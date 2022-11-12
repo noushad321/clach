@@ -27,7 +27,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard')->middleware('admin');
 
-    Route::get('/add-products', function () {
+    Route::get('/products', function () {
         return view('add_products');
     });
 });
