@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('slug');
             $table->string('short_description');
-            $table->longText('long_description');
-            $table->integer('in_stock');
-            $table->string('reference_number');
+            $table->longText('long_description')->nullable();
+            $table->integer('in_stock')->default(0);
+            $table->string('reference_number')->nullable();
             $table->unsignedBigInteger('fk_sub_category_type_id');
             $table->foreign('fk_sub_category_type_id')->references('id')->on('sub_category_types')->onDelete('cascade');
             $table->float('price',7, 2)->default(0);
