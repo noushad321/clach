@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\ProductController;
+use App\Http\Livewire\CreateProduct;
+use App\Http\Livewire\EditProduct;
+use App\Http\Livewire\ShowProducts;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,7 +31,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard')->middleware('admin');
 
-    Route::get('/products', 'App\Http\Controllers\ProductController@index');
-    Route::get('/create-product', 'App\Http\Controllers\ProductController@create')->name('products.create');
-    Route::post('/store-product', 'App\Http\Controllers\ProductController@store')->name('products.store');
+    Route::get('products', ShowProducts::class);
+    Route::get('/user/add', CreateProduct::class);
+    Route::get('/product/edit/{product}', EditProduct::class);
 });
