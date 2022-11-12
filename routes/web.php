@@ -27,7 +27,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard')->middleware('admin');
 
-    Route::get('/products', function () {
-        return view('add_products');
-    });
+    Route::get('/products', 'App\Http\Controllers\ProductController@index');
+    Route::get('/create-product', 'App\Http\Controllers\ProductController@create')->name('products.create');
+    Route::post('/store-product', 'App\Http\Controllers\ProductController@store')->name('products.store');
 });

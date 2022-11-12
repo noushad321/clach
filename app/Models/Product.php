@@ -11,6 +11,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Product extends Model
 {
     use HasFactory, HasMultimedia;
+    protected $fillable = ['name', 'slug', 'short_description', 'in_stock', 'reference_number', 'fk_sub_category_type_id'];
+    public $timestamps = false;
 
     public function attributeValues(): BelongsToMany
     {
