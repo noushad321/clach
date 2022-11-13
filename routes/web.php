@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\ProductController;
+use App\Http\Livewire\CreateProduct;
+use App\Http\Livewire\EditProduct;
+use App\Http\Livewire\ShowProducts;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,9 +24,14 @@ Route::get('/', function () {
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
-    'verified'
+    'verified',
 ])->group(function () {
+
     Route::get('/dashboard', function () {
         return view('dashboard');
-    })->name('dashboard');
+    })->name('dashboard')->middleware('admin');
+
+    Route::get('products', ShowProducts::class);
+    Route::get('/user/add', CreateProduct::class);
+    Route::get('/product/edit/{product}', EditProduct::class);
 });
