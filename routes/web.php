@@ -18,7 +18,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+Route::get('/items/{category}/{subcategory}/{type}', function () {
+    return view('items');
 });
 
 Route::middleware([
