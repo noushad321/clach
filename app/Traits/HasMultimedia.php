@@ -3,12 +3,12 @@
 namespace App\Traits;
 
 use App\Models\Multimedia;
-use Illuminate\Database\Eloquent\Relations\MorphToMany;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 trait HasMultimedia
 {
-    public function multimedia(): MorphToMany
+    public function multimedia(): MorphMany
     {
-        return $this->morphToMany(Multimedia::class, 'multimediable');
+        return $this->morphMany(Multimedia::class, 'multimediable');
     }
 }
