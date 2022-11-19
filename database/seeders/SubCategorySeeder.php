@@ -16,42 +16,42 @@ class SubCategorySeeder extends Seeder
      */
     public function run()
     {
-        SubCategory::create([
+        SubCategory::firstOrCreate([
             'name' => 'Bracelets',
             'slug' => Str::slug('Bracelets', '-'),
             'fk_category_id' => 1
 
         ]);
 
-        SubCategory::create([
+        SubCategory::firstOrCreate([
             'name' => 'Brooches',
             'slug' => Str::slug('Brooches', '-'),
             'fk_category_id' => 1
 
         ]);
 
-        SubCategory::create([
+        SubCategory::firstOrCreate([
             'name' => 'Cufflinks',
             'slug' => Str::slug('Cufflinks', '-'),
             'fk_category_id' => 1
 
         ]);
 
-        SubCategory::create([
+        SubCategory::firstOrCreate([
             'name' => 'Earrings',
             'slug' => Str::slug('Earrings', '-'),
             'fk_category_id' => 1
 
         ]);
 
-        SubCategory::create([
+        SubCategory::firstOrCreate([
             'name' => 'Necklaces',
             'slug' => Str::slug('Necklaces', '-'),
             'fk_category_id' => 1
 
         ]);
 
-        SubCategory::create([
+        SubCategory::firstOrCreate([
             'name' => 'Rings',
             'slug' => Str::slug('Rings', '-'),
             'fk_category_id' => 1

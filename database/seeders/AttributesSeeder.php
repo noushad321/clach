@@ -15,21 +15,21 @@ class AttributesSeeder extends Seeder
      */
     public function run()
     {
-        Attributes::create([
+        Attributes::firstOrCreate([
             'name' => 'metal',
         ]);
 
-        AttributeValues::create([
+        AttributeValues::firstOrCreate([
             'fk_attribute_id' => 1,
             'value' => 'Yellow Gold'
         ]);
 
-        AttributeValues::create([
+        AttributeValues::firstOrCreate([
             'fk_attribute_id' => 1,
             'value' => 'Rose Gold'
         ]);
 
-        AttributeValues::create([
+        AttributeValues::firstOrCreate([
             'fk_attribute_id' => 1,
             'value' => 'White Gold'
         ]);

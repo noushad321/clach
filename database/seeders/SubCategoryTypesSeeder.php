@@ -15,138 +15,138 @@ class SubCategoryTypesSeeder extends Seeder
      */
     public function run()
     {
-        SubCategoryType::create([
+        SubCategoryType::firstOrCreate([
             'name' => 'Butterfly',
             'slug' => Str::slug('Butterfly', '-'),
             'fk_sub_category_id' => 1
 
         ]);
-        SubCategoryType::create([
+        SubCategoryType::firstOrCreate([
             'name' => 'Clip',
             'slug' => Str::slug('Clip', '-'),
             'fk_sub_category_id' => 1
 
         ]);
-        SubCategoryType::create([
+        SubCategoryType::firstOrCreate([
             'name' => 'Nut',
             'slug' => Str::slug('Nut', '-'),
             'fk_sub_category_id' => 1
 
         ]);
-        SubCategoryType::create([
+        SubCategoryType::firstOrCreate([
             'name' => 'Rubber Me',
             'slug' => Str::slug('Rubber Me', '-'),
             'fk_sub_category_id' => 1
 
         ]);
-        SubCategoryType::create([
+        SubCategoryType::firstOrCreate([
             'name' => 'Symbols',
             'slug' => Str::slug('Symbols', '-'),
             'fk_sub_category_id' => 1
 
         ]);
 
-        SubCategoryType::create([
+        SubCategoryType::firstOrCreate([
             'name' => 'Butterfly',
             'slug' => Str::slug('Butterfly', '-'),
             'fk_sub_category_id' => 2
 
         ]);
-        SubCategoryType::create([
+        SubCategoryType::firstOrCreate([
             'name' => 'Symbols',
             'slug' => Str::slug('Symbols', '-'),
             'fk_sub_category_id' => 2
 
         ]);
 
-        SubCategoryType::create([
+        SubCategoryType::firstOrCreate([
             'name' => 'Butterfly',
             'slug' => Str::slug('Butterfly', '-'),
             'fk_sub_category_id' => 3
 
         ]);
-        SubCategoryType::create([
+        SubCategoryType::firstOrCreate([
             'name' => 'Clip',
             'slug' => Str::slug('Clip', '-'),
             'fk_sub_category_id' => 3
 
         ]);
 
-        SubCategoryType::create([
+        SubCategoryType::firstOrCreate([
             'name' => 'Butterfly',
             'slug' => Str::slug('Butterfly', '-'),
             'fk_sub_category_id' => 4
 
         ]);
-        SubCategoryType::create([
+        SubCategoryType::firstOrCreate([
             'name' => 'Clip',
             'slug' => Str::slug('Clip', '-'),
             'fk_sub_category_id' => 4
 
         ]);
-        SubCategoryType::create([
+        SubCategoryType::firstOrCreate([
             'name' => 'Nut',
             'slug' => Str::slug('Nut', '-'),
             'fk_sub_category_id' => 4
 
         ]);
-        SubCategoryType::create([
+        SubCategoryType::firstOrCreate([
             'name' => 'Rubber Me',
             'slug' => Str::slug('Rubber Me', '-'),
             'fk_sub_category_id' => 4
 
         ]);
-        SubCategoryType::create([
+        SubCategoryType::firstOrCreate([
             'name' => 'Symbols',
             'slug' => Str::slug('Symbols', '-'),
             'fk_sub_category_id' => 4
 
         ]);
 
-        SubCategoryType::create([
+        SubCategoryType::firstOrCreate([
             'name' => 'Butterfly',
             'slug' => Str::slug('Butterfly', '-'),
             'fk_sub_category_id' => 5
 
         ]);
-        SubCategoryType::create([
+        SubCategoryType::firstOrCreate([
             'name' => 'Clip',
             'slug' => Str::slug('Clip', '-'),
             'fk_sub_category_id' => 5
 
         ]);
-        SubCategoryType::create([
+        SubCategoryType::firstOrCreate([
             'name' => 'Nut',
             'slug' => Str::slug('Nut', '-'),
             'fk_sub_category_id' => 5
 
         ]);
-        SubCategoryType::create([
+        SubCategoryType::firstOrCreate([
             'name' => 'Rubber Me',
             'slug' => Str::slug('Rubber Me', '-'),
             'fk_sub_category_id' => 5
 
         ]);
-        SubCategoryType::create([
+        SubCategoryType::firstOrCreate([
             'name' => 'Symbols',
             'slug' => Str::slug('Symbols', '-'),
             'fk_sub_category_id' => 5
 
         ]);
 
-        SubCategoryType::create([
+        SubCategoryType::firstOrCreate([
             'name' => 'Butterfly',
             'slug' => Str::slug('Butterfly', '-'),
             'fk_sub_category_id' => 6
 
         ]);
-        SubCategoryType::create([
+        SubCategoryType::firstOrCreate([
             'name' => 'Clip',
             'slug' => Str::slug('Clip', '-'),
             'fk_sub_category_id' => 6
 
         ]);
-        SubCategoryType::create([
+        SubCategoryType::firstOrCreate([
             'name' => 'Nut',
             'slug' => Str::slug('Nut', '-'),
             'fk_sub_category_id' => 6

@@ -15,43 +15,34 @@ class TagsSeeder extends Seeder
      */
     public function run()
     {
-        Tag::create([
-            'name' => 'Yellow Gold',
-        ]);
-        Tag::create([
+        Tag::firstOrCreate([
             'name' => 'Malachite',
         ]);
-        Tag::create([
+        Tag::firstOrCreate([
             'name' => 'Diamonds',
         ]);
-        Tag::create([
+        Tag::firstOrCreate([
             'name' => 'Enamel',
         ]);
-        Tag::create([
+        Tag::firstOrCreate([
             'name' => 'White Mother-of-Pearl',
         ]);
-        Tag::create([
+        Tag::firstOrCreate([
             'name' => 'One Diamond',
         ]);
-        Tag::create([
-            'name' => 'Rose Gold',
-        ]);
-        Tag::create([
-            'name' => 'White Gold',
-        ]);
-        Tag::create([
+        Tag::firstOrCreate([
             'name' => 'Pearls',
         ]);
-        Tag::create([
+        Tag::firstOrCreate([
             'name' => 'Rubber',
         ]);
-        Tag::create([
+        Tag::firstOrCreate([
             'name' => 'Black Onyx',
         ]);
-        Tag::create([
+        Tag::firstOrCreate([
             'name' => 'Turquoise',
         ]);
-        Tag::create([
+        Tag::firstOrCreate([
             'name' => 'Black Onyx',
         ]);
     }

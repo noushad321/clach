@@ -35,6 +35,6 @@ Route::middleware([
     })->name('dashboard')->middleware('admin');
 
     Route::get('products', ShowProducts::class);
-    Route::get('/user/add', CreateProduct::class);
+    Route::get('/product/add', CreateProduct::class);
     Route::get('/product/edit/{product}', EditProduct::class);
 });

@@ -15,13 +15,13 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        Category::create([
+        Category::firstOrCreate([
             'name' => 'Collection',
             'slug' => Str::slug('Collection', '-')
 
         ]);
 
-        Category::create([
+        Category::firstOrCreate([
             'name' => 'La Maison',
             'slug' => Str::slug('La Maison', '-')
 
