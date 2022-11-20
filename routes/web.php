@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/items/{category}/{subcategory}/{type}', function () {
+Route::get('/items/{category}/{subCategory}/{subCategoryType}', function () {
     return view('items');
 });
 
