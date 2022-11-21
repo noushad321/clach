@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/items/{category}/{subcategory}/{type}', function () {
+Route::get('/items/{category}/{subCategory}/{subCategoryType}', function () {
     return view('items');
 });
 
@@ -35,6 +35,6 @@ Route::middleware([
     })->name('dashboard')->middleware('admin');
 
     Route::get('products', ShowProducts::class);
-    Route::get('/user/add', CreateProduct::class);
+    Route::get('/product/add', CreateProduct::class);
     Route::get('/product/edit/{product}', EditProduct::class);
 });
