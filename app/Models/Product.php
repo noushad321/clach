@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Traits\HasMultimedia;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
@@ -21,7 +22,12 @@ class Product extends Model
 
     public function tags(): HasMany
     {
-        return $this->hasMany(Tag::class, 'fk_product', 'id');
+        return $this->hasMany(Tag::class, 'fk_product_id', 'id');
+    }
+
+    public function subCategoryType(): BelongsTo
+    {
+        return $this->belongsTo(SubCategoryType::class, 'fk_sub_category_type_id', 'id');
     }
 
 }
