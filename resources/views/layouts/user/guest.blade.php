@@ -66,6 +66,7 @@
         sizes="128x128" />
 
     <link rel="stylesheet" href="{{asset('css/global.css')}}" />
+    <link rel="stylesheet" href="{{asset('css/searchMain.css')}}" />
 
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css" />
@@ -16837,26 +16838,7 @@
             <div class="footer__secondary-content bg--secondary text-color--white gutter--normal">
                 <div class="max-width--xmedium">
                     <div class="row">
-                        <div class="footer__secondary-content-column col-12 col-md-6">
-                            <div class="footer__country-selector">
-                                <span class="body-type--centi text-transform--uppercase">
-                                    Shop In:
-
-                                    United Arab Emirates
-                                </span>
-
-
-                                <br class="display--medium-down" />
-
-
-                                <a class="footer__country-selector-anchor link link--primary link--flex"
-                                    href="/en-ae/change-country"
-                                    data-modal-trigger='{"url": "/en-ae/change-country?renderView=modal", "type": "html", "options": {"modalID": "countrySelector", "modalClass": "modal--country-selector modal--base"}}'>
-                                    Change Country
-                                </a>
-
-                            </div>
-                        </div>
+                      
 
                         <div class="footer__secondary-content-column col-12 col-md-6">
                             <div class="footer__copyright text-align--small-up-right">
@@ -16906,6 +16888,7 @@
     <script defer type="text/javascript" src="{{asset('js/main.js')}}"></script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js"></script>
+        
     <script>
         $(document).ready(function () {
             $('.carousel').slick({
@@ -16928,9 +16911,11 @@
 
             });
         });
+       
+
     </script>
 
-
+ @stack('custom-scripts')
 
 
 

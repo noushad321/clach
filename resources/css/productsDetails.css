@@ -1,0 +1,8 @@
+.product-gallery--pdp .product-gallery__col {
+    margin-bottom: 0.625em;
+    padding: 0 0.313em;
+
+}
+.list--reset li {
+    list-style-type: none;
+}

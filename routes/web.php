@@ -23,6 +23,9 @@ Route::get('/', function () {
 Route::get('/items/{category}/{subcategory}/{type}', function () {
     return view('items');
 });
+Route::get('/details', function () {
+    return view('details');
+});
 
 Route::middleware([
     'auth:sanctum',
