@@ -54,7 +54,7 @@
             @if($category)
             <div class="mb-6">
                 <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Select Category</label>
-                <select class="form-control mr-sm-2"  wire:model="category">
+                <select class="form-control mr-sm-2"  wire:model.defer="category">
                     <option value=''>Select Category</option>
                     @foreach ($category as $cat)
                             <option value="{{$cat->id}}" > {{$cat->name}}</option>
@@ -67,7 +67,7 @@
             @if($sub_category)
             <div class="mb-6">
                 <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Select Sub Category</label>
-                <select class="form-control mr-sm-2"  wire:model="sub_category">
+                <select class="form-control mr-sm-2"  wire:model.defer="sub_category">
                     <option value=''>Select Sub Category</option>
                     @foreach ($sub_category as $sub_cat)
                         <option value="{{$sub_cat->id}}" > {{$sub_cat->name}}</option>
@@ -80,7 +80,7 @@
             @if($sub_category_type)
             <div class="mb-6">
                 <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Select Sub Category Type</label>
-                <select class="form-control mr-sm-2"  wire:model="sub_category_type">
+                <select class="form-control mr-sm-2"  wire:model.defer="sub_category_type">
                     <option value=''>Select Sub Category Type</option>
                     @foreach ($sub_category_type as $sub_cat_type)
                         <option value="{{$sub_cat_type->id}}" > {{$sub_cat_type->name}}</option>

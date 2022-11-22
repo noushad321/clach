@@ -76,11 +76,7 @@ class CreateProduct extends Component
 
     public function render(): Factory|View|Application
     {
-        return view('livewire.create-product', [
-            'category' => $this->category,
-            'sub_category' => $this->sub_category,
-            'sub_category_type' => $this->sub_category_type,
-            'tags' => $this->tags,
-        ]);
+        return view('livewire.create-product');
+        
     }
-}
+    }
