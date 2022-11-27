@@ -2,7 +2,7 @@
     <div class="px-4 sm:px-6 lg:px-8">
         <form wire:submit.prevent="save">
             <div class="mb-6">
-                <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Name</label>
+                <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Slider Name</label>
                 <input type="text"
                        wire:model="sliderImage.name"
                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -11,7 +11,7 @@
                 @error('sliderImage.name') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
             </div>
             <div class="mb-6">
-                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Desc</label>
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Slider Desc</label>
                 <input type="text"
                        wire:model="sliderImage.description"
                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -19,7 +19,7 @@
                 @error('sliderImage.description') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
             </div>
             <div class="mb-6">
-                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Photo</label>
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Slider Photo</label>
                 <input type="file" wire:model="photo">
                 @error('photo') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
             </div>

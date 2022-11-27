@@ -4,7 +4,7 @@
         <div class=" mt-6 p-6 bg-white shadow-md sm:rounded-lg">
             <div class="ml-12 mt-12 sm:flex-right">
                 <a href="/actions"
-                   class="underline mt-12 text-blue-700">
+                   class="underline mt-12 hover:text-blue-200 text-blue-700">
                     << Go Back To Navigation
                 </a>
             </div>
@@ -25,7 +25,7 @@
                     <div class="mt-8 flex flex-col">
                         <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
                                 <div class="shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
-                                    <table>
+                                    <table class="ml-12 table-auto">
                                         <thead>
                                         <tr>
                                             <th scope="col"

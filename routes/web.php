@@ -10,6 +10,7 @@ use App\Http\Livewire\ShowCategories;
 use App\Http\Livewire\ShowProducts;
 use App\Http\Livewire\ShowSliderImages;
 use App\Http\Livewire\ShowSubCategories;
+use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -54,7 +55,7 @@ Route::middleware([
     Route::get('/product/add', CreateProduct::class);
     Route::get('/product/edit/{product}', EditProduct::class);
     Route::get('/actions', function () {
-        return view('actions');
+        return view('actions', ['products' => Product::all()]);
     });
 
     Route::get('slider-images', ShowSliderImages::class);

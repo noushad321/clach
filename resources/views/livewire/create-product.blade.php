@@ -2,7 +2,7 @@
     <div class="px-4 sm:px-6 lg:px-8">
         <form wire:submit.prevent="save">
             <div class="mb-6">
-                <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Name</label>
+                <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Product Name</label>
                 <input type="text"
                        wire:model="product.name"
                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -11,7 +11,7 @@
                 @error('product.name') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
             </div>
             <div class="mb-6">
-                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Short Desc</label>
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Product Short Desc</label>
                 <input type="text"
                        wire:model="product.short_description"
                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -19,7 +19,7 @@
                 @error('product.short_description') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
             </div>
             <div class="mb-6">
-                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Long Desc</label>
+                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Product Long Desc</label>
                 <input type="text"
                        wire:model="product.long_description"
                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -27,7 +27,7 @@
                 @error('product.long_description') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
             </div>
             <div class="mb-6">
-                <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Stock Quantity</label>
+                <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Product Stock Quantity</label>
                 <input type="text"
                        wire:model="product.in_stock"
                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -35,7 +35,7 @@
                 @error('product.in_stock') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
             </div>
             <div class="mb-6">
-                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Reference Number</label>
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Product Reference Number</label>
                 <input type="text"
                        wire:model="product.reference_number"
                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
