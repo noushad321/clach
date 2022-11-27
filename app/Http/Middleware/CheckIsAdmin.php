@@ -19,7 +19,7 @@ class CheckIsAdmin
     public function handle(Request $request, Closure $next): Response|RedirectResponse
     {
         if ($request->user()->email == 'admin@gmail.com') {
-            return redirect('products');
+            return redirect('/actions');
         }
         return $next($request);
     }
