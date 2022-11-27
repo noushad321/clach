@@ -42,6 +42,9 @@ Route::middleware([
     Route::get('products', ShowProducts::class);
     Route::get('/product/add', CreateProduct::class);
     Route::get('/product/edit/{product}', EditProduct::class);
+    Route::get('/actions', function () {
+        return view('actions');
+    });
 
     Route::get('slider-images', ShowSliderImages::class);
     Route::get('/slider-images/add', AddSliderImages::class);
