@@ -14,13 +14,13 @@
                 <div class="px-4 sm:px-6 lg:px-8">
                     <div class="sm:flex ">
                         <div class="sm:flex-auto">
-                            <h1 class="text-xl font-semibold text-gray-900">Categories</h1>
-                            <p class="mt-2 text-sm text-gray-700">A list of all the Categories.</p>
+                            <h1 class="text-xl font-semibold text-gray-900">Sub Categories</h1>
+                            <p class="mt-2 text-sm text-gray-700">A list of all the Sub Categories.</p>
                         </div>
                         <div class="ml-12 sm:mt-0 sm:ml-16 sm:flex-right">
-                            <a href="/category/add"
+                            <a href="/sub-category/add"
                                class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto">
-                                Add Category
+                                Add Sub Category
                             </a>
                         </div>
                     </div>
@@ -42,25 +42,32 @@
                                             class="px-3 py-3 text-left text-xs font-medium uppercase tracking-wide text-gray-500">
                                             Slug
                                         </th>
+                                        <th scope="col"
+                                            class="px-3 py-3 text-left text-xs font-medium uppercase tracking-wide text-gray-500">
+                                            Category
+                                        </th>
                                     </tr>
                                     </thead>
                                     <tbody class="divide-y divide-gray-200 bg-white">
 
-                                    @foreach($categories as $category)
+                                    @foreach($subCategories as $subCategory)
                                         <tr>
                                             <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
-                                                {{ $category->name }}
+                                                {{ $subCategory->name }}
                                             </td>
                                             <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                                                {{ $category->description }}
+                                                {{ $subCategory->description }}
                                             </td>
                                             <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                                                {{ $category->slug }}
+                                                {{ $subCategory->slug }}
+                                            </td>
+                                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                                                {{ $subCategory->category->name }}
                                             </td>
                                             <td>
                                                 <a href="#"
                                                    onclick="confirm('Are you sure you want to remove the product') || event.stopImmediatePropagation()"
-                                                   wire:click="delete({{ $category->id }})"
+                                                   wire:click="delete({{ $subCategory->id }})"
                                                    class="text-red-600 hover:text-red-900">Delete</a>
                                             </td>
                                         </tr>
@@ -73,5 +80,5 @@
                 </div>
             </div>
         </div>
-        </div>
     </div>
+</div>

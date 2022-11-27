@@ -3,11 +3,13 @@
 use App\Http\Controllers\ProductController;
 use App\Http\Livewire\AddCategories;
 use App\Http\Livewire\AddSliderImages;
+use App\Http\Livewire\AddSubCategories;
 use App\Http\Livewire\CreateProduct;
 use App\Http\Livewire\EditProduct;
 use App\Http\Livewire\ShowCategories;
 use App\Http\Livewire\ShowProducts;
 use App\Http\Livewire\ShowSliderImages;
+use App\Http\Livewire\ShowSubCategories;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,6 +45,11 @@ Route::middleware([
 
     Route::get('/category/add', AddCategories::class);
     Route::get('/categories', ShowCategories::class);
+
+    Route::get('/sub-category/add', AddSubCategories::class);
+    Route::get('/sub-categories', ShowSubCategories::class);
+
+
     Route::get('products', ShowProducts::class);
     Route::get('/product/add', CreateProduct::class);
     Route::get('/product/edit/{product}', EditProduct::class);
