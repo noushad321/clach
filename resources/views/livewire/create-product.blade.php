@@ -93,7 +93,7 @@
             @if($tags)
             <div class="mb-6">
                 <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Tags</label>
-                <select class="form-control mr-sm-2"  wire:model="tags">
+                <select class="form-control mr-sm-2"  wire:model.defer="tags">
                     <option value=''>Select Tags</option>
                     @foreach ($tags as $tag)
                         <option value="{{$tag->id}}" > {{$tag->name}}</option>

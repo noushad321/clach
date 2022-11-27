@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProductsController;
 use App\Http\Livewire\AddSliderImages;
 use App\Http\Livewire\CreateProduct;
 use App\Http\Livewire\EditProduct;
@@ -19,9 +21,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [HomeController::class,'index']);
+
+
 Route::get('/items/{category}/{subCategory}/{subCategoryType}', function () {
     return view('items');
 });

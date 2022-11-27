@@ -8,7 +8,9 @@ html {
     top: 0;
     width: 100%;
   }
-
+  .header-flyout__tab-carousel img {
+    margin-bottom: 0.95rem;
+  }
 body {
     margin: 0
 }
@@ -4892,7 +4894,7 @@ hr {
 }
 
 .container,.max-width--large {
-    max-width: 90rem
+    max-width: 100rem
 }
 
 .container {
@@ -4989,7 +4991,7 @@ hr {
 }
 
 .bg--secondary {
-    background-color: #d50032
+    background-color: #1d1c1c
 }
 
 .bg--tertiary {
@@ -7506,7 +7508,7 @@ option {
 }
 
 [dir=ltr] .header-flyout__anchor:not(.header-flyout__anchor--parent) {
-    font-size: .75rem
+    font-size: .80rem
 }
 
 [dir=rtl] .header-flyout__anchor:not(.header-flyout__anchor--parent) {
@@ -11061,7 +11063,7 @@ isapplepay {
 }
 
 [dir=ltr] .body-type--centi {
-    font-size: .75rem
+    font-size: .80rem
 }
 
 [dir=rtl] .body-type--centi {
@@ -13180,7 +13182,7 @@ html[dir=rtl][lang=th-TH] .registration .iti__dropdown-label {
     .product-tile__overlay {
         z-index: 0;
         position: absolute;
-        top: -1.5rem;
+        top: -1rem;
         width: calc(100% + 3rem);
         height: calc(100% + 3rem);
         padding: 1rem 1rem 2rem;
