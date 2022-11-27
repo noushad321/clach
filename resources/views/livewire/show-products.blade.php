@@ -2,6 +2,12 @@
     <div class="items-center pt-6 sm:pt-0">
 
         <div class=" mt-6 p-6 bg-white shadow-md sm:rounded-lg">
+            <div class="ml-12 mt-12 sm:flex-right">
+                <a href="/actions"
+                   class="underline mt-12 text-blue-700">
+                    << Go Back To Navigation
+                </a>
+            </div>
             <div class="max-w-4xl mx-auto mt-5">
                 <div class="px-4 sm:px-6 lg:px-8">
                     <div class="sm:flex">

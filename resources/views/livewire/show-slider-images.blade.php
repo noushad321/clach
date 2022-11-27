@@ -1,15 +1,23 @@
 
-<div class="min-h-screen flex flex-col items-center pt-6 sm:pt-0">
+<div class="items-center pt-6 sm:pt-0">
 
     <div class=" mt-6 p-6 bg-white shadow-md sm:rounded-lg">
+
+        <div class=" mt-6 p-6 bg-white shadow-md sm:rounded-lg">
+            <div class="ml-12 mt-12 sm:flex-right">
+                <a href="/actions"
+                   class="underline mt-12 text-blue-700">
+                    << Go Back To Navigation
+                </a>
+            </div>
         <div class="max-w-4xl mx-auto mt-5">
             <div class="px-4 sm:px-6 lg:px-8">
-                <div class="sm:flex sm:items-center">
+                <div class="sm:flex ">
                     <div class="sm:flex-auto">
                         <h1 class="text-xl font-semibold text-gray-900">Slider Images</h1>
                         <p class="mt-2 text-sm text-gray-700">A list of all the Slider Images.</p>
                     </div>
-                    <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
+                    <div class="ml-12 sm:mt-0 sm:ml-16 sm:flex-right">
                         <a href="/slider-images/add"
                            class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto">
                             Add Image
@@ -18,9 +26,8 @@
                 </div>
                 <div class="mt-8 flex flex-col">
                     <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                        <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
                             <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
-                                <table class="divide-y divide-gray-300">
+                                <table>
                                     <thead class="bg-gray-50">
                                     <tr>
                                         <th scope="col"
@@ -60,7 +67,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
 
     </div>
