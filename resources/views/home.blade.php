@@ -215,6 +215,7 @@
                                 <section class=" gutter--normal">
                                     <div class="module-container__header">
                                         <div class="multiple-items">
+                                        
                                         @foreach($products as $product)
                                             <livewire:product-item :product="$product" :keys="$loop->index">
                                         @endforeach

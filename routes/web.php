@@ -31,7 +31,7 @@ Route::get('/', [HomeController::class,'index']);
 Route::get('/items/{category}/{subCategory}/{subCategoryType}', function () {
     return view('items');
 });
-Route::get('/details', function () {
+Route::get('/details/{category}/{subCategory}/{subCategoryType}', function () {
     return view('details');
 });
 

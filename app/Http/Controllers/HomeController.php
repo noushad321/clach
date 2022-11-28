@@ -23,7 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $products = Product::inRandomOrder()->limit(5)->get();
+        $products = Product::with('subCategoryType.subCategory.category')->inRandomOrder()->limit(5)->get();
         $sizes = ['15cm','16cm','17cm'];
         return view('home',compact('products','sizes'));
     }
