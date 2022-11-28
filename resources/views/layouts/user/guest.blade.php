@@ -42,7 +42,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css" />
 
 
-
+    @livewireStyles
 
 
     <svg aria-hidden="true" focusable="false" class="hidden">
@@ -1609,7 +1609,7 @@
             })
         });
     </script>
-
+ @livewireScripts
     @stack('custom-scripts')
 
 

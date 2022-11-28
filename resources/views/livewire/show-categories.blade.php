@@ -10,24 +10,24 @@
                     << Go Back To Navigation
                 </a>
             </div>
-        <div class="max-w-4xl mx-auto mt-5">
-            <div class="px-4 sm:px-6 lg:px-8">
-                <div class="sm:flex ">
-                    <div class="sm:flex-auto">
-                        <h1 class="text-xl font-semibold text-gray-900">Slider Images</h1>
-                        <p class="mt-2 text-sm text-gray-700">A list of all the Slider Images.</p>
+            <div class="max-w-4xl mx-auto mt-5">
+                <div class="px-4 sm:px-6 lg:px-8">
+                    <div class="sm:flex ">
+                        <div class="sm:flex-auto">
+                            <h1 class="text-xl font-semibold text-gray-900">Categories</h1>
+                            <p class="mt-2 text-sm text-gray-700">A list of all the Categories.</p>
+                        </div>
+                        <div class="ml-12 sm:mt-0 sm:ml-16 sm:flex-right">
+                            <a href="/category/add"
+                               class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto">
+                                Add Category
+                            </a>
+                        </div>
                     </div>
-                    <div class="ml-12 sm:mt-0 sm:ml-16 sm:flex-right">
-                        <a href="/slider-images/add"
-                           class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto">
-                            Add Image
-                        </a>
-                    </div>
-                </div>
-                <div class="mt-8 flex flex-col">
-                    <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                    <div class="mt-8 flex flex-col">
+                        <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
                             <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
-                                <table>
+                                <table class="table-fixed">
                                     <thead class="bg-gray-50">
                                     <tr>
                                         <th scope="col"
@@ -38,25 +38,29 @@
                                             class="px-3 py-3 text-left text-xs font-medium uppercase tracking-wide text-gray-500">
                                             Description
                                         </th>
+                                        <th scope="col"
+                                            class="px-3 py-3 text-left text-xs font-medium uppercase tracking-wide text-gray-500">
+                                            Slug
+                                        </th>
                                     </tr>
                                     </thead>
                                     <tbody class="divide-y divide-gray-200 bg-white">
 
-                                    @foreach($images as $image)
+                                    @foreach($categories as $category)
                                         <tr>
                                             <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
-                                                {{ $image->name }}
+                                                {{ $category->name }}
                                             </td>
                                             <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                                                {{ $image->description }}
+                                                {{ $category->description }}
                                             </td>
-{{--                                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">--}}
-{{--                                                {{ $image->multimedia }}--}}
-{{--                                            </td>--}}
+                                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                                                {{ $category->slug }}
+                                            </td>
                                             <td>
                                                 <a href="#"
                                                    onclick="confirm('Are you sure you want to remove the product') || event.stopImmediatePropagation()"
-                                                   wire:click="delete({{ $image->id }})"
+                                                   wire:click="delete({{ $category->id }})"
                                                    class="text-red-600 hover:text-red-900">Delete</a>
                                             </td>
                                         </tr>
@@ -67,7 +71,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
-
+        </div>
     </div>
-</div>

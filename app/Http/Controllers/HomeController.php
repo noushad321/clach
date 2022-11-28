@@ -24,8 +24,8 @@ class HomeController extends Controller
     public function index()
     {
         $products = Product::inRandomOrder()->limit(5)->get();
-
-        return view('home',compact('products'));
+        $sizes = ['15cm','16cm','17cm'];
+        return view('home',compact('products','sizes'));
     }
 
     /**

@@ -215,187 +215,9 @@
                                 <section class=" gutter--normal">
                                     <div class="module-container__header">
                                         <div class="multiple-items">
-                                            @foreach($products as $product)
-                                            <div class="module-carousel__item col-6 col-md-3 col-lg-3">
-
-
-                                                <div class="product flex flex-grow-1 flex-direction-col">
-                                                    <div
-                                                        class="product-tile product-tile--default flex flex-direction-col flex-grow-1 text-align--center">
-                                                        <!-- dwMarker="product" dwContentID="0a6cce9987006d6da95df75306" -->
-                                                        <a class="product-tile__anchor"
-                                                            href="/en-ae/jewellery/bracelets/panthere-de-cartier/panthere-de-cartier-bracelet-CRB6067217.html"
-                                                            data-product-url="productShow" itemprop="url">
-                                                            <!--Product Badges -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-                                                            <div
-                                                                class="product-tile__media product-tile__media--default aspect-ratio--square ">
-                                                                <div
-                                                                    class="product-tile__media-container component-overlay component-overlay--center">
-    
-                                                                    <img class="product-tile__image product-tile__image--primary component-overlay component-overlay--center object-fit--contain lazyload none-up  full-stretch-image "
-                                                                        data-product-component="image"
-                                                                        data-src="https://www.cartier.com/dw/image/v2/BFHP_PRD/on/demandware.static/-/Sites-cartier-master/default/dwb4895c0f/images/large/637956888481809437-2377634.png?sw=350&amp;sh=350&amp;sm=fit&amp;sfrm=png"
-                                                                        data-image-index="0" itemprop="image"
-                                                                        alt="Panth&egrave;re de Cartier bracelet"
-                                                                        width="350" height="350"
-                                                                        title="Panth&egrave;re de Cartier bracelet" />
-    
-                                                                    <img class="product-tile__image product-tile__image--secondary component-overlay component-overlay--center object-fit--contain lazyload none-up display--small-up  full-stretch-image "
-                                                                        data-product-component="image"
-                                                                        data-src="https://www.cartier.com/dw/image/v2/BFHP_PRD/on/demandware.static/-/Sites-cartier-master/default/dwb4895c0f/images/large/637956888481809437-2377634.png?sw=350&amp;sh=350&amp;sm=fit&amp;sfrm=png"
-                                                                        data-image-index="0" itemprop="image"
-                                                                        alt="Panth&egrave;re de Cartier bracelet"
-                                                                        width="350" height="350"
-                                                                        title="Panth&egrave;re de Cartier bracelet" />
-    
-                                                                </div>
-                                                            </div>
-    
-    
-                                                            <div class="product-tile__body">
-                                                                <p class="product-tile__body-section product-tile__name text-line--large heading-type body-type--deci"
-                                                                    itemprop="name">
-                                                                    {{$product->name}}
-                                                                </p>
-    
-    
-    
-    
-    
-                                                                <p
-                                                                    class="product-tile__body-section product-tile__material font-family--serif">
-                                                                    Yellow gold, onyx, tsavorite garnets
-                                                                </p>
-    
-    
-    
-    
-    
-                                                                <div
-                                                                    class="product-tile__body-section text-line--large font-weight--semibold body-type--deci">
-    
-    
-    
-                                                                    <div class="price flex--inline flex-flow-wrap flex-align-baseline"
-                                                                        data-product-component="price" itemprop="offers"
-                                                                        itemscope itemtype="http://schema.org/Offer">
-    
-    
-    
-    
-    
-    
-    
-                                                                        <meta itemprop="priceCurrency" content="AED" />
-    
-                                                                        <span class="price__sales sales">
-    
-    
-    
-                                                                            <span class="value" itemprop="price"
-                                                                                content="30700.00">
-    
-    
-    
-    
-                                                                                ${{$product->price}}
-    
-    
-    
-                                                                            </span>
-    
-    
-                                                                    </div>
-    
-    
-    
-    
-                                                                </div>
-    
-    
-    
-                                                                <div class="body-type--deci">
-    
-    
-    
-    
-                                                                </div>
-    
-    
-    
-                                                            </div>
-                                                        </a>
-    
-    
-                                                        <button type="button" class="product-tile__wishlist body-type--deka"
-                                                            title="Add to Wish List, Panth&egrave;re de Cartier bracelet"
-                                                            data-wishlist-trigger="heart"
-                                                            data-wishlist-label-add="Add to Wish List, Panth&egrave;re de Cartier bracelet"
-                                                            data-wishlist-label-remove="Remove from Wish List, Panth&egrave;re de Cartier bracelet">
-                                                            <svg aria-hidden="true" focusable="false"
-                                                                class="icon product-tile__wishlist-add">
-                                                                <use xlink:href="#icon--heart" />
-                                                            </svg>
-                                                            <svg aria-hidden="true" focusable="false"
-                                                                class="icon product-tile__wishlist-remove">
-                                                                <use xlink:href="#icon--heart-filled" />
-                                                            </svg>
-                                                        </button>
-    
-    
-    
-    
-    
-    
-    
-                                                        <div class="product-tile__overlay flex flex-align-end bg--white">
-                                                            <div class="product-tile__overlay-actions set--w-100">
-    
-    
-    
-    
-                                                                <div class="product-tile__quickadd" data-quickadd>
-                                                                    <button type="button"
-                                                                        class="product-tile__quickadd-trigger button button--primary button--small set--w-100"
-                                                                        data-url="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Product-ShowQuickAdd?pid=CRB6067217"
-                                                                        data-product-url="productShowQuickAdd"
-                                                                        title="Quick Add for Panth&egrave;re de Cartier bracelet"
-                                                                        data-quickadd-trigger>
-                                                                        <span class="display--small-up">
-                                                                            Add to Shopping Bag
-                                                                        </span>
-                                                                        <span class="display--small-only">
-                                                                            Add to Bag
-                                                                        </span>
-                                                                    </button>
-    
-                                                                    <div class="product-tile__quickadd-panel body-type--deci"
-                                                                        data-quickadd-component="panel" tabindex="-1"
-                                                                        role="dialog" aria-modal="true"></div>
-                                                                </div>
-    
-    
-                                                            </div>
-                                                        </div>
-    
-                                                        <!-- END_dwmarker -->
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-                                            @endforeach
-                                          
+                                        @foreach($products as $product)
+                                            <livewire:product-item :product="$product" :keys="$loop->index">
+                                        @endforeach
                                         </div>
                                     </div>
 
@@ -434,88 +256,15 @@
                                         <div
                                             class="module-grid row module-grid--spacing-row-regular module-grid--has-inner-gutters">
 
-
-
-
-
                                             <div class="module-grid__item col-12 col-md-6 col-lg-6">
                                                 <div class="flex flex-grow-1">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                                                     <article class="
     set--w-100 flex flex-direction-col
     content-tile
     content-tile--size-regular
     content-tile--ratio-natural
-    content-tile--style-default
-    
-    
-    
-    
-    
-    " style="" data-content-component="content-tile"
+    content-tile--style-default" data-content-component="content-tile"
                                                         data-motion='{"properties": "opacity from-v-direction", "children": ".content-tile__content > *"}'>
                                                         <!-- dwMarker="content" dwContentID="null" -->
 
@@ -914,81 +663,12 @@
                                         <div class="module-grid__item col-12 col-md-6 col-lg-6">
                                             <div class="flex flex-grow-1">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                                                 <article class="
     set--w-100 flex flex-direction-col
     content-tile
     content-tile--size-regular
     content-tile--ratio-natural
-    content-tile--style-default
-    
-    
-    
-    
-    
-    " style="" data-content-component="content-tile"
+    content-tile--style-default" data-content-component="content-tile"
                                                     data-motion='{"properties": "opacity from-v-direction", "children": ".content-tile__content > *"}'>
                                                     <!-- dwMarker="content" dwContentID="null" -->
 
@@ -997,52 +677,7 @@
 
                                                         <div class="content-tile__media ">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                                                             <picture>
-
-
-
-
 
                                                                 <source data-srcset="images/4_NOA_1680x1377.jpg"
                                                                     class="picture--source-element">
@@ -1057,26 +692,9 @@
                                                             </picture>
 
 
-
-
-
-
                                                         </div>
 
                                                     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                                                     <a class="component-overlay component-overlay--low-index component-overlay--center "
                                                         href="https://www.cartier.com/en-ae/art-of-living/writing-%26-stationery/writing-instruments/"
@@ -1112,32 +730,7 @@
                                                                 The Universe of a Grande Maison
                                                             </h2>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
                                                             <div class="component-actions content-tile__actions">
-
-
-
-
-
-
-
-
-
-
-
-
 
                                                                 <a href="https://www.cartier.com/en-ae/art-of-living/writing-%26-stationery/writing-instruments/"
                                                                     target=_blank
@@ -1146,11 +739,6 @@
                                                                     style="">
                                                                     Discover New Creations
                                                                 </a>
-
-
-
-
-
 
                                                             </div>
 
@@ -1163,72 +751,8 @@
                                         </div>
 
 
-
-
-
                                         <div class="module-grid__item col-12 col-md-6 col-lg-6">
                                             <div class="flex flex-grow-1">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1237,13 +761,7 @@
     content-tile
     content-tile--size-regular
     content-tile--ratio-natural
-    content-tile--style-default
-    
-    
-    
-    
-    
-    " style="" data-content-component="content-tile"
+    content-tile--style-default" data-content-component="content-tile"
                                                     data-motion='{"properties": "opacity from-v-direction", "children": ".content-tile__content > *"}'>
                                                     <!-- dwMarker="content" dwContentID="null" -->
 
@@ -1253,51 +771,7 @@
                                                         <div class="content-tile__media ">
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                                                             <picture>
-
-
-
-
 
                                                                 <source data-srcset="images/NM_CYCADA_1680x1377.jpg"
                                                                     class="picture--source-element">
@@ -1310,29 +784,9 @@
                                                                     title="" alt=""
                                                                     style="--focal-point-x: 50%; --focal-point-y:50%; ; " />
                                                             </picture>
-
-
-
-
-
-
                                                         </div>
 
                                                     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                                                     <a class="component-overlay component-overlay--low-index component-overlay--center "
                                                         href="https://www.cartier.com/en-ae/high-jewellery/latest-collections/beautes-du-monde/"
                                                         aria-label="Discover the Collection">
@@ -1353,10 +807,7 @@
             
             text-align--center
             
-            component-h-align--center
-            
-            
-            " style="">
+            component-h-align--center">
 
                                                         <div class="content-tile__content">
 
@@ -1367,32 +818,7 @@
                                                                 Beautés du Monde
                                                             </h2>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
                                                             <div class="component-actions content-tile__actions">
-
-
-
-
-
-
-
-
-
-
-
-
 
                                                                 <a href="https://www.cartier.com/en-ae/high-jewellery/latest-collections/beautes-du-monde/"
                                                                     target=_blank
@@ -1401,11 +827,6 @@
                                                                     style="">
                                                                     Discover the Collection
                                                                 </a>
-
-
-
-
-
 
                                                             </div>
 
@@ -1432,8 +853,11 @@
                     </div>
                 </div>
             </div>
-
+           
         </main>
+
+        <livewire:product-modal>
+                                      
 @endsection
 
 
