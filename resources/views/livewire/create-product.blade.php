@@ -106,7 +106,7 @@
             @if($attributeValues)
                 <div class="mb-6">
                     <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Select Attribute Value</label>
-                    <select class="form-control mr-sm-2"  wire:model.defer="attributeValue">
+                    <select class="form-control mr-sm-2"  wire:model.defer="attributeValue" multiple>
                         <option value=''>Select Attribute Value</option>
                         @foreach ($attributeValues as $attributeValue)
                             <option value="{{$attributeValue->id}}" > {{$attributeValue->value}}</option>
