@@ -7,7 +7,7 @@
                                                         class="product-tile product-tile--default flex flex-direction-col flex-grow-1 text-align--center">
                                                         <!-- dwMarker="product" dwContentID="0a6cce9987006d6da95df75306" -->
                                                         <a class="product-tile__anchor"
-                                                            href="{{ url('/details/'. $product->subCategoryType->subCategory->category->slug .'/'. $product->subCategoryType->subCategory->slug .'/'. $product->subCategoryType->slug) }}"
+                                                            href="{{ url('/details/'. $product->subCategoryType->subCategory->category->slug .'/'. $product->subCategoryType->subCategory->slug .'/'. $product->subCategoryType->slug.'/'. $product->slug) }}"
                                                             data-product-url="productShow" itemprop="url">
                                                             <!--Product Badges -->
     

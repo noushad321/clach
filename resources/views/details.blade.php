@@ -96,34 +96,21 @@ dw.ac._capture({id: "B6067517", type: "detail"});
                     <div class="pdp-main__media">
                         <!-- Breadcrumbs -->
                         <div class="pdp-main__breadcrumbs">
-                            <ol class="breadcrumbs body-type--centi list--reset">
-    <li class="breadcrumbs__item flex--inline flex-align-baseline">
-        <a class="breadcrumbs__anchor link--secondary" href="https://www.cartier.com/en-ae/home" title="Home">Home</a>
 
-        
+                            <ol class="breadcrumbs body-type--centi list--reset">
+                                @foreach(request()->route()->parameters as $breadcrumbs)
+                                @if(count(request()->route()->parameters)-1 > $loop->index )
+    <li class="breadcrumbs__item flex--inline flex-align-baseline">
+        <a class="breadcrumbs__anchor link--secondary" href="https://www.cartier.com/en-ae/home" title="Home">{{$breadcrumbs}}</a>
+
+        @if(count(request()->route()->parameters)-2 > $loop->index )
             <span class="breadcrumbs__separator">/</span>
+          @endif
         
     </li>
-
-    
-        <li class="breadcrumbs__item flex--inline flex-align-baseline">
-            <a class="breadcrumbs__anchor link--secondary" href="/en-ae/jewelry/" title="Jewellery">Jewellery</a>
-            
-                <span class="breadcrumbs__separator">/</span>
-            
-        </li>
-    
-        <li class="breadcrumbs__item flex--inline flex-align-baseline">
-            <a class="breadcrumbs__anchor link--secondary" href="/en-ae/jewellery/bracelets/" title="Bracelets">Bracelets</a>
-            
-                <span class="breadcrumbs__separator">/</span>
-            
-        </li>
-    
-        <li class="breadcrumbs__item flex--inline flex-align-baseline">
-            <a class="breadcrumbs__anchor link--secondary" href="/en-ae/jewellery/bracelets/love/" title="LOVE">LOVE</a>
-            
-        </li>
+  @endif
+    @endforeach
+      
     
 </ol>
                         </div>
@@ -236,7 +223,10 @@ dw.ac._capture({id: "B6067517", type: "detail"});
                             
 
                             <!-- Product Name -->
-                            <h1 class="pdp__name heading-type fluid-type--deka-hecto text-line--normal" data-product-component="name"><span class="font-family--cartier-logos">LOVE</span> bracelet</h1>
+                            <h1 class="pdp__name heading-type fluid-type--deka-hecto text-line--normal" data-product-component="name">
+                                <!-- <span class="font-family--cartier-logos">LOVE</span>  -->
+                                {{str_replace('-',' ', request()->route('productName'))}}
+                            </h1>
 
                             <!-- Short Description -->
                             
@@ -273,7 +263,7 @@ dw.ac._capture({id: "B6067517", type: "detail"});
 
 
 
-<meta itemprop="priceCurrency" content="AED">
+<meta itemprop="priceCurrency" content="$">
 
     <span class="price__sales sales">
     
@@ -284,7 +274,7 @@ dw.ac._capture({id: "B6067517", type: "detail"});
     
 
 	
-    AED 26,400
+    $ 26,400
 
 
 
