@@ -31,7 +31,7 @@ Route::get('/', [HomeController::class,'index']);
 Route::get('/items/{category}/{subCategory}/{subCategoryType}', function () {
     return view('items');
 });
-Route::get('/details/{category}/{subCategory}/{subCategoryType}/{productName}', [DeatilsController::class,'index']);
+Route::get('/details/{category}/{subCategory}/{subCategoryType}/{productSlug}', [DeatilsController::class,'index']);
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

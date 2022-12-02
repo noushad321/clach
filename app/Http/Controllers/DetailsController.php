@@ -21,10 +21,10 @@ class HomeController extends Controller
      * @param SubCategoryType $subCategoryType
      * @return Response
      */
-    public function index()
+    public function index($category,$subCategory,$subCategoryType,$productSlug)
     {
        
-        return view('details');
+       return Product::where('slug',$productSlug)->get();
     }
 
     /**
