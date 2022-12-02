@@ -80,7 +80,7 @@ class CreateProduct extends Component
         $this->productAttributes->save();
 
         foreach ($this->photos as $key => $photo) {
-            $filePath = ('uploads/') . date('Y/m');
+            $filePath = ('public/uploads/') . date('Y/m');
             $file = $photo;
             $extension = $file->getClientOriginalExtension();
             $fileName = uniqid() . '.' . $extension;
