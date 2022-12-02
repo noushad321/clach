@@ -1,3 +1,4 @@
+
 <div class="max-w-4xl mx-auto mt-5">
     <div class="px-4 sm:px-6 lg:px-8">
         <form wire:submit.prevent="save">
@@ -52,54 +53,54 @@
             </div>
 
             @if($categories)
-            <div class="mb-6">
-                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Select Category</label>
-                <select class="form-control mr-sm-2"  wire:model.defer="category">
-                    <option value=''>Select Category</option>
-                    @foreach ($categories as $cat)
-                            <option value="{{$cat->id}}" > {{$cat->name}}</option>
-                    @endforeach
-                </select>
-                @error('product.category') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
-            </div>
+                <div class="mb-6">
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Select Category</label>
+                    <select class="form-control mr-sm-2"  wire:model.defer="category" name="category" wire:change = "$emit('refreshComponent')">
+                        <option value=''>Select Category</option>
+                        @foreach ($categories as $cat)
+                            <option value="{{$cat->id}}" rel="{{$cat->id}}"> {{$cat->name}}</option>
+                        @endforeach
+                    </select>
+                    @error('category') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
+                </div>
             @endif
 
             @if($sub_categories)
-            <div class="mb-6">
-                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Select Sub Category</label>
-                <select class="form-control mr-sm-2"  wire:model.defer="sub_category">
-                    <option value=''>Select Sub Category</option>
-                    @foreach ($sub_categories as $sub_cat)
-                        <option value="{{$sub_cat->id}}" > {{$sub_cat->name}}</option>
-                    @endforeach
-                </select>
-                @error('product.sub_category') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
-            </div>
+                <div class="mb-6">
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Select Sub Category</label>
+                    <select class="form-control mr-sm-2"  wire:model.defer="sub_category" name="sub_category" wire:change = "$emit('refreshComponent')">
+                        <option value=''>Select Sub Category</option>
+                        @foreach ($sub_categories as $sub_cat)
+                            <option value="{{$sub_cat->id}}" rel="{{$sub_cat->id}}" class="{{$sub_cat->fk_category_id}}" > {{$sub_cat->name}}</option>
+                        @endforeach
+                    </select>
+                    @error('sub_category') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
+                </div>
             @endif
 
             @if($sub_category_types)
-            <div class="mb-6">
-                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Select Sub Category Type</label>
-                <select class="form-control mr-sm-2"  wire:model.defer="sub_category_type">
-                    <option value=''>Select Sub Category Type</option>
-                    @foreach ($sub_category_types as $sub_cat_type)
-                        <option value="{{$sub_cat_type->id}}" > {{$sub_cat_type->name}}</option>
-                    @endforeach
-                </select>
-                @error('product.sub_category_type') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
-            </div>
+                <div class="mb-6">
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Select Sub Category Type</label>
+                    <select class="form-control mr-sm-2"  wire:model.defer="sub_category_type" name="sub_cat_type">
+                        <option value=''>Select Sub Category Type</option>
+                        @foreach ($sub_category_types as $sub_cat_type)
+                            <option value="{{$sub_cat_type->id}}"  rel="{{$sub_cat_type->id}}" class="{{$sub_cat_type->fk_sub_category_id}}"> {{$sub_cat_type->name}}</option>
+                        @endforeach
+                    </select>
+                    @error('sub_category_type') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
+                </div>
             @endif
 
             @if($attributes)
                 <div class="mb-6">
                     <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Select Attributes</label>
-                    <select class="form-control mr-sm-2"  wire:model.defer="attribute">
+                    <select class="form-control mr-sm-2"  wire:model.defer="attribute" wire:change = "$emit('refreshComponent')">
                         <option value=''>Select Attributes</option>
                         @foreach ($attributes as $attribute)
                             <option value="{{$attribute->id}}" > {{$attribute->name}}</option>
                         @endforeach
                     </select>
-                    @error('product.attribute') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
+                    @error('attribute') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
                 </div>
             @endif
 
@@ -112,29 +113,29 @@
                             <option value="{{$attributeValue->id}}" > {{$attributeValue->value}}</option>
                         @endforeach
                     </select>
-                    @error('product.attributeValue') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
+                    @error('attributeValue') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
                 </div>
             @endif
 
             @if($tags)
-            <div class="mb-6">
-                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Tags</label>
-                <select class="form-control mr-sm-2"  wire:model.defer="tag">
-                    <option value=''>Select Tags</option>
-                    @foreach ($tags as $tag)
-                        <option value="{{$tag->id}}" > {{$tag->name}}</option>
-                    @endforeach
-                </select>
-                @error('tag') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
-            </div>
+                <div class="mb-6">
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Tags</label>
+                    <select class="form-control mr-sm-2"  wire:model.defer="tag" multiple>
+                        <option value=''>Select Tags</option>
+                        @foreach ($tags as $tag)
+                            <option value="{{$tag->id}}" > {{$tag->name}}</option>
+                        @endforeach
+                    </select>
+                    @error('tag') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
+                </div>
             @endif
 
 
-           <div class="mb-6">
-               <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Photos</label>
-               <input type="file" wire:model.defer="photos" multiple>
-               @error('photos.*') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
-           </div>
+            <div class="mb-6">
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Photos</label>
+                <input type="file" wire:model.defer="photos" multiple>
+                @error('photos.*') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
+            </div>
             <div class="flex items-center justify-start space-x-4">
                 <div class="ml-12 sm:flex-right">
                     <a href="/products"
@@ -151,3 +152,4 @@
 
     </div>
 </div>
+

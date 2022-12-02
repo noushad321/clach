@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\Multimedia;
 use App\Models\Product;
 use App\Models\ProductAttributes;
+use App\Models\ProductTag;
 use App\Models\SubCategory;
 use App\Models\SubCategoryType;
 use App\Models\Tag;
@@ -21,21 +22,22 @@ use Livewire\Component;
 class CreateProduct extends Component
 {
     use WithFileUploads;
+
     public Product $product;
-    public ProductAttributes $productAttributes;
+    protected $listeners = ['refreshComponent' => '$refresh'];
     public $photos;
-    public $categories=[];
+    public $categories = [];
     public $category;
-    public $sub_categories=[];
+    public $sub_categories = [];
     public $sub_category;
-    public $sub_category_types=[];
+    public $sub_category_types = [];
     public $sub_category_type;
-    public $tags=[];
-    public $tag;
-    public $attributes=[];
+    public $tags = [];
+    public $tag = [];
+    public $attributes = [];
     public $attribute;
-    public $attributeValues=[];
-    public $attributeValue;
+    public $attributeValues = [];
+    public $attributeValue = [];
 
     protected $rules = [
         'product.name' => 'required|string',
@@ -47,19 +49,17 @@ class CreateProduct extends Component
         'category' => 'required',
         'sub_category' => 'required',
         'sub_category_type' => 'required',
-        'tag' => 'sometimes|numeric',
+        'tag' => 'sometimes|array',
         'attribute' => 'sometimes | numeric',
-        'attributeValue' => 'sometimes | numeric',
+        'attributeValue' => 'sometimes | array',
         'photos.*' => 'image|max:1024',
     ];
 
     public function mount()
     {
         $this->product = new Product();
-        $this->productAttributes = new ProductAttributes();
         $this->categories = Category::all();
-        $this->sub_categories = SubCategory::all();
-        $this->sub_category_types = SubCategoryType::all();
+
         $this->tags = Tag::all();
         $this->attributes = Attributes::all();
         $this->attributeValues = AttributeValues::all();
@@ -74,31 +74,44 @@ class CreateProduct extends Component
         $this->product->fk_sub_category_type_id = $this->sub_category_type;
         $this->product->save();
 
-        $this->productAttributes->fk_product_id = $this->product->id;
-        $this->productAttributes->fk_attribute_values_id = $this->attributeValue;
-        $this->productAttributes->save();
+        foreach ($this->attributeValue as $key => $value) {
+            $productAttributes = new ProductAttributes();
+            $productAttributes->fk_product_id = $this->product->id;
+            $productAttributes->fk_attribute_values_id = $value;
+            $productAttributes->save();
+        }
 
-       foreach ($this->photos as $key => $photo) {
-           $filePath = ( 'uploads/') . date('Y/m');
-           $file = $photo;
-           $extension = $file->getClientOriginalExtension();
-           $fileName = uniqid() . '.' . $extension;
-           $uploadPath = $file->storeAs($filePath, $fileName);
-           $originalName = $file->getClientOriginalName();
-           $media = new Multimedia();
-           $media->name = $originalName;
-           $media->source_path= $uploadPath;
-           $media->order = $key++;
-           $this->product->multimedia()->save($media);
+        foreach ($this->tag as $key => $value) {
+            $productTag = new ProductTag();
+            $productTag->fk_product_id = $this->product->id;
+            $productTag->fk_tag_id = $value;
+            $productTag->save();
+        }
 
-       }
+        foreach ($this->photos as $key => $photo) {
+            $filePath = ('public/uploads/') . date('Y/m');
+            $file = $photo;
+            $extension = $file->getClientOriginalExtension();
+            $fileName = uniqid() . '.' . $extension;
+            $uploadPath = $file->storeAs($filePath, $fileName);
+            $originalName = $file->getClientOriginalName();
+            $media = new Multimedia();
+            $media->name = $originalName;
+            $media->source_path = $uploadPath;
+            $media->order = $key++;
+            $this->product->multimedia()->save($media);
+
+        }
 
         return redirect()->to('/products');
     }
 
     public function render(): Factory|View|Application
     {
+        $this->sub_categories = $this->category ? (new Category)->find($this->category)->subCategories : SubCategory::all();
+        $this->sub_category_types = $this->sub_category ? (new SubCategory)->find($this->sub_category)->subCategoryTypes : SubCategoryType::all();
+        $this->attributeValues = $this->attribute ? (new Attributes)->find($this->attribute)->values : AttributeValues::all();
         return view('livewire.create-product');
 
     }
-    }
+}

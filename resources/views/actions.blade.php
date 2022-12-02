@@ -18,7 +18,7 @@
                 </a>
             </div>
             <div class="ml-12 sm:flex-right">
-                <a href="/product/add"
+                <a href="/sub-category-type/add"
                    class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto">
                     Add Sub Category Types
                 </a>
