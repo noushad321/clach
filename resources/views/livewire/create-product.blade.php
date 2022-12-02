@@ -1,33 +1,4 @@
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js"
-            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script type="application/javascript">
-        $(document).ready(function(){
-            const $cat = $('select[name=category]'),
-                $sub_cat = $('select[name=sub_category]'),
-                $sub_cat_type = $('select[name=sub_cat_type]');
-
-            $cat.change(function(){
-                const $this = $(this).find(':selected'),
-                    rel = $this.attr('rel');
-                $sub_cat.find("option").hide();
-                const $set = $sub_cat.find('option.' + rel);
-                $set.show().first().prop('selected', true);
-
-            });
-
-            $sub_cat.change(function(){
-                const $this = $(this).find(':selected'),
-                    rel = $this.attr('rel');
-                $sub_cat_type.find("option").hide();
-                const $set = $sub_cat_type.find('option.' + rel);
-                $set.show().first().prop('selected', true);
-
-            });
-        });
-
-    </script>
-
 <div class="max-w-4xl mx-auto mt-5">
     <div class="px-4 sm:px-6 lg:px-8">
         <form wire:submit.prevent="save">
@@ -84,7 +55,7 @@
             @if($categories)
                 <div class="mb-6">
                     <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Select Category</label>
-                    <select class="form-control mr-sm-2"  wire:model.defer="category" name="category">
+                    <select class="form-control mr-sm-2"  wire:model.defer="category" name="category" wire:change = "$emit('refreshComponent')">
                         <option value=''>Select Category</option>
                         @foreach ($categories as $cat)
                             <option value="{{$cat->id}}" rel="{{$cat->id}}"> {{$cat->name}}</option>
@@ -97,7 +68,7 @@
             @if($sub_categories)
                 <div class="mb-6">
                     <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Select Sub Category</label>
-                    <select class="form-control mr-sm-2"  wire:model.defer="sub_category" name="sub_category">
+                    <select class="form-control mr-sm-2"  wire:model.defer="sub_category" name="sub_category" wire:change = "$emit('refreshComponent')">
                         <option value=''>Select Sub Category</option>
                         @foreach ($sub_categories as $sub_cat)
                             <option value="{{$sub_cat->id}}" rel="{{$sub_cat->id}}" class="{{$sub_cat->fk_category_id}}" > {{$sub_cat->name}}</option>
