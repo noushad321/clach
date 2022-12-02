@@ -5,12 +5,14 @@ use App\Http\Controllers\ProductController;
 use App\Http\Livewire\AddCategories;
 use App\Http\Livewire\AddSliderImages;
 use App\Http\Livewire\AddSubCategories;
+use App\Http\Livewire\AddSubCategoryTypes;
 use App\Http\Livewire\CreateProduct;
 use App\Http\Livewire\EditProduct;
 use App\Http\Livewire\ShowCategories;
 use App\Http\Livewire\ShowProducts;
 use App\Http\Livewire\ShowSliderImages;
 use App\Http\Livewire\ShowSubCategories;
+use App\Http\Livewire\ShowSubCategoryTypes;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
@@ -47,6 +49,9 @@ Route::middleware([
 
     Route::get('/sub-category/add', AddSubCategories::class);
     Route::get('/sub-categories', ShowSubCategories::class);
+
+    Route::get('/sub-category-type/add', AddSubCategoryTypes::class);
+    Route::get('/sub-categories-types', ShowSubCategoryTypes::class);
 
 
     Route::get('products', ShowProducts::class);
