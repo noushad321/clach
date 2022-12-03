@@ -57,7 +57,7 @@ Route::middleware([
     Route::get('products', ShowProducts::class);
     Route::get('/product/add', CreateProduct::class);
     Route::get('/product/edit/{product}', EditProduct::class);
-    Route::get('/actions', function () {
+    Route::get('/admin', function () {
         return view('actions', ['products' => Product::all()]);
     });
 
