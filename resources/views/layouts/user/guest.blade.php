@@ -599,27 +599,7 @@
 
                         <div class="col-3 col-md-4 flex-direction-row flex-justify-end flex-align-center">
 
-                            <div class="header__account header__utility-item--reverse-spacing flex display--small-up">
 
-
-
-
-                                <a class="header__utility-item header__utility-anchor link flex" href="https://www.cartier.com/en-ae/wishlist" title="Wish List" aria-label="Wish List">
-                                    <svg aria-hidden="true" focusable="false" class="icon fluid-type--deka-base">
-                                        <use xlink:href="#icon--heart" />
-                                    </svg>
-                                    <span class="sr-only">Wish List</span>
-                                </a>
-
-                                <a class="header__utility-item header__utility-anchor link flex" href="https://www.cartier.com/en-ae/login" title="My Cartier" aria-label="My Cartier">
-                                    <svg aria-hidden="true" focusable="false" class="icon fluid-type--deka-base">
-                                        <use xlink:href="#nav--profile" />
-                                    </svg>
-                                    <span class="sr-only">My Cartier</span>
-                                </a>
-
-
-                            </div>
 
 
 
@@ -1018,6 +998,23 @@
 
                                 <ul class="footer-links__list list--reset footer-links__list--stacked">
 
+                                    <li class="footer-links__item">
+
+
+
+
+
+
+
+
+
+
+                                        <a href="/en-ae/contact-customer-care" class="component-actions__cta  body-type--centi link link--secondary " aria-label="Go to Contact Us page" style="">
+                                            About Us
+                                        </a>
+
+                                    </li>
+
 
                                     <li class="footer-links__item">
 
@@ -1035,6 +1032,7 @@
                                         </a>
 
                                     </li>
+
 
 
 
@@ -1069,29 +1067,14 @@
 
 
                                         <a href="/en-ae/faq-product.html" class="component-actions__cta  body-type--centi link link--secondary " aria-label="Read Frequently Asked Questions" style="">
-                                            FAQ
+                                            Refund Policy
                                         </a>
 
                                     </li>
 
 
 
-                                    <li class="footer-links__item">
 
-
-
-
-
-
-
-
-
-
-                                        <a href="/en-ae/check-order" class="component-actions__cta  body-type--centi link link--secondary " aria-label="Check Order" style="">
-                                            Check Order
-                                        </a>
-
-                                    </li>
 
 
                                 </ul>
@@ -1205,7 +1188,7 @@
 
 
                                         <a href="/en-ae/legal-%26-privacy/credits.html" class="component-actions__cta  body-type--centi link link--secondary " aria-label="Credits" style="">
-                                            Credits
+                                            SHIPPING POLICY
                                         </a>
 
                                     </li>

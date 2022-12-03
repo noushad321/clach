@@ -252,7 +252,17 @@
                             <div class="pdp__details-short-description-wrapper">
 
                                 <div class="pdp-main__short-description cms-generic-copy text-line--medium">
-                                    Yellow gold
+                                    @foreach($product->attributeValues as $value)
+                                    @if($value->attribute->name=='metal')
+                                    {{$value->value}}
+                                    @endif
+                                    @endforeach
+
+                                    @foreach($product->tags as $tag)
+
+                                    {{$tag->name}}
+
+                                    @endforeach
                                 </div>
 
 
@@ -300,7 +310,8 @@
                                             </span>
 
 
-                                        </span></div>
+                                        </span>
+                                    </div>
 
 
 
@@ -383,7 +394,16 @@
                                             <span class="product-attribute__label-pre">Select Size</span>
                                         </label>
                                     </div>
+                                    @php
+                                    $sizeExist = false;
 
+                                    foreach($product->attributeValues as $value){
+                                    if($value->attribute->name=='size'){
+                                    $sizeExist = true;
+                                    }
+                                    }
+                                    @endphp
+                                    @if( $sizeExist)
                                     <div class="product-attribute__contents ">
 
                                         <!-- Attribute Values Drop Down Menu -->
@@ -392,47 +412,24 @@
                                             <option value="https://www.cartier.com/on/demandware.store/Sites-CartierUAE-Site/en_AE/Product-Variation?dwvar_B6067517_size=&amp;pid=B6067517&amp;quantity=1">
                                                 Select Size
                                             </option>
-
+                                            @foreach($product->attributeValues as $value)
+                                            @if($value->attribute->name=='size')
                                             <option value="https://www.cartier.com/on/demandware.store/Sites-CartierUAE-Site/en_AE/Product-Variation?dwvar_B6067517_size=&amp;pid=B6067517&amp;quantity=1" data-attr-value="15">
-                                                15
-
+                                                {{$value->value}}
                                             </option>
+                                            @endif
+                                            @endforeach
 
-                                            <option value="https://www.cartier.com/on/demandware.store/Sites-CartierUAE-Site/en_AE/Product-Variation?dwvar_B6067517_size=16&amp;pid=B6067517&amp;quantity=1" data-attr-value="16">
-                                                16
 
-                                            </option>
 
-                                            <option value="https://www.cartier.com/on/demandware.store/Sites-CartierUAE-Site/en_AE/Product-Variation?dwvar_B6067517_size=17&amp;pid=B6067517&amp;quantity=1" data-attr-value="17">
-                                                17
 
-                                            </option>
-
-                                            <option value="https://www.cartier.com/on/demandware.store/Sites-CartierUAE-Site/en_AE/Product-Variation?dwvar_B6067517_size=18&amp;pid=B6067517&amp;quantity=1" data-attr-value="18">
-                                                18
-
-                                            </option>
-
-                                            <option value="https://www.cartier.com/on/demandware.store/Sites-CartierUAE-Site/en_AE/Product-Variation?dwvar_B6067517_size=19&amp;pid=B6067517&amp;quantity=1" data-attr-value="19">
-                                                19
-
-                                            </option>
-
-                                            <option value="https://www.cartier.com/on/demandware.store/Sites-CartierUAE-Site/en_AE/Product-Variation?dwvar_B6067517_size=20&amp;pid=B6067517&amp;quantity=1" data-attr-value="20">
-                                                20
-
-                                            </option>
-
-                                            <option value="https://www.cartier.com/on/demandware.store/Sites-CartierUAE-Site/en_AE/Product-Variation?dwvar_B6067517_size=21&amp;pid=B6067517&amp;quantity=1" data-attr-value="21">
-                                                21
-
-                                            </option>
 
                                         </select>
 
 
 
                                     </div>
+                                    @endif
 
 
                                 </div>
