@@ -23,7 +23,9 @@ class ItemsController extends Controller
      */
     public function index($category, $subCategory = null, $subCategoryType = null)
     {
-        $products =  Product::all();
+        $category = (new Category)->where('name', $category)->first();
+        $products = $category->products;
+       // $products =  Product::all();
         // if (isset($category)) {
         //     $product =  Product::where('multimedia')->where('slug', $productSlug)->first();
         // } else if (isset($subCategory)) {
