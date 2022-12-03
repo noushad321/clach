@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\User;
 use Closure;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -18,9 +19,14 @@ class CheckIsAdmin
      */
     public function handle(Request $request, Closure $next): Response|RedirectResponse
     {
-        if ($request->user()->email == 'admin@gmail.com') {
-            return redirect('/actions');
+        $user = (new User)->where('email', $request->user()->email)->first();
+
+        if($user){
+            if ($user->name == 'admin') {
+                return redirect('/admin');
+            }
         }
+
         return $next($request);
     }
 }

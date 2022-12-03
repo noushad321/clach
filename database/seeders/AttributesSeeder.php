@@ -18,6 +18,9 @@ class AttributesSeeder extends Seeder
         Attributes::firstOrCreate([
             'name' => 'metal',
         ]);
+        Attributes::firstOrCreate([
+            'name' => 'size',
+        ]);
 
         AttributeValues::firstOrCreate([
             'fk_attribute_id' => 1,
