@@ -25,13 +25,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        
+
         view()->composer('*', function ($view) {
 
-            $menus = Category::with('subCategories.subCategoryTypes')->get();
+            $menus = Category::with('subCategories.subCategoryTypes.multimedia')->get();
 
             return $view->with('menus', $menus);
         });
-
     }
 }

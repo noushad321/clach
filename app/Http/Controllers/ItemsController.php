@@ -10,7 +10,7 @@ use App\Models\SubCategoryType;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
-class ProductsController extends Controller
+class ItemsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,10 +21,21 @@ class ProductsController extends Controller
      * @param SubCategoryType $subCategoryType
      * @return Response
      */
-    public function index(Request $request, Category $category, SubCategory $subCategory, SubCategoryType $subCategoryType)
+    public function index($category, $subCategory = null, $subCategoryType = null)
     {
-        $products = (new Product)->where('sub_category_type_id', $subCategoryType->id)->get();
-        $viewData = ProductsResource::collection($products);
+        $products =  Product::all();
+        // if (isset($category)) {
+        //     $product =  Product::where('multimedia')->where('slug', $productSlug)->first();
+        // } else if (isset($subCategory)) {
+        //     $product =  Product::where('multimedia')->where('slug', $productSlug)->first();
+        // } else if (isset($subCategoryType)) {
+        //     $product =  Product::where('multimedia')->where('slug', $productSlug)->first();
+        // }
+        // $product =  Product::where('multimedia')->where('slug', $productSlug)->first();
+        // $similarProducts =  Product::whereHas('subCategoryType', function ($q) use ($subCategoryType) {
+        //     $q->where('slug', $subCategoryType);
+        // })->where('slug', $productSlug)->get();
+        return view('items', compact('products'));
     }
 
     /**

@@ -873,11 +873,14 @@ canvas {
 .pdp__details-short-description-wrapper{
     margin-top: 0.875rem;
 }
+.pdp-main__secondary-action:not(:last-child), .pdp-main__section--secondary-actions{
+    margin-bottom: 1.125rem
+}
 [dir=ltr] .pdp-main__price-value{
     margin-right: 1.125rem;
 }
 .fixit-element.fixit--active {
-    /* position: fixed; */
+    position: initial;
     top: 0
 }
 

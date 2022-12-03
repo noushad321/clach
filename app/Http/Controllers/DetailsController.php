@@ -10,7 +10,7 @@ use App\Models\SubCategoryType;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
-class HomeController extends Controller
+class DetailsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,10 +21,15 @@ class HomeController extends Controller
      * @param SubCategoryType $subCategoryType
      * @return Response
      */
-    public function index($category,$subCategory,$subCategoryType,$productSlug)
+    public function index($category, $subCategory, $subCategoryType, $productSlug)
     {
-       
-       return Product::where('slug',$productSlug)->get();
+
+        $product =  Product::with('multimedia', 'attributeValues')->where('slug', $productSlug)->first();
+
+        $similarProducts =  Product::whereHas('subCategoryType', function ($q) use ($subCategoryType) {
+            $q->where('slug', $subCategoryType);
+        })->where('slug', $productSlug)->get();
+        return view('details', compact('product', 'similarProducts'));
     }
 
     /**

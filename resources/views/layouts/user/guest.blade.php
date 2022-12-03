@@ -739,11 +739,12 @@
                                                                         <div class="header-flyout__tab-carousel" style="display: flex;" data-slick='{"type": "headerFlyoutCarousel"}'>
 
                                                                             @foreach($subcategory->subCategoryTypes as $type)
+
                                                                             <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                                                                                <a href="/en-ae/high-jewellery/latest-collections/beautes-du-monde/" id="flyout-high-jewellery_latest-collections_beautes_du_monde" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" aria-label="View High Jewellery: Beaut&eacute;s du monde">
+                                                                                <a href="#" id="flyout-high-jewellery_latest-collections_beautes_du_monde" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" aria-label="View High Jewellery: Beaut&eacute;s du monde">
                                                                                     <picture>
                                                                                         <source data-srcset="{{asset('images/JEWELRY_MEGAMENU_COLLECTIONS_LOVE.jpg')}}" class="picture--source-element">
-                                                                                        <img data-image-component="ondemandload" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" />
+                                                                                        <img data-image-component="ondemandload" src="" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" />
                                                                                     </picture>
                                                                                     <span class="link--secondary text-line--large">
                                                                                         {{$type->name}}
@@ -1100,7 +1101,7 @@
 
                         </div>
 
-                       
+
 
                         <div class="footer-links-col col-12 col-md-6 col-lg-4">
 
@@ -1609,7 +1610,7 @@
             })
         });
     </script>
- @livewireScripts
+    @livewireScripts
     @stack('custom-scripts')
 
 

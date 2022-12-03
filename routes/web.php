@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\DetailsController;
+use App\Http\Controllers\ItemsController;
 use App\Http\Livewire\AddCategories;
 use App\Http\Livewire\AddSliderImages;
 use App\Http\Livewire\AddSubCategories;
@@ -27,13 +29,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class,'index']);
+Route::get('/', [HomeController::class, 'index']);
 
 
-Route::get('/items/{category}/{subCategory}/{subCategoryType}', function () {
-    return view('items');
-});
-Route::get('/details/{category}/{subCategory}/{subCategoryType}/{productSlug}', [DeatilsController::class,'index']);
+Route::get('/items/{category}/{subCategory?}/{subCategoryType?}', [ItemsController::class, 'index']);
+Route::get('/details/{category}/{subCategory}/{subCategoryType}/{productSlug}', [DetailsController::class, 'index']);
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
