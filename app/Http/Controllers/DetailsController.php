@@ -24,8 +24,7 @@ class DetailsController extends Controller
     public function index($category, $subCategory, $subCategoryType, $productSlug)
     {
 
-        $product =  Product::with('multimedia', 'attributeValues')->where('slug', $productSlug)->first();
-
+        $product =  Product::with('multimedia', 'attributeValues.attribute', 'tags')->where('slug', $productSlug)->first();
         $similarProducts =  Product::whereHas('subCategoryType', function ($q) use ($subCategoryType) {
             $q->where('slug', $subCategoryType);
         })->where('slug', $productSlug)->get();

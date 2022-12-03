@@ -59,7 +59,6 @@ class CreateProduct extends Component
     {
         $this->product = new Product();
         $this->categories = Category::all();
-
         $this->tags = Tag::all();
         $this->attributes = Attributes::all();
         $this->attributeValues = AttributeValues::all();
@@ -71,6 +70,8 @@ class CreateProduct extends Component
         $this->validate();
         $this->product->slug = Str::slug($this->product->name, '-');
         //TODO: must be substituted for the actual category type.
+        $this->product->fk_category_id = $this->category;
+        $this->product->fk_sub_category_id = $this->sub_category;
         $this->product->fk_sub_category_type_id = $this->sub_category_type;
         $this->product->save();
 

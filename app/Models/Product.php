@@ -17,16 +17,26 @@ class Product extends Model
 
     public function attributeValues(): BelongsToMany
     {
-        return $this->belongsToMany(AttributeValues::class, 'product_attributes', 'fk_attribute_value_id', 'fk_product_id');
+        return $this->belongsToMany(AttributeValues::class, 'product_attributes', 'fk_product_id', 'fk_attribute_values_id');
     }
 
-    public function tags(): HasMany
+    public function tags(): BelongsToMany
     {
-        return $this->hasMany(Tag::class, 'fk_product_id', 'id');
+        return $this->belongsToMany(Tag::class, 'product_tags', 'fk_product_id', 'fk_tag_id');
     }
 
     public function subCategoryType(): BelongsTo
     {
         return $this->belongsTo(SubCategoryType::class, 'fk_sub_category_type_id', 'id');
+    }
+
+    public function subCategory(): BelongsTo
+    {
+        return $this->belongsTo(SubCategory::class, 'fk_sub_category_id', 'id');
+    }
+
+    public function category(): BelongsTo
+    {
+        return $this->belongsTo(Category::class, 'fk_category_id', 'id');
     }
 }
