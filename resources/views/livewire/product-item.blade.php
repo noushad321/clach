@@ -1,7 +1,7 @@
-<div class="module-carousel__item col-6 col-md-3 col-lg-3">
+<div class="product-grid__item col-6 col-md-3">
 
     <div class="product flex flex-grow-1 flex-direction-col">
-        <div class="product-tile product-tile--default flex flex-direction-col flex-grow-1 text-align--center">
+        <div class="product-tile product-tile--default flex flex-direction-col text-align--center">
             <!-- dwMarker="product" dwContentID="0a6cce9987006d6da95df75306" -->
             <a class="product-tile__anchor" href="{{ url('/details/'. $product->subCategoryType->subCategory->category->slug .'/'. $product->subCategoryType->subCategory->slug .'/'. $product->subCategoryType->slug.'/'. $product->slug) }}" data-product-url="productShow" itemprop="url">
                 <!--Product Badges -->

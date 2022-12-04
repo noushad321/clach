@@ -56,63 +56,12 @@
                     <div class="descriptive-card__media ">
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                         <picture>
-
-
-
-
 
                             <source data-srcset="{{asset('images/contact-us-hero.jpeg')}}" class="picture--source-element" srcset="{{asset('images/contact-us-hero.jpeg')}}">
 
-
-
                             <img data-image-component="lazyload" src="{{asset('images/contact-us-hero.jpeg')}}" class="component-image descriptive-card__img object-fit--cover blur-up lazyloaded" title="Contact Us" alt="" style="--focal-point-x: 50%; --focal-point-y:50%; ; ">
                         </picture>
-
-
-
-
-
 
                     </div>
                 </div>
