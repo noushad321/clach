@@ -23,9 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $products = Product::with('attributeValues.attribute', 'tags', 'subCategoryType.subCategory.category')->inRandomOrder()->limit(5)->get();
-        $sizes = ['15cm', '16cm', '17cm'];
-        return view('home', compact('products', 'sizes'));
+        $products = Product::with('attributeValues.attribute', 'tags', 'subCategoryType.subCategory.category', 'multimedia')->inRandomOrder()->limit(5)->get();
+        return view('home', compact('products'));
     }
 
     /**

@@ -5,143 +5,7 @@
 @endpush
 <main id="main" class="main" role="main">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div class="search-results__main " data-search-component="search-main">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         <article class="
@@ -160,52 +24,7 @@
                     <div class="descriptive-card__aspect-ratio descriptive-card__aspect-ratio--wide">
                         <div class="descriptive-card__media component-overlay component-overlay--center">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                             <picture>
-
-
-
-
 
                                 <source data-srcset="{{asset('images/header.jpg')}}" class="picture--source-element" srcset="{{asset('images/header.jpg')}}">
 
@@ -213,11 +32,6 @@
 
                                 <img data-image-component="lazyload" src="{{asset('images/header.jpg')}}" class="component-image descriptive-card__img object-fit--cover blur-up lazyloaded" title="" alt="" style="--focal-point-x: 50%; --focal-point-y:50%; ; ">
                             </picture>
-
-
-
-
-
 
                         </div>
                     </div>
@@ -245,15 +59,6 @@
                             <div class="descriptive-card__description font-family--serif text-line--medium">
                                 Conceived in '70s New York, the Juste un Clou collection reflects the bold spirit of the era. Its nail-inspired silhouette breaks through conventions, asserting the essence of its wearer. Original, independent, fearless, and free.
                             </div>
-
-
-
-
-
-
-
-
-
 
 
 
