@@ -9,7 +9,6 @@ class HeaderIcon extends Component
 
     public function toggleCartDrawer()
     {
-
         $this->emit('toggleCartBar');
     }
     public function render()

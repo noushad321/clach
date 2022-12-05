@@ -1,5 +1,7 @@
 @extends('layouts.user.guest')
 @section('content')
+
+
 <main id="main" class="main" role="main">
     <h1 class="sr-only">Cartier&reg; Official Website - Jewellery and Watchmaker since 1847</h1>
     <div class="experience-region experience-main">

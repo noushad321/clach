@@ -621,7 +621,7 @@
 
 
 
-                            <livewire:header-icon />
+                            @livewire('header-icon')
 
 
 
@@ -879,7 +879,7 @@
         </header>
 
 
-        <livewire:cart-drawer />
+        @livewire('cart-drawer')
 
 
 

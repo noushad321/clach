@@ -6,11 +6,17 @@ use Livewire\Component;
 
 class CartDrawer extends Component
 {
-    protected $listeners = ['toggleCartBar'];
+    protected $listeners = ['toggleCartBar' => 'openCartBar'];
     public $isToggle = false;
-    public function toggleCartBar()
+    public function openCartBar()
     {
+
         $this->isToggle = true;
+    }
+
+    public function closeCartBar()
+    {
+        $this->isToggle = false;
     }
     public function render()
     {
