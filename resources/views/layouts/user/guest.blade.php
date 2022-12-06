@@ -652,7 +652,7 @@
 
 
                                             <li class="header-flyout__item level-1" role="menuitem">
-                                                <button type="button" id="flyout-High Jewellery" class="header-flyout__anchor level-1 set--w-100 text-transform--uppercase flex-justify-between flex-align-center set--inner-focus" data-nav-component="anchor-1" aria-label="High Jewellery" style="">
+                                                <button type="button" id="flyout-High Jewellery" class="header-flyout__anchor level-1 set--w-100 text-transform--uppercase flex-justify-between flex-align-center set--inner-focus {{$menu->name=='La Maison' ? 'lamaison' : ''}}" data-nav-component="anchor-1" aria-label="High Jewellery" style="">
                                                     {{$menu->name}}
                                                     <svg aria-hidden="true" focusable="false" class="header-flyout__anchor-arrow icon body-type--deci display--small-only">
                                                         <use xlink:href="#icon--angle-right" />
@@ -720,10 +720,12 @@
 
                                                                             <div class="header-flyout__item header-flyout__item--thumbnail level-3" style="width:160px">
                                                                                 <a href="{{ url('/items/collection'  .'/'. $subcategory->slug .'/'. $type->slug) }}" id="flyout-high-jewellery_latest-collections_beautes_du_monde" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" aria-label="View High Jewellery: Beaut&eacute;s du monde">
+
                                                                                     <picture>
                                                                                         <source data-srcset="data:image/jpeg;base64,{{ base64_encode(Storage::get($type->multimedia()->first()->getRawOriginal('source_path'))) }}" class="picture--source-element">
                                                                                         <img data-image-component="ondemandload" src="" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" />
                                                                                     </picture>
+
                                                                                     <span class="link--secondary text-line--large">
                                                                                         {{$type->name}}
 
@@ -1567,6 +1569,11 @@
                 $(".header__utility-anchor").removeClass("toggle--active");
                 $(".site-search__form").removeClass("toggle--active")
 
+            })
+
+            $(".lamaison").click(function() {
+                window.location.href = "{{URL::to('/lamaison')}}"
+                // $(".site-search__form").addClass('toggle--active');
             })
         });
     </script>

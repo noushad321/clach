@@ -1,20 +1,9 @@
 <div class="product-grid__item col-6 col-md-3">
-
     <div class="product flex flex-grow-1 flex-direction-col">
         <div class="product-tile product-tile--default flex flex-direction-col text-align--center">
             <!-- dwMarker="product" dwContentID="0a6cce9987006d6da95df75306" -->
             <a class="product-tile__anchor" href="{{ url('/details/'. $product->subCategoryType->subCategory->category->slug .'/'. $product->subCategoryType->subCategory->slug .'/'. $product->subCategoryType->slug.'/'. $product->slug) }}" data-product-url="productShow" itemprop="url">
                 <!--Product Badges -->
-
-
-
-
-
-
-
-
-
-
 
                 <div class="product-tile__media product-tile__media--default aspect-ratio--square ">
                     <div class="product-tile__media-container component-overlay component-overlay--center">
@@ -105,7 +94,7 @@
 
 
                     <div class="product-tile__quickadd" data-quickadd>
-                        <button type="button" class="product-tile__quickadd-trigger button button--primary button--small set--w-100" data-url="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Product-ShowQuickAdd?pid=CRB6067217" data-product-url="productShowQuickAdd" title="Quick Add for Panth&egrave;re de Cartier bracelet" data-quickadd-trigger>
+                        <button type="button" wire:click="addToCart({{$product}})" class="product-tile__quickadd-trigger button button--primary button--small set--w-100" data-url="" data-product-url="productShowQuickAdd" title="Quick Add for Panth&egrave;re de Cartier bracelet" data-quickadd-trigger>
                             <span class="display--small-up">
                                 Add to Shopping Bag
                             </span>

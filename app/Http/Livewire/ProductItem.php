@@ -15,6 +15,11 @@ class ProductItem extends Component
         //$this->showModal = true;
         $this->emit('showModal',$this->showModal);
     }
+
+    public function addToCart($product)
+    {
+        dd($product);
+    }
     public function mount($product,$keys)
     {
         $this->product = $product;
