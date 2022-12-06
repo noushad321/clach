@@ -9,6 +9,7 @@ use App\Http\Livewire\AddCategories;
 use App\Http\Livewire\AddSliderImages;
 use App\Http\Livewire\AddSubCategories;
 use App\Http\Livewire\AddSubCategoryTypes;
+use App\Http\Livewire\AddTags;
 use App\Http\Livewire\CreateProduct;
 use App\Http\Livewire\EditProduct;
 use App\Http\Livewire\ShowAttributes;
@@ -17,6 +18,7 @@ use App\Http\Livewire\ShowProducts;
 use App\Http\Livewire\ShowSliderImages;
 use App\Http\Livewire\ShowSubCategories;
 use App\Http\Livewire\ShowSubCategoryTypes;
+use App\Http\Livewire\ShowTags;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
@@ -32,6 +34,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('checkout', function () {
+    return view('checkout');
+});
 
 Route::get('/contactus', function () {
     return view('contactus');
@@ -65,12 +70,16 @@ Route::middleware([
     Route::get('/attributes/add', AddAttributes::class);
     Route::get('/attributes', ShowAttributes::class);
 
+    Route::get('/tags/add', AddTags::class);
+    Route::get('/tags', ShowTags::class);
+
     Route::get('products', ShowProducts::class);
     Route::get('/product/add', CreateProduct::class);
     Route::get('/product/edit/{product}', EditProduct::class);
     Route::get('/admin', function () {
         return view('actions', ['products' => Product::all()]);
     });
+
 
     Route::get('slider-images', ShowSliderImages::class);
     Route::get('/slider-images/add', AddSliderImages::class);

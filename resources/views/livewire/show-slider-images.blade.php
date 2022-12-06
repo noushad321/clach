@@ -5,7 +5,7 @@
 
         <div class=" mt-6 p-6 bg-white shadow-md sm:rounded-lg">
             <div class="ml-12 mt-12 sm:flex-right">
-                <a href="/actions"
+                <a href="/admin"
                    class="underline mt-12 text-blue-700">
                     << Go Back To Navigation
                 </a>
