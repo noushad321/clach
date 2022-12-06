@@ -5,160 +5,19 @@
 @endpush
 <main id="main" class="main" role="main">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div class="search-results__main " data-search-component="search-main">
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <article class="
-    bg--grey-1 flex-grow-1
-    descriptive-card
-    descriptive-card--size-regular
-    descriptive-card--ratio-wide
-    descriptive-card--style-slim" style="" data-content-component="descriptive-card" data-motion="{&quot;properties&quot;: &quot;opacity from-v-direction&quot;, &quot;children&quot;: &quot;.descriptive-card__content > *&quot;}">
-            <!-- dwMarker="content" dwContentID="2e7d255606c7684536c0792ec4" -->
+        <article class="bg--grey-1 flex-grow-1 descriptive-card descriptive-card--size-regular descriptive-card--ratio-natural descriptive-card--style-default set--motion-complete" style="" data-content-component="descriptive-card">
+            <!-- dwMarker="content" dwContentID="262c06849652c8feb53ba11b6c" -->
 
 
 
             <div class="row flex-no-gutters">
 
                 <div class="col-12 col-md-6 col-lg-6 ">
-                    <div class="descriptive-card__aspect-ratio descriptive-card__aspect-ratio--wide">
-                        <div class="descriptive-card__media component-overlay component-overlay--center">
+                    <div class="descriptive-card__aspect-ratio descriptive-card__aspect-ratio--natural">
+                        <div class="descriptive-card__media ">
 
 
 
@@ -207,11 +66,11 @@
 
 
 
-                                <source data-srcset="{{asset('images/header.jpg')}}" class="picture--source-element" srcset="{{asset('images/header.jpg')}}">
+                                <source data-srcset="{{asset('images/banner.jpeg')}}" class="picture--source-element" srcset="{{asset('images/banner.jpeg')}}">
 
 
 
-                                <img data-image-component="lazyload" src="{{asset('images/header.jpg')}}" class="component-image descriptive-card__img object-fit--cover blur-up lazyloaded" title="" alt="" style="--focal-point-x: 50%; --focal-point-y:50%; ; ">
+                                <img data-image-component="lazyload" src="{{asset('images/banner.jpeg')}}" class="component-image descriptive-card__img object-fit--cover blur-up lazyloaded" title="Contact Us" alt="" style="--focal-point-x: 50%; --focal-point-y:50%; ; ">
                             </picture>
 
 
@@ -234,16 +93,16 @@
                 
                 
                 ">
-                        <div class="descriptive-card__content component-custom-width" style="--component-var-width:26.5rem; ">
+                        <div class="descriptive-card__content component-custom-width" style="--component-var-width:26.25rem; ">
 
-                            <h1 class="descriptive-card__title heading-type component-copy__title--regular">
-                                Juste un Clou
+                            <h1 class="descriptive-card__title heading-type component-copy__title--regular set--motion-complete">
+                                Rings
                             </h1>
 
 
 
-                            <div class="descriptive-card__description font-family--serif text-line--medium">
-                                Conceived in '70s New York, the Juste un Clou collection reflects the bold spirit of the era. Its nail-inspired silhouette breaks through conventions, asserting the essence of its wearer. Original, independent, fearless, and free.
+                            <div class="descriptive-card__description font-family--serif text-line--medium set--motion-complete">
+                                A love child of '70s New York, the LOVE collection is a symbol of free-spirited love. Its binding closure and screw motif give it true permanence, while diverse interpretations allow for a unique expression of feelings. Lock in your love, forever.
                             </div>
 
 
@@ -262,6 +121,7 @@
                 </div>
             </div>
         </article>
+
 
 
 
@@ -325,11 +185,11 @@
 
 
                         <div class="search-results__toolbar-count col-6 col-md-6 font-family--serif" aria-live="polite" aria-atomic="true">
-                            <span>
+                            <!-- <span>
 
                                 68 Models
 
-                            </span>
+                            </span> -->
 
 
 
@@ -655,20 +515,9 @@
                             </div>
                         </div>
 
-                        <div class="col-12 col-md-9">
-                            <div class="">
 
-                                <input type="hidden" data-refinement-tracking="">
+                        <livewire:products />
 
-
-
-
-
-                                <div class="row product-grid grid-view" itemtype="http://schema.org/SomeProducts" itemid="#product" data-search-component="product-grid">
-
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
 

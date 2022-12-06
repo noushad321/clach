@@ -445,7 +445,7 @@
 
 
 
-    <!--
+    <!-- 
 <script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch"}]);</script>
                               <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="3U5UD-A3KVH-XWX9Q-ND4WL-URRMD",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"3U5UD-A3KVH-XWX9Q-ND4WL-URRMD",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e=""=="true"?1:0,t="cookiepresent",n="knxjwnvydlfsuy3lkdhq-f-326130b85-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"33","ak.cp":"1101092","ak.ai":parseInt("202616",10),"ak.ol":"0","ak.cr":98,"ak.ipv":4,"ak.proto":"h2","ak.rid":"a3aa81c","ak.r":11483,"ak.a2":e,"ak.m":"a","ak.n":"essl","ak.bpcip":"83.110.155.0","ak.cport":49328,"ak.gh":"23.32.29.100","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.csrc":"-","ak.acc":"","ak.t":"1667977423","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==/Sj7nA01u7drqWfekH0GWgpnMkppky6HPNJpOtBFXPajWcDJEvGzNah7cKM112XS0+TeA0oNbfNVOngpkk8L6rm4SBqXCvKgJ90O/YFzSkfHFuIwg9Nh74WrPP9bbs0G2ttUd9ro2pp9o1rcMsRYadvplqn2zNlpH3sL2IzVwoN617oVETDXIEMMV0mu69B2gVKyyIeL5hEyZPb0zq/HR7Z72mVd0OdYHVa2qsiLtL9C2qbM7MYuPNNJu/01Iq6Fl/D0ATOzB/hsx5XcP/zscpCiw4VZEDhYssY7BMlokAvd3y1dYvbdR28gGZNl9o2s1aYH3jygbN2dLduqfsTi2naaKNcrSt94gpSyTErog5m93oUxnfmI2/RI8FrfG8f74OpNA1zBxdH8WRviafGLpHiHNb6BmzvD9IA0hqbnJx0=","ak.pv":"271","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head> -->
 
@@ -485,10 +485,6 @@
 
 
 
-
-                                <a class="header__country-selector-anchor component-actions__cta header__utility-item header__utility-anchor header-flyout__secondary-link body-type--centi link link--secondary" href="/en-ae/change-country" data-modal-trigger='{"url": "/en-ae/change-country?renderView=modal", "type": "html", "options": {"modalID": "countrySelector", "modalClass": "modal--country-selector modal--base"}}'>
-                                    United Arab Emirates
-                                </a>
 
 
 
@@ -546,7 +542,7 @@
 
 
 
-                                <a href="/en-ae/contact-customer-care" class="component-actions__cta  header__utility-item header__utility-anchor header-flyout__secondary-link body-type--centi link link--secondary " aria-label="Contact Us" style="">
+                                <a href="{{url('/contactus')}}" class="component-actions__cta  header__utility-item header__utility-anchor header-flyout__secondary-link body-type--centi link link--secondary " aria-label="Contact Us" style="">
                                     Contact Us
                                 </a>
 
@@ -563,9 +559,7 @@
 
 
 
-                                <a href="/en-ae/services.html" class="component-actions__cta  header__utility-item header__utility-anchor header-flyout__secondary-link body-type--centi link link--secondary " aria-label="Go to our Services page" style="">
-                                    Services
-                                </a>
+
 
 
 
@@ -611,7 +605,7 @@
                                     <span class="sr-only">Wish List</span>
                                 </a>
 
-                                <a class="header__utility-item header__utility-anchor link flex" href="{{ env('APP_URL', '') }}/login" title="My Cartier" aria-label="My Cartier">
+                                <a class="header__utility-item header__utility-anchor link flex" href="https://www.cartier.com/en-ae/login" title="My Cartier" aria-label="My Cartier">
                                     <svg aria-hidden="true" focusable="false" class="icon fluid-type--deka-base">
                                         <use xlink:href="#nav--profile" />
                                     </svg>
@@ -624,26 +618,10 @@
 
 
 
-                            <a class="header__utility-item--reverse-spacing header__utility-anchor link flex" href="https://stores.cartier.com/en_ae/search?category=storeLocatorSearch" title="Find a Boutique" aria-label="Find a Boutique" target="_blank">
-                                <svg aria-hidden="true" focusable="false" class="icon fluid-type--deka-base">
-                                    <use xlink:href="#icon--store-locator" />
-                                </svg>
-                                <span class="sr-only">Find a Boutique</span>
-                            </a>
 
 
 
-
-                            <div class="header__minicart header__utility-item--reverse-spacing header__utility-item--badged flex " data-minicart-component="container">
-                                <a class="header__utility-anchor flex flex-align-center link body-type--milli" href="https://www.cartier.com/en-ae/cart" title="View Cart" role="button">
-                                    <svg aria-hidden="true" focusable="false" class="header__minicart-icon icon fluid-type--deka-base">
-                                        <use xlink:href="#nav--cart" />
-                                    </svg>
-                                    <span class="header__utility-badge header__utility-badge--has-items flex flex-align-center flex-justify-center" data-minicart-component="qty">0</span>
-                                </a>
-
-                                <div class="header__minicart-overlay utility-overlay" data-minicart-component="overlay" tabindex="-1" role="dialog" aria-modal="true"></div>
-                            </div>
+                            @livewire('header-icon')
 
 
 
@@ -740,10 +718,10 @@
 
                                                                             @foreach($subcategory->subCategoryTypes as $type)
 
-                                                                            <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                                                                                <a href="#" id="flyout-high-jewellery_latest-collections_beautes_du_monde" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" aria-label="View High Jewellery: Beaut&eacute;s du monde">
+                                                                            <div class="header-flyout__item header-flyout__item--thumbnail level-3" style="width:160px">
+                                                                                <a href="{{ url('/items/collection'  .'/'. $subcategory->slug .'/'. $type->slug) }}" id="flyout-high-jewellery_latest-collections_beautes_du_monde" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" aria-label="View High Jewellery: Beaut&eacute;s du monde">
                                                                                     <picture>
-                                                                                        <source data-srcset="{{asset('images/JEWELRY_MEGAMENU_COLLECTIONS_LOVE.jpg')}}" class="picture--source-element">
+                                                                                        <source data-srcset="data:image/jpeg;base64,{{ base64_encode(Storage::get($type->multimedia()->first()->getRawOriginal('source_path'))) }}" class="picture--source-element">
                                                                                         <img data-image-component="ondemandload" src="" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" />
                                                                                     </picture>
                                                                                     <span class="link--secondary text-line--large">
@@ -782,29 +760,12 @@
 
 
 
-                                            <a class="header__country-selector-anchor component-actions__cta header__utility-item header__utility-anchor header-flyout__secondary-link body-type--centi link link--secondary" href="/en-ae/change-country" data-modal-trigger='{"url": "/en-ae/change-country?renderView=modal", "type": "html", "options": {"modalID": "countrySelector", "modalClass": "modal--country-selector modal--base"}}'>
-                                                <svg aria-hidden="true" focusable="false" class="icon body-type--deka icon--set-left">
-                                                    <use xlink:href="#icon--store-locator" />
-                                                </svg>
-                                                United Arab Emirates
-                                            </a>
 
 
 
 
-                                            <form action="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Page-SetLocale" method="GET" class="header-language-selector header__utility-item body-type--centi" data-ajax-form='{"appendPageQueryString": true, "appendPageAction": true, "appendHashOnRedirect": true, "submitActionSelector": "button"}'>
-                                                <span class="header-language-selector__item header-language-selector__item--selected link--secondary--static" id="dropdownCountrySelector">
-                                                    en
-                                                </span>
 
 
-                                                <span class="header-language-selector__divider"> / </span>
-
-                                                <button type="button" class="header-language-selector__item header-language-selector__selectable link--secondary" data-ajax-form-data='{"CurrencyCode": "AED", "code": "ar_AE"}'>
-                                                    العربية
-                                                </button>
-
-                                            </form>
 
 
                                             <a href="/en-ae/contact-customer-care" class="component-actions__cta  header__utility-item header__utility-anchor header-flyout__secondary-link body-type--centi link link--secondary " aria-label="Contact Us" style="">
@@ -826,11 +787,6 @@
 
 
 
-                                            <a href="/en-ae/services.html" class="component-actions__cta  header__utility-item header__utility-anchor header-flyout__secondary-link body-type--centi link link--secondary " aria-label="Go to our Services page" style="">
-                                                <svg aria-hidden="true" focusable="false" class="icon body-type--deka icon--set-left">
-                                                    <use xlink:href="#icon--bell" />
-                                                </svg>Services
-                                            </a>
 
 
 
@@ -923,6 +879,7 @@
         </header>
 
 
+        @livewire('cart-drawer')
 
 
 
@@ -1018,6 +975,23 @@
 
                                 <ul class="footer-links__list list--reset footer-links__list--stacked">
 
+                                    <li class="footer-links__item">
+
+
+
+
+
+
+
+
+
+
+                                        <a href="/en-ae/contact-customer-care" class="component-actions__cta  body-type--centi link link--secondary " aria-label="Go to Contact Us page" style="">
+                                            About Us
+                                        </a>
+
+                                    </li>
+
 
                                     <li class="footer-links__item">
 
@@ -1035,6 +1009,7 @@
                                         </a>
 
                                     </li>
+
 
 
 
@@ -1069,29 +1044,14 @@
 
 
                                         <a href="/en-ae/faq-product.html" class="component-actions__cta  body-type--centi link link--secondary " aria-label="Read Frequently Asked Questions" style="">
-                                            FAQ
+                                            Refund Policy
                                         </a>
 
                                     </li>
 
 
 
-                                    <li class="footer-links__item">
 
-
-
-
-
-
-
-
-
-
-                                        <a href="/en-ae/check-order" class="component-actions__cta  body-type--centi link link--secondary " aria-label="Check Order" style="">
-                                            Check Order
-                                        </a>
-
-                                    </li>
 
 
                                 </ul>
@@ -1205,7 +1165,7 @@
 
 
                                         <a href="/en-ae/legal-%26-privacy/credits.html" class="component-actions__cta  body-type--centi link link--secondary " aria-label="Credits" style="">
-                                            Credits
+                                            SHIPPING POLICY
                                         </a>
 
                                     </li>

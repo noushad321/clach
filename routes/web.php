@@ -35,6 +35,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
 
+Route::get('/contactus', function () {
+    return view('contactus');
+});
 
 Route::get('/items/{category}/{subCategory?}/{subCategoryType?}', [ItemsController::class, 'index']);
 Route::get('/details/{category}/{subCategory}/{subCategoryType}/{productSlug}', [DetailsController::class, 'index']);
