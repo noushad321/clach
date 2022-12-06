@@ -18,18 +18,23 @@
                        placeholder="desc">
                 @error('subCategory.description') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
             </div>
-            @if($category)
+            @if($categories)
                 <div class="mb-6">
                     <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Select Category</label>
                     <select class="form-control mr-sm-2"  wire:model.defer="category">
                         <option value=''>Select Category</option>
-                        @foreach ($category as $cat)
+                        @foreach ($categories as $cat)
                             <option value="{{$cat->id}}" > {{$cat->name}}</option>
                         @endforeach
                     </select>
-                    @error('product.category') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
+                    @error('category') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
                 </div>
             @endif
+            <div class="mb-6">
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Banner Image</label>
+                <input type="file" wire:model.defer="bannerImage">
+                @error('bannerImage') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
+            </div>
             <div class="flex items-center justify-start space-x-4">
                 <div class="ml-12 sm:flex-right">
                     <a href="/sub-categories"

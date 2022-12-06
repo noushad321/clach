@@ -18,6 +18,11 @@
                        placeholder="desc">
                 @error('category.description') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
             </div>
+            <div class="mb-6">
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Banner Image</label>
+                <input type="file" wire:model.defer="bannerImage">
+                @error('bannerImage') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
+            </div>
             <div class="flex items-center justify-start space-x-4">
                 <div class="ml-12 sm:flex-right">
                     <a href="/categories"
