@@ -34,6 +34,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('checkout', function () {
+    return view('checkout');
+});
 
 Route::get('/contactus', function () {
     return view('contactus');
@@ -72,6 +75,7 @@ Route::middleware([
     Route::get('/admin', function () {
         return view('actions', ['products' => Product::all()]);
     });
+
 
     Route::get('slider-images', ShowSliderImages::class);
     Route::get('/slider-images/add', AddSliderImages::class);
