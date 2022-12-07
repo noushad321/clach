@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PaymentsController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\DetailsController;
 use App\Http\Controllers\ItemsController;
@@ -42,9 +43,11 @@ Route::get('/contactus', function () {
     return view('contactus');
 });
 
-Route::get('/lamaison', function () {
+Route::get('/la-maison', function () {
     return view('lamaison');
 });
+Route::post('/shipment', [PaymentsController::class, 'storeShipmentAddress'])->name('shipment');
+Route::post('/email/verify', [PaymentsController::class, 'verifyEmail'])->name('verify-email');
 
 Route::get('/items/{category}/{subCategory?}/{subCategoryType?}', [ItemsController::class, 'index']);
 Route::get('/details/{category}/{subCategory}/{subCategoryType}/{productSlug}', [DetailsController::class, 'index']);
