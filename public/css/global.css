@@ -3,6 +3,45 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
 }
+.checkout-stage__header, .checkout-steps-header {
+    margin-bottom: 1rem;
+}
+.checkout-stage__shaded-message{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.checkout-steps-header__message{
+    margin-top: 1.5rem;
+}
+.checkout-steps-header .checkout-steps_list .opt-wrapper{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+[dir=ltr] .checkout-steps-header .checkout-steps_list .opt-wrapper .checkout-register {
+    margin-right: 1rem;
+}
+.checkout-steps-header .checkout-steps_list .opt-wrapper a {
+    text-transform: capitalize;
+}
+.checkout-steps-header .checkout-steps_list{
+    padding: 0;
+}
+.font-family--sans, .font-family--sans-secondary, [class*=heading-type]{
+    font-family: Brilliant Cut,Almarai,Helvetica,Arial,sans-serif;
+}
+[dir=ltr] [class*=heading-type] {
+    letter-spacing: .025rem;
+}
+[dir=ltr] [class*=heading-type] {
+    font-weight: 600;
+}
+.checkout-steps-header .checkout-steps_list .heading-type, .checkout-steps-header .checkout-steps_list p{
+    font-size: .875rem;
+    margin-bottom: 1rem;
+}
 .sticky {
     position: fixed;
     top: 0;
@@ -587,6 +626,13 @@ canvas {
 }
 
 @media (min-width: 64.0625rem) {
+    [dir=ltr] .checkout-steps-header .checkout-steps_list .checkout-steps_list-login {
+        padding-left: 1rem;
+    }
+    .gutter--medium-up-normal, .gutter--normal, .gutter--small-up-normal {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
     [class*=slider--lg-pre-layout]:not(.slick-initialized) {
         display:-webkit-box;
         display: -ms-flexbox;
@@ -645,6 +691,13 @@ canvas {
 }
 
 @media (min-width: 48rem) {
+    .checkout-steps-header{
+        margin-bottom: 2.5rem;
+    }
+    .checkout {
+        padding-top: 3rem;
+        padding-bottom: 6rem;
+    }
     .contactus-tile__description{
         max-width: 17.5rem;
     }
@@ -4261,6 +4314,10 @@ hr {
 }
 
 @media only screen and (min-width: 64.0625rem) {
+    [dir=ltr] .checkout-steps-header .checkout-steps_list .checkout-steps_list-guest {
+        padding-right: 1rem;
+        border-right: 1px solid #ccc;
+    }
     .col-lg-1 {
         -ms-flex-preferred-size:8.3333333333%;
         flex-basis: 8.3333333333%;
