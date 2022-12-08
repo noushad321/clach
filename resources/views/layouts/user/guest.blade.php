@@ -1595,7 +1595,7 @@
             })
 
             $(".lamaison").click(function() {
-                window.location.href = "{{URL::to('/lamaison')}}"
+                window.location.href = "{{URL::to('/la-maison')}}"
                 // $(".site-search__form").addClass('toggle--active');
             })
 

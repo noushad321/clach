@@ -4,6 +4,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\CartController;
 
+use App\Http\Controllers\PaymentsController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\DetailsController;
 use App\Http\Controllers\ItemsController;
 use App\Http\Livewire\AddAttributes;
@@ -45,12 +47,14 @@ Route::get('/contactus', function () {
     return view('contactus');
 });
 
-Route::get('/lamaison', function () {
+Route::get('/la-maison', function () {
     return view('lamaison');
 });
 Route::post('add-to-cart', [ProductsController::class, 'addToCart'])->name('add.to.cart');
 Route::delete('remove-from-cart',  [ProductsController::class, 'remove']);
 Route::patch('update-cart', [ProductsController::class, 'update']);
+Route::post('/shipment', [PaymentsController::class, 'storeShipmentAddress'])->name('shipment');
+Route::get('/email/verify/{shipment_id}', [PaymentsController::class, 'verifyEmail']);
 
 Route::get('/items/{category}/{subCategory?}/{subCategoryType?}', [ItemsController::class, 'index']);
 Route::get('/details/{category}/{subCategory}/{subCategoryType}/{productSlug}', [DetailsController::class, 'index']);
