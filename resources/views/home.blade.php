@@ -207,7 +207,7 @@
 
 
                                                         <a class="component-overlay component-overlay--low-index component-overlay--center "
-                                                           href="https://www.cartier.com/en-ae/jewellery/collections/clash-de-cartier/"
+                                                           href="#"
                                                            aria-label="Discover the Creations">
 
                                                         <span class="sr-only">
@@ -306,7 +306,7 @@
 
 
                                                         <a class="component-overlay component-overlay--low-index component-overlay--center "
-                                                           href="https://www.cartier.com/en-ae/watches/collections/santos-de-cartier/"
+                                                           href="#"
                                                            aria-label="Discover">
 
                                                         <span class="sr-only">
@@ -416,7 +416,7 @@
                                                     </div>
 
                                                     <a class="component-overlay component-overlay--low-index component-overlay--center "
-                                                       href="https://www.cartier.com/en-ae/art-of-living/writing-%26-stationery/writing-instruments/"
+                                                       href="#"
                                                        aria-label="Discover New Creations">
 
                                                     <span class="sr-only">
@@ -449,7 +449,7 @@
 
                                                             <div class="component-actions content-tile__actions">
 
-                                                                <a href="https://www.cartier.com/en-ae/art-of-living/writing-%26-stationery/writing-instruments/"
+                                                                <a href="#"
                                                                    target=_blank
                                                                    class="component-actions__cta component-actions__cta--fake content-tile__cta link link--primary "
                                                                    aria-label="Discover New Creations" tabindex=-1

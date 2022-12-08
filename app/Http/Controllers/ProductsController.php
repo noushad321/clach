@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Product;
 use App\Models\SubCategory;
 use App\Models\SubCategoryType;
+
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -33,6 +34,63 @@ class ProductsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return Response
      */
+    public function addToCart(Request $request)
+    {
+        $id = $request->id;
+        $product = Product::find($id);
+        
+        if(!$product) {
+            abort(404);
+        }
+        $cart = session()->get('cart');
+        if(!$cart) {
+            $cart = [
+                    $id => [
+                        "name" => $product->name,
+                        "quantity" => 1,
+                        "price" => $product->price,
+                        "photo" => ''
+                    ]
+            ];
+            session()->put('cart', $cart);
+            return response()->json(['message' => 'first added', 'data' => $cart]);
+        }
+        // if cart not empty then check if this product exist then increment quantity
+        if(isset($cart[$id])) {
+            $cart[$id]['quantity']++;
+            session()->put('cart', $cart);
+            return response()->json(['message' => 'updated', 'data' => $cart]);
+         
+        }
+        // if item not exist in cart then add to cart with quantity = 1
+        $cart[$id] = [
+            "name" => $product->name,
+            "quantity" => 1,
+            "price" => $product->price,
+            "photo" => ''
+        ];
+        session()->put('cart', $cart);
+     
+        return response()->json(['message' => 'others added', 'data' => $cart]);
+       
+
+    }
+
+    public function remove(Request $request)
+    {
+        if($request->id) {
+            $cart = session()->get('cart');
+            if(isset($cart[$request->id])) {
+                unset($cart[$request->id]);
+                session()->put('cart', $cart);
+            }
+            //session()->flash('success', 'Product removed successfully');
+        }
+    }
+
+    
+
+    
     public function store(Request $request)
     {
         //
@@ -56,9 +114,15 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        if($request->id and $request->quantity)
+        {
+            $cart = session()->get('cart');
+            $cart[$request->id]["quantity"] = $request->quantity;
+            session()->put('cart', $cart);
+            session()->flash('success', 'Cart updated successfully');
+        }
     }
 
     /**

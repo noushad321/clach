@@ -620,8 +620,27 @@
 
 
 
+                            <div class="header__minicart header__utility-item--reverse-spacing header__utility-item--badged flex " data-minicart-component="container">
+    <a class="header__utility-anchor flex flex-align-center link body-type--milli" title="View Cart" wire:click="toggleCartDrawer" role="button">
+        <svg aria-hidden="true" focusable="false" class="header__minicart-icon icon fluid-type--deka-base">
+            <use xlink:href="#nav--cart" />
+        </svg>
+        <span class="header__utility-badge header__utility-badge--has-items flex flex-align-center flex-justify-center" data-minicart-component="qty">
+        @if(session('cart'))
 
-                            @livewire('header-icon')
+
+
+
+
+
+{{count(session('cart'))}}
+@endif
+        </span>
+        
+    </a>
+
+    <div class="header__minicart-overlay utility-overlay" data-minicart-component="overlay" tabindex="-1" role="dialog" aria-modal="true"></div>
+</div>
 
 
 
@@ -882,7 +901,10 @@
         </header>
 
 
-        @livewire('cart-drawer')
+        <div>
+        <livewire:cart-drawer />
+
+</div>
 
 
 
@@ -1576,6 +1598,64 @@
                 window.location.href = "{{URL::to('/lamaison')}}"
                 // $(".site-search__form").addClass('toggle--active');
             })
+
+
+            
+            $(".header__minicart").click(function(){
+               $('.header__minicart-overlay').addClass("toggle--active")
+            })
+
+            $(".utility-overlay__header-close").click(function(){
+                $('.header__minicart-overlay').removeClass("toggle--active")
+            })
+            
+        });
+        $(document).on( 'click', '.addToCart', function (e) {
+        e.preventDefault(); 
+        const ele = $(this);
+        const productID = ele.prev().val();
+ 
+        $.ajax({
+        url: '{{url("add-to-cart")}}',
+      
+        type: "POST",
+        data: {_token: '{{ csrf_token() }}', id: productID},
+        headers: {
+            'X-CSRF-Token': '{{ csrf_token() }}',
+        },
+        success: function(data){
+            alert("okay");
+
+        }, 
+    })
+    })
+    $(document).on( 'click','.product-line-item__action-cta--remove',function (e) {
+            e.preventDefault();
+            var ele = $(this);
+            if(confirm("Are you sure")) {
+                $.ajax({
+                 
+                    url: '{{ url("remove-from-cart") }}',
+                    method: "DELETE",
+                    data: {_token: '{{ csrf_token() }}', id: ele.attr("data-id")},
+                    success: function (response) {
+                        window.location.reload();
+                    }
+                });
+            }
+        });
+
+            $(document).on( 'click','.update-cart',function (e) {
+           e.preventDefault();
+           var ele = $(this);
+            $.ajax({
+               url: '{{ url("update-cart") }}',
+               method: "patch",
+               data: {_token: '{{ csrf_token() }}', id: ele.attr("data-id"), quantity: ele.parents("tr").find(".quantity").val()},
+               success: function (response) {
+                   window.location.reload();
+               }
+            });
         });
     </script>
     @livewireScripts

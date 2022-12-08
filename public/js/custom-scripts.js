@@ -6,3 +6,7 @@ $(window).bind("scroll", function () {
     //     $('.my-header').addClass('sticky');
     // }
 });
+
+
+
+    

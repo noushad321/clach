@@ -6,6 +6,23 @@ html {
 .checkout-stage__header, .checkout-steps-header {
     margin-bottom: 1rem;
 }
+.order-summary__totals{
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+    border: 0.0625rem solid;
+}
+.total-list__row--short-spacing:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+.cart__checkout-actions{
+    z-index: 0;
+    position: relative;
+    margin-top: 1.5rem;
+
+}
+.cart__back-to-shopping {
+    margin-top: 2.75rem;
+}
 .checkout-stage__shaded-message{
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -8622,7 +8639,7 @@ html[lang=th-TH] .descriptive-card__content .descriptive-card__actions,html[lang
 }
 
 .header__utility-item--badged:not(.set--has-items) .header__utility-badge--has-items {
-    display: none
+    /* display: none */
 }
 
 .header__utility-anchor {
@@ -8652,6 +8669,9 @@ html[lang=th-TH] .descriptive-card__content .descriptive-card__actions,html[lang
 }
 
 @media (min-width: 48rem) {
+    .cart__header {
+        margin-bottom: 1.75rem;
+    }
     [dir=ltr] .header__utility-item:not(:last-child) {
         margin-right:1.125rem
     }

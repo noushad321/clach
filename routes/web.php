@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\CartController;
+
 use App\Http\Controllers\DetailsController;
 use App\Http\Controllers\ItemsController;
 use App\Http\Livewire\AddAttributes;
@@ -37,6 +39,7 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('checkout', function () {
     return view('checkout');
 });
+Route::get('cart',  [CartController::class, 'index']);
 
 Route::get('/contactus', function () {
     return view('contactus');
@@ -45,6 +48,9 @@ Route::get('/contactus', function () {
 Route::get('/lamaison', function () {
     return view('lamaison');
 });
+Route::post('add-to-cart', [ProductsController::class, 'addToCart'])->name('add.to.cart');
+Route::delete('remove-from-cart',  [ProductsController::class, 'remove']);
+Route::patch('update-cart', [ProductsController::class, 'update']);
 
 Route::get('/items/{category}/{subCategory?}/{subCategoryType?}', [ItemsController::class, 'index']);
 Route::get('/details/{category}/{subCategory}/{subCategoryType}/{productSlug}', [DetailsController::class, 'index']);

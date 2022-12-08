@@ -94,7 +94,8 @@
 
 
                     <div class="product-tile__quickadd" data-quickadd>
-                        <button type="button" wire:click="addToCart({{$product}})" class="product-tile__quickadd-trigger button button--primary button--small set--w-100" data-url="" data-product-url="productShowQuickAdd" title="Quick Add for Panth&egrave;re de Cartier bracelet" data-quickadd-trigger>
+                        <input type="hidden" value='{{$product->id}}'class="productID">
+                        <button type="button"  class="product-tile__quickadd-trigger button button--primary button--small set--w-100 addToCart" data-url="" data-product-url="productShowQuickAdd" title="Quick Add for Panth&egrave;re de Cartier bracelet" data-quickadd-trigger>
                             <span class="display--small-up">
                                 Add to Shopping Bag
                             </span>
