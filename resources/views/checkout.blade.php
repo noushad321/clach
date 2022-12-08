@@ -15,6 +15,11 @@
                                     with your order</h1>
                                 <div
                                     class="checkout-steps-header__message checkout-stage__shaded-message gutter--normal bg--grey-1">
+                                    <form class="checkout-stage__form toggle--active" autocomplete="on"
+                                          method="POST" novalidate="" action="{{ route('shipment') }}"
+                                          data-address-mode="new" data-checkout-component="single-shipping-form"
+                                          name="dwfrm_shipping" id="dwfrm_shipping">
+                                        @csrf
                                     <div class="step-content">
                                         <ul class="checkout-steps_list row">
                                             <li class="col-12 col-lg-6 checkout-steps_list-guest">
@@ -25,8 +30,6 @@
                                                     your personal information, please see our
                                                     <a href="https://www.cartier.com/en-ae/resources/privacy-policy-template/privacy-policy.html"
                                                        title="Privacy Policy" target="_blank">Privacy Policy</a></p>
-                                                <form method="POST" novalidate="" action="{{ route('verify-email') }}" autocomplete="on"
-                                                      onsubmit="event.preventDefault(); ">
                                                     <div class="form-group--short-spacing
                                     required dwfrm_shipping_shippingAddress_contactInfoFields_email"
                                                          data-floating-label="">
@@ -34,19 +37,11 @@
                                                         <input type="email" required="" class="form-control email"
                                                                id="email" value=""
                                                                aria-describedby="emailInvalidMessage"
-                                                               name="dwfrm_shipping_shippingAddress_contactInfoFields_email"
+                                                               name="shipping_email"
                                                                aria-required="true" maxlength="50"
                                                                pattern="^[\w.!#$%\/'*+=?^`{|}~-]+@[\w.-]+\.[\w]{2,6}$">
                                                         <div class="invalid-feedback" id="emailInvalidMessage"></div>
                                                     </div>
-                                                    <button
-                                                        class="button button--primary set--w-100 body-type--centi submit-shipping"
-                                                        type="submit" name="submit" value="submit-shipping"
-                                                        data-checkout-component="shipping-stage-next"
-                                                        form="dwfrm_shipping">
-                                                        Verify
-                                                    </button>
-                                                </form>
                                             </li>
                                             <li class="col-12 col-lg-6 checkout-steps_list-login">
                                                 <h4 class="body-type heading-type">Login</h4>
@@ -83,11 +78,7 @@
                                         <div class="checkout-stage__shipment"
                                              data-shipment-uuid="e0002f69e8fac8fcfd190b30a7" data-skip-shipping="false"
                                              data-is-staff-sale-site="null">
-                                            <form class="checkout-stage__form toggle--active" autocomplete="on"
-                                                  method="POST" novalidate="" action="{{ route('shipment') }}"
-                                                  data-address-mode="new" data-checkout-component="single-shipping-form"
-                                                  name="dwfrm_shipping" id="dwfrm_shipping">
-                                                @csrf
+
                                                 <input name="originalShipmentUUID" type="hidden"
                                                        value="e0002f69e8fac8fcfd190b30a7"
                                                        aria-describedby="originalShipmentUUID-1374831112540">

@@ -47,7 +47,7 @@ Route::get('/la-maison', function () {
     return view('lamaison');
 });
 Route::post('/shipment', [PaymentsController::class, 'storeShipmentAddress'])->name('shipment');
-Route::post('/email/verify', [PaymentsController::class, 'verifyEmail'])->name('verify-email');
+Route::get('/email/verify/{shipment_id}', [PaymentsController::class, 'verifyEmail']);
 
 Route::get('/items/{category}/{subCategory?}/{subCategoryType?}', [ItemsController::class, 'index']);
 Route::get('/details/{category}/{subCategory}/{subCategoryType}/{productSlug}', [DetailsController::class, 'index']);

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('user_first_name');
             $table->string('user_last_name')->nullable();
+            $table->string('shipping_email')->nullable();
             $table->string('first_address');
             $table->string('second_address')->nullable();
             $table->string('country_code');

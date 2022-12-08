@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\VerifyEmail;
 use App\Models\ShipmentDetails;
+use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Mail;
 
 class PaymentsController extends Controller
 {
@@ -13,12 +17,22 @@ class PaymentsController extends Controller
         $shipment = new ShipmentDetails();
         $shipment->fill($request->all());
         $shipment->save();
+
+        $email = $request->get('shipping_email');
+        Mail::to($email)->send(new VerifyEmail($shipment));
+
         return redirect()->to('/payments');
     }
 
-    public function verifyEmail(Request $request)
+    public function verifyEmail(Request $request, $shipmentID)
     {
-        
+        $shipmentDetails = ShipmentDetails::find($shipmentID);
+        $user = new User();
+        $user->name = $shipmentDetails->user_first_name;
+        $user->email = $shipmentDetails->shipping_email;
+        $user->password = 'Support_1234';
+        $user->email_verified_at = Carbon::now();
+        $user->save();
     }
 
 

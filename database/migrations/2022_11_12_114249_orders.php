@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('walk_in_users', function (Blueprint $table) {
             $table->id();
             $table->string('email')->unique();
+            $table->date('email_verified_at')->nullable();
         });
 
         Schema::create('profiles', function (Blueprint $table) {
