@@ -50,6 +50,7 @@ Route::get('/contactus', function () {
 Route::get('/la-maison', function () {
     return view('lamaison');
 });
+
 Route::post('add-to-cart', [ProductsController::class, 'addToCart'])->name('add.to.cart');
 Route::delete('remove-from-cart',  [ProductsController::class, 'remove']);
 Route::patch('update-cart', [ProductsController::class, 'update']);

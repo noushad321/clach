@@ -19,14 +19,15 @@
 
     
     
-
+  @if(session('cart'))
     <div class="cart  gutter--small-up-normal" data-cart-component="cart-container">
+  
         <div class="brand__panther-image image-width__small inverted"></div>
         <div class="cart__header max-width--xmedium gutter--small-only-normal flex flex-align-baseline">
             <h1 class="cart__title fluid-type--deka-hecto heading-type">Shopping Bag</h1>
 
             
-                <span class="cart__header-count font-family--serif" data-minicart-component="qty" data-qty-label-single="({0} Item)" data-qty-label="({0} Items)">(1 Item)</span>
+                <span class="cart__header-count font-family--serif" data-minicart-component="qty" data-qty-label-single="({0} Item)" data-qty-label="({0} Items)">({{count(session('cart'))}} Item)</span>
             
         </div>
 
@@ -56,7 +57,7 @@
 
     
 
-@if(session('cart'))
+
 <?php $total = 0 ?>
 @foreach(session('cart') as $id => $details)
 <?php $total += $details['price'] * $details['quantity'] ?>
@@ -113,7 +114,7 @@
                 
                     
 <div class="product-line-item__remove ">
-    <button type="button" class="product-line-item__action-cta--remove button--circle-close bg--white" data-line-item-component="remove-action" aria-label="Remove, #LOVE# bracelet" id="toggleID-1400" aria-expanded="false" aria-controls="toggleID-1400--target">
+    <button type="button" data-id="{{$id}}" class="product-line-item__action-cta--remove button--circle-close bg--white" data-line-item-component="remove-action" aria-label="Remove, #LOVE# bracelet" id="toggleID-1400" aria-expanded="false" aria-controls="toggleID-1400--target">
 
         <span class="sr-only">Remove</span>
         <svg aria-hidden="true" focusable="false" class="icon button__icon--circle-close"><use xlink:href="#icon--close"></use></svg>
@@ -328,7 +329,7 @@
     
 </div>
 @endforeach
-@endif
+
 </div>
 
                             <div class="approaching-discounts" data-cart-component="approaching-discounts"></div>
@@ -382,20 +383,20 @@
             <p class="order-receipt-label heading-type word-break--break-word hyphens--auto" data-totals-component="label">Subtotal</p>
         </dt>
         <dd class="col">
-            <p class="text-align--right sub-total word-break--break-word" data-totals-component="value">$ {{$total}}</p>
+        @if(session('cart'))   <p class="text-align--right sub-total word-break--break-word" data-totals-component="value">$ {{$total}}</p>@endif
         </dd>
     </div>
 
     
     <div class="total-list__row row sales-tax-item" data-totals-component="totalTax">
-        <dt class="col">
+        <!-- <dt class="col">
             <p class="order-receipt-label font-family--serif word-break--break-word hyphens--auto" data-totals-component="label">Sales tax incl.</p>
-        </dt>
+        </dt> -->
         
-	        <dd class="col">
+	        <!-- <dd class="col">
 	            <p class="text-align--right tax-total body-type--centi" data-totals-component="value">AED 1,257.14</p>
 	        </dd>
-	    
+	     -->
     </div>
 </dl>
                                     </div>
@@ -425,8 +426,37 @@
 
             
         </div>
+       
     </div>
+ @else
+ <div class="cart cart--empty gutter--small-up-normal" data-cart-component="cart-container" data-cart-is-empty="">
+        <div class="brand__panther-image image-width__small inverted"></div>
+        <div class="cart__header max-width--xmedium gutter--small-only-normal text-align--center">
+            <h1 class="cart__title fluid-type--deka-hecto heading-type">Shopping Bag</h1>
 
+            
+        </div>
+
+        <div class="cart__main max-width--xmedium fixit-container" data-cart-component="cart-main">
+            
+                <p class="cart__empty-message text-align--center">Your shopping bag is empty</p>
+
+<div data-cart-component="cart-empty-slots" data-url="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Cart-GetEmptyCartSlots">
+    
+
+<div class="cart__recommendations">
+    
+	 
+
+	
+</div>
+</div>
+            
+
+            
+        </div>
+    </div>
+        @endif
 </main>
 
 @endsection

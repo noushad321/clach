@@ -450,7 +450,7 @@
                               <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="3U5UD-A3KVH-XWX9Q-ND4WL-URRMD",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"3U5UD-A3KVH-XWX9Q-ND4WL-URRMD",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e=""=="true"?1:0,t="cookiepresent",n="knxjwnvydlfsuy3lkdhq-f-326130b85-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"33","ak.cp":"1101092","ak.ai":parseInt("202616",10),"ak.ol":"0","ak.cr":98,"ak.ipv":4,"ak.proto":"h2","ak.rid":"a3aa81c","ak.r":11483,"ak.a2":e,"ak.m":"a","ak.n":"essl","ak.bpcip":"83.110.155.0","ak.cport":49328,"ak.gh":"23.32.29.100","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.csrc":"-","ak.acc":"","ak.t":"1667977423","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==/Sj7nA01u7drqWfekH0GWgpnMkppky6HPNJpOtBFXPajWcDJEvGzNah7cKM112XS0+TeA0oNbfNVOngpkk8L6rm4SBqXCvKgJ90O/YFzSkfHFuIwg9Nh74WrPP9bbs0G2ttUd9ro2pp9o1rcMsRYadvplqn2zNlpH3sL2IzVwoN617oVETDXIEMMV0mu69B2gVKyyIeL5hEyZPb0zq/HR7Z72mVd0OdYHVa2qsiLtL9C2qbM7MYuPNNJu/01Iq6Fl/D0ATOzB/hsx5XcP/zscpCiw4VZEDhYssY7BMlokAvd3y1dYvbdR28gGZNl9o2s1aYH3jygbN2dLduqfsTi2naaKNcrSt94gpSyTErog5m93oUxnfmI2/RI8FrfG8f74OpNA1zBxdH8WRviafGLpHiHNb6BmzvD9IA0hqbnJx0=","ak.pv":"271","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head> -->
 
 <body>
-
+<div class="loader"><img src="{{asset('images/loading.gif')}}"> </div>
 
     <!-- Google Tag Manager (noscript) -->
 
@@ -621,19 +621,17 @@
 
 
                             <div class="header__minicart header__utility-item--reverse-spacing header__utility-item--badged flex " data-minicart-component="container">
-    <a class="header__utility-anchor flex flex-align-center link body-type--milli" title="View Cart" wire:click="toggleCartDrawer" role="button">
+    <a class="header__utility-anchor flex flex-align-center link body-type--milli cartIcon" title="View Cart" wire:click="toggleCartDrawer" role="button">
         <svg aria-hidden="true" focusable="false" class="header__minicart-icon icon fluid-type--deka-base">
             <use xlink:href="#nav--cart" />
         </svg>
-        <span class="header__utility-badge header__utility-badge--has-items flex flex-align-center flex-justify-center" data-minicart-component="qty">
+        
+        <span class="cartCount header__utility-badge header__utility-badge--has-items flex flex-align-center flex-justify-center" data-minicart-component="qty">
         @if(session('cart'))
-
-
-
-
-
-
+        
 {{count(session('cart'))}}
+@else
+0
 @endif
         </span>
         
@@ -666,9 +664,7 @@
                                     <div class="header-flyout__scrollable level-1" data-scrollable>
                                         <ul class="header-flyout__list level-1 list--reset text-transform--uppercase" role="menu">
 
-
                                             @foreach($menus as $menu)
-
 
                                             <li class="header-flyout__item level-1" role="menuitem">
                                                 <button type="button" id="flyout-High Jewellery" class="header-flyout__anchor level-1 set--w-100 text-transform--uppercase flex-justify-between flex-align-center set--inner-focus {{$menu->name=='La Maison' ? 'lamaison' : ''}}" data-nav-component="anchor-1" aria-label="High Jewellery" style="">
@@ -736,8 +732,6 @@
                                                                         <div class="header-flyout__tab-carousel" style="display: flex;" data-slick='{"type": "headerFlyoutCarousel"}'>
 
                                                                             @foreach($subcategory->subCategoryTypes as $type)
-
-
                                                                             <div class="header-flyout__item header-flyout__item--thumbnail level-3" style="width:160px">
                                                                                 <a href="{{ url('/items/collection'  .'/'. $subcategory->slug .'/'. $type->slug) }}" id="flyout-high-jewellery_latest-collections_beautes_du_monde" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" aria-label="View High Jewellery: Beaut&eacute;s du monde">
                                                                                     @if($type->multimedia()->first())
@@ -1612,9 +1606,14 @@
         });
         $(document).on( 'click', '.addToCart', function (e) {
         e.preventDefault(); 
+        $('.loader').css("opacity","1");
+        $('.loader').css("visibility","visible");
+
         const ele = $(this);
         const productID = ele.prev().val();
- 
+        $(".emptyCart").remove();
+        $(".myCartList").empty();
+        //$(".cartIcon").empty();
         $.ajax({
         url: '{{url("add-to-cart")}}',
       
@@ -1624,7 +1623,14 @@
             'X-CSRF-Token': '{{ csrf_token() }}',
         },
         success: function(data){
-            alert("okay");
+            console.log(data.count)
+            $('.loader').css("opacity","0");
+            $('.loader').css("visibility","hidden");
+            $(".utility-overlay__line-items").remove();
+             $(".cartCount").text(data.count);
+            //$(".cartIcon").append(`<span class="cartCount header__utility-badge header__utility-badge--has-items flex flex-align-center flex-justify-center" data-minicart-component="qty">${data.count}</span>`);
+            $(".myCartList").append(data.data);
+            $('.header__minicart-overlay').addClass("toggle--active");
 
         }, 
     })

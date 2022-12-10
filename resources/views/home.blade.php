@@ -503,7 +503,7 @@
 
                                                     </div>
                                                     <a class="component-overlay component-overlay--low-index component-overlay--center "
-                                                       href="https://www.cartier.com/en-ae/high-jewellery/latest-collections/beautes-du-monde/"
+                                                       href=""
                                                        aria-label="Discover the Collection">
 
                                                     <span class="sr-only">
@@ -533,7 +533,7 @@
 
                                                             <div class="component-actions content-tile__actions">
 
-                                                                <a href="https://www.cartier.com/en-ae/high-jewellery/latest-collections/beautes-du-monde/"
+                                                                <a href=""
                                                                    target=_blank
                                                                    class="component-actions__cta component-actions__cta--fake content-tile__cta link link--primary "
                                                                    aria-label="Discover the Collection" tabindex=-1

@@ -4,9 +4,9 @@
         <div class="utility-overlay__header text-align--center gutter--normal">
             <h2 class="utility-overlay__header-title fluid-type--deka-hecto heading-type font-weight--semibold">
                 Shopping Bag 
-                @if(session('cart'))
-                   <span class="cart_count">  ({{count(session('cart'))}})</span>
-                @endif
+               
+                   <span class="cartCount">  @if(session('cart')) ({{count(session('cart'))}}) @endif</span>
+               
             </h2>
             <button type="button" class="utility-overlay__header-close link flex flex-align-center" data-toggle-close="" aria-label="Close shopping bag panel" wire:click="closeCartBar()">
                 <svg aria-hidden="true" focusable="false" class="icon">
@@ -14,6 +14,7 @@
                 </svg>
             </button>
         </div>
+        <div class="myCartList"></div>
         <?php $total = 0 ?>
 
         @if(session('cart'))
@@ -219,9 +220,10 @@
 </div>
 
 @else
-        <p class="flex flex-align-center flex-justify-center set--h-100">Your shopping bag is empty</p>
+        <p class="flex flex-align-center flex-justify-center set--h-100 emptyCart">Your shopping bag is empty</p>
         
 @endif
+<div class="myFooter"></div>
 
     </div>
 
