@@ -15,7 +15,9 @@ use App\Http\Livewire\AddSubCategories;
 use App\Http\Livewire\AddSubCategoryTypes;
 use App\Http\Livewire\AddTags;
 use App\Http\Livewire\CreateProduct;
+use App\Http\Livewire\EditCategories;
 use App\Http\Livewire\EditProduct;
+use App\Http\Livewire\EditSubCategories;
 use App\Http\Livewire\ShowAttributes;
 use App\Http\Livewire\ShowCategories;
 use App\Http\Livewire\ShowProducts;
@@ -70,9 +72,11 @@ Route::middleware([
 
     Route::get('/category/add', AddCategories::class);
     Route::get('/categories', ShowCategories::class);
+    Route::get('/categories/edit/{category}', EditCategories::class);
 
     Route::get('/sub-category/add', AddSubCategories::class);
     Route::get('/sub-categories', ShowSubCategories::class);
+    Route::get('/sub-categories/edit/{subCategory}', EditSubCategories::class);
 
     Route::get('/sub-category-type/add', AddSubCategoryTypes::class);
     Route::get('/sub-categories-types', ShowSubCategoryTypes::class);
@@ -89,7 +93,6 @@ Route::middleware([
     Route::get('/admin', function () {
         return view('actions', ['products' => Product::all()]);
     });
-
 
     Route::get('slider-images', ShowSliderImages::class);
     Route::get('/slider-images/add', AddSliderImages::class);
