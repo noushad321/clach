@@ -18,6 +18,7 @@ use App\Http\Livewire\CreateProduct;
 use App\Http\Livewire\EditCategories;
 use App\Http\Livewire\EditProduct;
 use App\Http\Livewire\EditSubCategories;
+use App\Http\Livewire\EditSubCategoryTypes;
 use App\Http\Livewire\ShowAttributes;
 use App\Http\Livewire\ShowCategories;
 use App\Http\Livewire\ShowProducts;
@@ -81,6 +82,7 @@ Route::middleware([
 
     Route::get('/sub-category-type/add', AddSubCategoryTypes::class);
     Route::get('/sub-categories-types', ShowSubCategoryTypes::class);
+    Route::get('/sub-categories-types/edit/{subCategoryType}', EditSubCategoryTypes::class);
 
     Route::get('/attributes/add', AddAttributes::class);
     Route::get('/attributes', ShowAttributes::class);
