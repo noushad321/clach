@@ -7,6 +7,9 @@ use App\Models\Category;
 use App\Models\Product;
 use App\Models\SubCategory;
 use App\Models\SubCategoryType;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -19,9 +22,9 @@ class DetailsController extends Controller
      * @param Category $category
      * @param SubCategory $subCategory
      * @param SubCategoryType $subCategoryType
-     * @return Response
+     * @return Application|Factory|View
      */
-    public function index($category, $subCategory, $subCategoryType, $productSlug)
+    public function index(Category $category, SubCategory $subCategory, $subCategoryType, $productSlug): View|Factory|Application
     {
 
         $product =  Product::with('multimedia', 'attributeValues.attribute', 'tags')->where('slug', $productSlug)->first();

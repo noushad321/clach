@@ -14,4 +14,9 @@ class ShowSubCategoryTypes extends Component
             'subCategoryTypes' => SubCategoryType::all()
         ]);
     }
+
+    public function delete(SubCategoryType $subCategoryType)
+    {
+        $subCategoryType->delete();
+    }
 }
