@@ -44,6 +44,7 @@ Route::get('checkout', function () {
     return view('checkout');
 });
 Route::get('cart',  [CartController::class, 'index']);
+Route::get('orders/{user}',  [CartController::class, 'getOrders']);
 
 Route::get('/contactus', function () {
     return view('contactus');
