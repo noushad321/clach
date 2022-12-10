@@ -10,8 +10,9 @@
 
                         <img class="product-tile__image product-tile__image--primary component-overlay component-overlay--center object-fit--contain lazyload none-up  full-stretch-image " data-product-component="image" data-src="data:image/jpeg;base64,{{ base64_encode(Storage::get($product->multimedia[0]->getRawOriginal('source_path'))) }}" data-image-index="0" itemprop="image" alt="Panth&egrave;re de Cartier bracelet" width="350" height="350" title="Panth&egrave;re de Cartier bracelet" />
 
+                        @if($product->multimedia->count() > 1)
                         <img class="product-tile__image product-tile__image--secondary component-overlay component-overlay--center object-fit--contain lazyload none-up display--small-up  full-stretch-image " data-product-component="image" data-src="data:image/jpeg;base64,{{ base64_encode(Storage::get($product->multimedia[1]->getRawOriginal('source_path'))) }}" data-image-index="0" itemprop="image" alt="Panth&egrave;re de Cartier bracelet" width="350" height="350" title="Panth&egrave;re de Cartier bracelet" />
-
+                        @endif
                     </div>
                 </div>
 
@@ -41,6 +42,7 @@
                                     ${{$product->price}}
                                 </span>
                         </div>
+
 
 
 
