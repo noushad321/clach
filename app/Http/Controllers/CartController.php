@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Product;
 use App\Models\SubCategory;
 use App\Models\SubCategoryType;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -69,5 +70,11 @@ class CartController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function getOrders(Request $request, User $user)
+    {
+        $userOrders = $user->orders->with('items')->get();
+
     }
 }

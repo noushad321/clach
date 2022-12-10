@@ -51,13 +51,13 @@
                                                     <div class="checkout-register">
                                                         <a class="checkout-steps-header__message-link font-family--serif link--secondary"
                                                            title="Register"
-                                                           href="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Checkout-Register"
+                                                           href="/register"
                                                            data-auth-required="true">Register</a>
                                                     </div>
                                                     <div class="checkout-login">
                                                         <a class="checkout-steps-header__message-link font-family--serif link--secondary"
                                                            title="Login"
-                                                           href="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Checkout-Login"
+                                                           href="/login"
                                                            data-auth-required="true">Login</a>
                                                     </div>
                                                 </div>

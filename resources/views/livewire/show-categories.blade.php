@@ -42,6 +42,10 @@
                                             class="px-3 py-3 text-left text-xs font-medium uppercase tracking-wide text-gray-500">
                                             Slug
                                         </th>
+                                        <th scope="col"
+                                            class="px-3 py-3 text-left text-xs font-medium uppercase tracking-wide text-gray-500">
+                                            Image
+                                        </th>
                                     </tr>
                                     </thead>
                                     <tbody class="divide-y divide-gray-200 bg-white">
@@ -56,6 +60,18 @@
                                             </td>
                                             <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                                                 {{ $category->slug }}
+                                            </td>
+                                            @if($category->multimedia()->first())
+                                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                                                    <img alt="{{ env('APP_NAME', '') }}"
+                                                         style="display: block; margin-left: 20px; max-width: 200px; max-height: 200px"
+                                                         src="data:image/jpeg;base64,{{ base64_encode(Storage::get($category->multimedia()->first()->getRawOriginal('source_path'))) }}"/>
+
+                                                </td>
+                                            @endif
+                                            <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+                                                <a href="/categories/edit/{{ $category->id }}"
+                                                   class="text-indigo-600 hover:text-indigo-900">Edit</a>
                                             </td>
                                             <td>
                                                 <a href="#"
