@@ -38,7 +38,7 @@ class ProductsController extends Controller
     {
         $id = $request->id;
         $product = Product::find($id);
-        
+
         if(!$product) {
             abort(404);
         }
@@ -49,7 +49,7 @@ class ProductsController extends Controller
                         "name" => $product->name,
                         "quantity" => 1,
                         "price" => $product->price,
-                        "photo" => ''
+                        "photo" => $product->multimedia()->first()
                     ]
             ];
             session()->put('cart', $cart);
@@ -60,19 +60,19 @@ class ProductsController extends Controller
             $cart[$id]['quantity']++;
             session()->put('cart', $cart);
             return response()->json(['message' => 'updated', 'data' => $cart]);
-         
+
         }
         // if item not exist in cart then add to cart with quantity = 1
         $cart[$id] = [
             "name" => $product->name,
             "quantity" => 1,
             "price" => $product->price,
-            "photo" => ''
+            "photo" => $product->multimedia()->first()
         ];
         session()->put('cart', $cart);
-     
+
         return response()->json(['message' => 'others added', 'data' => $cart]);
-       
+
 
     }
 
@@ -88,9 +88,9 @@ class ProductsController extends Controller
         }
     }
 
-    
 
-    
+
+
     public function store(Request $request)
     {
         //
