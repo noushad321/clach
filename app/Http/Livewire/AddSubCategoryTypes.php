@@ -59,6 +59,7 @@ class AddSubCategoryTypes extends Component
         $originalName = $file->getClientOriginalName();
         $media = new Multimedia();
         $media->name = $originalName;
+        $media->code = 'banner';
         $media->source_path= $uploadPath;
         $media->order = 1;
         $this->subCategoryType->multimedia()->save($media);

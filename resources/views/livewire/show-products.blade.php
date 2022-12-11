@@ -53,6 +53,9 @@
                                                 Price
                                             </th>
                                             <th scope="col" class="relative py-3 pl-3 pr-4 sm:pr-6">
+                                                <span class="sr-only">Photos</span>
+                                            </th>
+                                            <th scope="col" class="relative py-3 pl-3 pr-4 sm:pr-6">
                                                 <span class="sr-only">Edit</span>
                                             </th>
                                         </tr>
@@ -79,18 +82,19 @@
                                                 <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                                                     {{ $product->price }}
                                                 </td>
-                                                @if($product->multimedia()->first())
-                                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                                                    <img alt="{{ env('APP_NAME', '') }}"
-                                                         style="display: block; margin-left: 20px; max-width: 200px; max-height: 200px"
-                                                         src="data:image/jpeg;base64,{{ base64_encode(Storage::get($product->multimedia()->first()->getRawOriginal('source_path'))) }}"/>
+                                                <td>
+                                                    @if($product->multimedia()->count() > 0)
+                                                        <div>
+                                                            @foreach($product->multimedia()->get() as $pic)
+                                                                <img alt="{{ env('APP_NAME', '') }}"
+                                                                     style="display: block; margin-left: 20px; max-width: 200px; max-height: 200px"
+                                                                     src="data:image/jpeg;base64,{{ base64_encode(Storage::get($pic->getRawOriginal('source_path'))) }}"/>
+                                                            @endforeach
+                                                        </div>
 
+                                                    @endif
                                                 </td>
-{{--                                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">--}}
-{{--                                                        {{(Storage::path('syrup.jpeg'))}}--}}
 
-{{--                                                    </td>--}}
-                                                @endif
                                                 <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
                                                     <a href="/product/edit/{{ $product->id }}"
                                                        class="text-indigo-600 hover:text-indigo-900">Edit</a>
