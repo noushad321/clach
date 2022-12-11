@@ -113,7 +113,7 @@ class ProductsController extends Controller
  
  
  
-                     <a href="/en-ae/jewellery/bracelets/love/love-bracelet-CRB6067416.html" class="product-line-item__name link word-break--break-word hyphens--auto" title="#LOVE# bracelet">'
+                     <a href="" class="product-line-item__name link word-break--break-word hyphens--auto" title="#LOVE# bracelet">'
                          . $details['name'].
                      '</a>
                  </div>
@@ -193,7 +193,7 @@ class ProductsController extends Controller
                          <div class="product-line-item__total-price item-total-be14c8d5b901190a7997ae7535 price font-family--sans" data-line-item-component="price-total">
      
  
- <div class="price__sales pricing line-item-total-price-amount">'.$details['price'].'</div>
+ <div class="price__sales pricing line-item-total-price-amount">$'.$details['price'].'</div>
  
  </div>
                      </div>
@@ -236,14 +236,14 @@ class ProductsController extends Controller
          </div>
 
          <div class="col-6">
-             <p class="text-align--right" data-totals-component="value">'.$total.'</p>
+             <p class="text-align--right" data-totals-component="value">$'.$total.'</p>
          </div>
      </div>
      
          <p class="utility-overlay__footer-message font-family--serif">Shipping and taxes calculated at checkout.</p>
      
      <div class="utility-overlay__footer-actions">
-         <a href="{{url()}}" class="button button--primary minicart__checkout-action checkout-btn set--w-100 " role="button" data-cart-component="checkout-action">
+         <a href="/cart" class="button button--primary minicart__checkout-action checkout-btn set--w-100 " role="button" data-cart-component="checkout-action">
  Proceed to Checkout
 </a>
 

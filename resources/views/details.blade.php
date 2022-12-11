@@ -105,7 +105,7 @@
                                 @foreach(request()->route()->parameters as $breadcrumbs)
                                 @if(count(request()->route()->parameters)-1 > $loop->index )
                                 <li class="breadcrumbs__item flex--inline flex-align-baseline">
-                                    <a class="breadcrumbs__anchor link--secondary" href="https://www.cartier.com/en-ae/home" title="Home">{{$breadcrumbs}}</a>
+                                    <a class="breadcrumbs__anchor link--secondary" href="" title="Home">{{$breadcrumbs}}</a>
 
                                     @if(count(request()->route()->parameters)-2 > $loop->index )
                                     <span class="breadcrumbs__separator">/</span>
@@ -339,24 +339,23 @@
 
                                 <div class="pdp-main__description cms-generic-copy text-line--medium" data-product-component="short-description" id="toggleID-1017--target" aria-labelledby="toggleID-1017">
 
-                                    <!-- <span class="pdp-main__description-truncated">
-                                        LOVE bracelet, 18K yellow gold (750/1000). Comes with a screwdriver. Width: 6.1 mm. Created in New...
-                                    </span>
-
-                                    <span class="pdp-main__description-full">
-                                        LOVE bracelet, 18K yellow gold (750/1000). Comes with a screwdriver. Width: 6.1 mm. Created in New York in 1969, the LOVE bracelet is an icon of jewelry design: a close fitting, oval bracelet composed of two rigid arcs which is worn on the wrist and removed using a specific screwdriver. The closure is designed with two functional screws placed on either side of the bracelet: you will need help to open or close it. To determine the size of your LOVE bracelet, measure your wrist, adding one centimeter to your size for a tighter fit, or two centimeters for a looser fit.
-
-                                        <p class="pdp__product-spec">
-                                            Please note that the carat weight, number of stones and product dimensions will vary based on the size of the creation you order.&nbsp;For detailed information please contact us.
-                                        </p> -->
-                                    <span>{{$product->long_description}}</span>
+                                   
+                                        @if(strlen($product->long_description) > 100)
+                                        <span class="pdp-main__description-truncated">{{substr($product->long_description,0,100)."..."}}</span>
+                                        <span class="pdp-main__description-full">{{$product->long_description}}</span>
+                                      
+                                        
+                                        @else
+                                        <span class="">{{$product->long_description}}</span>
+                                        @endif
 
                                     </span>
-
-                                    <button type="button" class="pdp-main__description-more link link--underline" id="toggleID-1017" aria-expanded="false" aria-controls="toggleID-1017--target">
+                                    @if(strlen($product->long_description) > 100)
+                                    <button type="button" class="pdp-main__description-more link link--underline toggleRead" id="toggleID-1017" aria-expanded="false" aria-controls="toggleID-1017--target">
                                         <span class="pdp-main__description-truncated">Read More</span>
                                         <span class="pdp-main__description-full">Read Less</span>
                                     </button>
+                                    @endif
 
                                 </div>
 
@@ -510,8 +509,8 @@
                                 <p class="font-family--serif hidden" data-product-component="availability-status">
                                     Currently unavailable online
                                 </p>
-
-                                <button class="product-add__button add-to-cart button button--primary button--fluid set--w-100" data-pid="CRB6067515" data-product-component="add-button" data-url="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Cart-AddProduct" data-sellable-url="getWebVisibleInfo" data-add-ready="">
+                                    <input type="hidden" value="{{$product->id}}">
+                                <button class="product-add__button add-to-cart button button--primary button--fluid set--w-100 addToCart" data-pid="CRB6067515" data-product-component="add-button" data-url="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Cart-AddProduct" data-sellable-url="getWebVisibleInfo" data-add-ready="">
 
                                     Add to Shopping Bag
 
@@ -540,7 +539,7 @@
                                     </svg>
                                 </button>
                             </div>
-                            <div class="loader face-loader-wrapper"><svg class="loader-indicator">
+                            <!-- <div class="loader face-loader-wrapper"><svg class="loader-indicator">
                                     <g class="face">
                                         <path class="loader-indicator__path" d="M57.89,40.39l-7.18-5,3.71-6.73h0L59.74,19l.93,4.89Zm-6.1,8.74L40.52,39.45,50,36.06l7.55,5.31ZM32.32,70c-5.08-.21-7.21-2.8-7.88-3.88l7.83-2.74,7.81,2.73C37.29,69.93,32.35,70,32.32,70ZM3.92,23.86l.93-4.92,5.33,9.67h0l3.72,6.73-7.2,5ZM1.09,4.65a.43.43,0,0,0,0-.12,3,3,0,0,1,.54-1.08C5.15,1.07,13.33,6.76,16.85,9.67l-12,7.1C.09,7.14,1.09,4.66,1.09,4.65Zm15.13.11L17,8.47C14.75,6.71,9.68,3,5.44,2.07c4.09,0,9.62,2.2,10.78,2.69ZM34.05,1c.09,0,5.51,0,13.27,3.67L42.55,31,32.8,28V1c.42,0,.83,0,1.25,0ZM59.23,2.08C55,3,49.8,6.79,47.64,8.52l.68-3.74C49.4,4.32,55.09,2,59.23,2.08ZM53.65,28l-10.07,3,3.7-20.39,12,7.14ZM21.6,32l2.53,6.39L14.9,35.09l-3.26-5.91Zm-.26-1.12L11,28,5.29,17.67l12.06-7.14ZM31.8,28l-9.44,3L17.23,4.7A49.12,49.12,0,0,1,31.8,1.07Zm1,8.53V29.05l9.46,2.88-3,6.72Zm-7.3,3.09,6.8-2.2L39,39.63V53.41H25.5Zm6.3-3.09-6.51,2.1-2.66-6.71,9.17-2.88Zm.49,22.3-5.81-4.43H38.07ZM7.05,41.35l7.57-5.29L24,39.44,12.79,49.11ZM13.25,50,24.5,40.35V53.61L15,58.71ZM23.8,65.28l-8.25-5.75,9.4-5,6.85,5.22v2.77Zm17,0-8-2.79V59.72l6.79-5.22,9.45,5Zm8.85-6.58L40,53.61V40.35l11.29,9.71Zm.08-23.62L40.48,38.4,43.31,32,53,29.19Zm10-18.32L47.82,9.67C51.3,6.76,59.43,1.1,62.92,3.46a3,3,0,0,1,.53,1.07l0,.1s1,2.51-3.73,12.14Zm.74.79c4.9-9.87,4.14-12.8,3.9-13.33a3.72,3.72,0,0,0-.69-1.36.22.22,0,0,0-.05-.08,3.92,3.92,0,0,0-1.41-1.11C58-.32,49.44,3.21,47.94,3.85,39.82,0,34.3,0,34.05,0,33.51,0,33,0,32.42,0L32.3,0a.58.58,0,0,0-.19,0A48.54,48.54,0,0,0,16.66,3.86C15.18,3.22,6.56-.32,2.34,1.68A4.16,4.16,0,0,0,.92,2.79l0,0a3.86,3.86,0,0,0-.71,1.4c-.24.53-1,3.46,3.9,13.32L2.92,23.76a.49.49,0,0,0,0,.17L5.84,41.31h0a.39.39,0,0,0,.08.2h0L12.24,50l1.87,9.53a.15.15,0,0,0,0,.07.64.64,0,0,0,0,.07h0a.43.43,0,0,0,.14.16l9,6.29c.39.79,2.58,4.56,9,4.83.24,0,5.94,0,8.94-4.81l9-6.31a.54.54,0,0,0,.14-.16h0a.1.1,0,0,0,0-.07.21.21,0,0,0,0-.07L52.35,50l6.31-8.51a.85.85,0,0,0,.09-.22l2.92-17.38a.49.49,0,0,0,0-.17Z"></path>
                                     </g>
@@ -556,7 +555,7 @@
                                     </defs>
                                 </svg>
                                 <div class="face-loader face-loader--reverse"></div>
-                            </div>
+                            </div> -->
                         </div>
 
 
@@ -624,12 +623,12 @@
 
 
 
-                                <button type="button" class="product-common__share-trigger link link--flex flex-align-center body-type--centi text-transform--uppercase" data-share-component="trigger" data-disable-redirect="">
+                                <!-- <button type="button" class="product-common__share-trigger link link--flex flex-align-center body-type--centi text-transform--uppercase" data-share-component="trigger" data-disable-redirect="">
                                     <svg aria-hidden="true" focusable="false" class="icon icon icon--set-left-short body-type--hecto">
                                         <use xlink:href="#icon--share"></use>
                                     </svg>
                                     Share
-                                </button>
+                                </button> -->
 
                                 <div class="modal-container--static" data-share-component="modal">
                                     <div class="modal__header">
@@ -694,7 +693,7 @@
                             </div>
 
                             <div class="pdp-main__footer-item pdp-main__ref body-type--deci">
-                                Ref. <span data-product-component="pid" data-pid="CRB6067515">CRB6067515</span>
+                                Ref. <span data-product-component="pid" data-pid="CRB6067515">{{$product['reference_number']}}</span>
                             </div>
                         </div>
                     </div>

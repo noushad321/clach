@@ -598,14 +598,14 @@
 
 
 
-                                <a class="header__utility-item header__utility-anchor link flex" href="https://www.cartier.com/en-ae/wishlist" title="Wish List" aria-label="Wish List">
+                                <a class="header__utility-item header__utility-anchor link flex" href="#" title="Wish List" aria-label="Wish List">
                                     <svg aria-hidden="true" focusable="false" class="icon fluid-type--deka-base">
                                         <use xlink:href="#icon--heart" />
                                     </svg>
                                     <span class="sr-only">Wish List</span>
                                 </a>
 
-                                <a class="header__utility-item header__utility-anchor link flex" href="https://www.cartier.com/en-ae/login" title="My Cartier" aria-label="My Cartier">
+                                <a class="header__utility-item header__utility-anchor link flex" href="{{url('/login')}}" title="My Cartier" aria-label="My Cartier">
                                     <svg aria-hidden="true" focusable="false" class="icon fluid-type--deka-base">
                                         <use xlink:href="#nav--profile" />
                                     </svg>
@@ -1627,6 +1627,7 @@
             $('.loader').css("opacity","0");
             $('.loader').css("visibility","hidden");
             $(".utility-overlay__line-items").remove();
+            $(".utility-overlay__footer").remove();
              $(".cartCount").text(data.count);
             //$(".cartIcon").append(`<span class="cartCount header__utility-badge header__utility-badge--has-items flex flex-align-center flex-justify-center" data-minicart-component="qty">${data.count}</span>`);
             $(".myCartList").append(data.data);

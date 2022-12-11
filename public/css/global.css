@@ -3,6 +3,19 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
 }
+.pdp-main__media {
+    position: relative;
+}
+.pdp-main__description.toggle--active .pdp-main__description-truncated, .pdp-main__description:not(.toggle--active) .pdp-main__description-full{
+    display: none;
+}
+.pdp-main {
+    margin-bottom: 1.875rem;
+    overflow: hidden;
+}
+.container, .max-width--large {
+    max-width: 90rem;
+}
 .checkout-stage__header, .checkout-steps-header {
     margin-bottom: 1rem;
 }
@@ -11037,6 +11050,9 @@ isapplepay {
 }
 
 @media screen and (min-width: 768px) {
+    [dir=ltr] .pdp-main__media {
+        padding-left: 3.313em;
+    }
     .m-sitemap .sitemap__sub-menu--level-1 {
         margin:0 -16px
     }
