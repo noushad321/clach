@@ -255,8 +255,8 @@
 
 
 
-<a href="tel: 800 032 1180" class="component-actions__cta  contactus-tile__link link link--primary " aria-label="Call us at 800 032 1180" style="">
-    Tel. 800 032 1180
+<a href="tel: +971 43467864" class="component-actions__cta  contactus-tile__link link link--primary " aria-label="Call us at +971 43467864" style="">
+    Tel. +971 43467864
 </a>
 
                                     

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Resources\ProductsResource;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\SliderImages;
 use App\Models\SubCategory;
 use App\Models\SubCategoryType;
 use Illuminate\Http\Request;
@@ -23,8 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+         $slider = SliderImages::all();
         $products = Product::with('attributeValues.attribute', 'tags', 'subCategoryType.subCategory.category', 'multimedia')->inRandomOrder()->limit(5)->get();
-        return view('home', compact('products'));
+        return view('home', compact('products','slider'));
     }
 
     /**

@@ -586,7 +586,7 @@
                         </div>
 
                         <div class="col-6 col-md-4 flex-align-center">
-                            <a href="/en-ae/home" class="header__logo set--w-100 flex flex-direction-col flex-align-center" title="Cartier Home">
+                            <a href="{{url('/')}}" class="header__logo set--w-100 flex flex-direction-col flex-align-center" title="Cartier Home">
                                 <img src="{{asset('images/clach_logo-1.png')}}">
                             </a>
                         </div>
@@ -598,18 +598,13 @@
 
 
 
-                                <a class="header__utility-item header__utility-anchor link flex" href="#" title="Wish List" aria-label="Wish List">
-                                    <svg aria-hidden="true" focusable="false" class="icon fluid-type--deka-base">
-                                        <use xlink:href="#icon--heart" />
-                                    </svg>
-                                    <span class="sr-only">Wish List</span>
-                                </a>
+                               
 
                                 <a class="header__utility-item header__utility-anchor link flex" href="{{url('/login')}}" title="My Cartier" aria-label="My Cartier">
                                     <svg aria-hidden="true" focusable="false" class="icon fluid-type--deka-base">
                                         <use xlink:href="#nav--profile" />
                                     </svg>
-                                    <span class="sr-only">My Cartier</span>
+                                    <span class="sr-only">My Clach</span>
                                 </a>
 
 
@@ -654,7 +649,7 @@
                                             <use xlink:href="#icon--close" />
                                         </svg><span class="sr-only">Close navigation</span></button>
 
-                                    <a href="/en-ae/home" class="header-flyout__logo flex flex-direction-col flex-align-center" title="Cartier Home">
+                                    <a href="/en-ae/home" class="header-flyout__logo flex flex-direction-col flex-align-center" title="Clach Home">
                                         <svg aria-hidden="true" focusable="false" class="header__logo-img">
                                             <use xlink:href="#logo" />
                                         </svg>
@@ -755,7 +750,11 @@
                                                                         </div>
 
 
-
+                                                                        <div class="header-flyout__tab-viewall level-3">
+                                                                    <a href="/en-ae/high-jewellery/latest-collections/" id="flyout-high-jewellery_latest-collections--viewall" class="link--primary text-transform--initial level-3" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" aria-label="View all Latest collections">
+                                                                            View all Latest collections
+                                                                        </a>
+                                                                </div>
 
 
                                                                     </div>
@@ -784,7 +783,7 @@
 
 
 
-                                            <a href="/en-ae/contact-customer-care" class="component-actions__cta  header__utility-item header__utility-anchor header-flyout__secondary-link body-type--centi link link--secondary " aria-label="Contact Us" style="">
+                                            <a href="{{url('/contactus')}}" class="component-actions__cta  header__utility-item header__utility-anchor header-flyout__secondary-link body-type--centi link link--secondary " aria-label="Contact Us" style="">
                                                 <svg aria-hidden="true" focusable="false" class="icon body-type--deka icon--set-left">
                                                     <use xlink:href="#icon--contact" />
                                                 </svg>Contact Us
@@ -812,15 +811,9 @@
 
 
 
-                                            <a class="header__utility-anchor header-flyout__secondary-link link flex" href="https://www.cartier.com/en-ae/wishlist" title="Wish List" aria-label="Wish List">
-                                                <svg aria-hidden="true" focusable="false" class="icon body-type--deka">
-                                                    <use xlink:href="#icon--heart" />
-                                                </svg>
-                                                <span class="header__utility-label icon--set-right-large text-transform--uppercase body-type--centi">Wish
-                                                    List</span>
-                                            </a>
+                                         
 
-                                            <a class="header__utility-anchor header-flyout__secondary-link link flex" href="https://www.cartier.com/en-ae/login" title="My Cartier" aria-label="My Cartier" data-auth-trigger>
+                                            <a class="header__utility-anchor header-flyout__secondary-link link flex" href="#" title="My Cartier" aria-label="My Cartier" data-auth-trigger>
                                                 <svg aria-hidden="true" focusable="false" class="icon body-type--deka">
                                                     <use xlink:href="#nav--profile" />
                                                 </svg>
@@ -937,28 +930,7 @@
 
             <div class="max-width--large gutter--normal">
                 <div class="subscription-banner">
-                    <div class="row flex-align-center flex-justify-center">
-                        <div class="col-12 col-md-6 col-lg-5 col-xl-4">
-                            <p class="subscription-banner__description heading-type text-align--center">Subscribe to our
-                                Newsletter</p>
-
-                            <form role="form" action="/on/demandware.store/Sites-CartierUAE-Site/en_AE/EmailSubscribe-Subscribe" method="POST" class="subscription-banner__form" data-ajax-form='{"onSuccess": "reset", "doneModalOptions": {"modalID": "footerNewsletterSubscribe", "modalClass": "modal--base modal--newsletter", "overlayOthers": true}, "tracking": {"trackEvent": "footerNewsletterCick"}}'>
-                                <div class="row flex-no-gutters">
-                                    <div class="col-8">
-                                        <div class="" data-floating-label>
-                                            <label for="subscriptionBannerEmail" class="form-control-label">Email</label>
-                                            <input id="subscriptionBannerEmail" type="email" class="subscription-banner__field form-control form-control--text remove--border-right-styles" name="subscriptionBannerEmail" required placeholder="your@email.com" aria-label="Email">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-4">
-                                        <button type="submit" class="subscription-banner__action button button--primary button--fluid set--w-100 remove--border-left-radius">
-                                            Subscribe</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
 
@@ -1005,7 +977,7 @@
 
 
 
-                                        <a href="/en-ae/contact-customer-care" class="component-actions__cta  body-type--centi link link--secondary " aria-label="Go to Contact Us page" style="">
+                                        <a href="{{url('/about-us')}}" class="component-actions__cta  body-type--centi link link--secondary " aria-label="Go to Contact Us page" style="">
                                             About Us
                                         </a>
 
@@ -1014,16 +986,7 @@
 
                                     <li class="footer-links__item">
 
-
-
-
-
-
-
-
-
-
-                                        <a href="/en-ae/contact-customer-care" class="component-actions__cta  body-type--centi link link--secondary " aria-label="Go to Contact Us page" style="">
+                                        <a href="{{url('/contactus')}}" class="component-actions__cta  body-type--centi link link--secondary " aria-label="Go to Contact Us page" style="">
                                             Contact Us
                                         </a>
 
@@ -1043,8 +1006,8 @@
 
 
 
-                                        <a href="tel: 800 0321180" class="component-actions__cta  body-type--centi link link--secondary " aria-label="Start call to: + 800 0321180" style="">
-                                            Call Now: 800 0321180
+                                        <a href="tel: +97143467864" class="component-actions__cta  body-type--centi link link--secondary " aria-label="Start call to: +97143467864" style="">
+                                            Call Now: +971 43467864
                                         </a>
 
                                     </li>
@@ -1126,7 +1089,7 @@
 
 
 
-                                        <a href="/en-ae/terms-of-use.html" class="component-actions__cta  body-type--centi link link--secondary " aria-label="Terms of Use" style="">
+                                        <a href="{{url('/terms-of-use')}}" class="component-actions__cta  body-type--centi link link--secondary " aria-label="Terms of Use" style="">
                                             Terms of Use
                                         </a>
 
@@ -1231,7 +1194,7 @@
 
 
 
-                                        <a href="https://www.instagram.com/cartier/" target=_blank class="component-actions__cta   link link--highlight-hover " aria-label="Follow us on Twitter" style="" rel="noopener noreferrer" data-link="instagram">
+                                        <a href="https://instagram.com/clachjewelry?igshid=YmMyMTA2M2Y=" target=_blank class="component-actions__cta   link link--highlight-hover " aria-label="Follow us on Twitter" style="" rel="noopener noreferrer" data-link="instagram">
                                             <svg aria-hidden="true" focusable="false" class="icon body-type--hecto">
                                                 <use xlink:href="#icon--instagram" />
                                             </svg>
@@ -1252,7 +1215,7 @@
 
 
 
-                                        <a href="https://www.facebook.com/Cartier" target=_blank class="component-actions__cta   link link--highlight-hover " aria-label="See our Facebook page" style="" rel="noopener noreferrer" data-link="facebook">
+                                        <a href="https://www.facebook.com/Clach-Jewelry-102383502095437" target=_blank class="component-actions__cta   link link--highlight-hover " aria-label="See our Facebook page" style="" rel="noopener noreferrer" data-link="facebook">
                                             <svg aria-hidden="true" focusable="false" class="icon body-type--hecto">
                                                 <use xlink:href="#icon--facebook" />
                                             </svg>
@@ -1273,7 +1236,7 @@
 
 
 
-                                        <a href="https://twitter.com/cartier" target=_blank class="component-actions__cta   link link--highlight-hover " aria-label="Checkout our latest Pins" style="" rel="noopener noreferrer" data-link="twitter">
+                                        <a href="#" target=_blank class="component-actions__cta   link link--highlight-hover " aria-label="Checkout our latest Pins" style="" rel="noopener noreferrer" data-link="twitter">
                                             <svg aria-hidden="true" focusable="false" class="icon body-type--hecto">
                                                 <use xlink:href="#icon--twitter" />
                                             </svg>
@@ -1283,66 +1246,7 @@
 
 
 
-                                    <li class="footer-links__item">
-
-
-
-
-
-
-
-
-
-
-                                        <a href="https://www.youtube.com/cartier" target=_blank class="component-actions__cta   link link--highlight-hover " aria-label="Subscribe to Cartier on Youtube" style="" rel="noopener noreferrer" data-link="youtube">
-                                            <svg aria-hidden="true" focusable="false" class="icon body-type--hecto">
-                                                <use xlink:href="#icon--youtube" />
-                                            </svg>
-                                        </a>
-
-                                    </li>
-
-
-
-                                    <li class="footer-links__item">
-
-
-
-
-
-
-
-
-
-
-                                        <a href="https://www.pinterest.com/cartier/" target=_blank class="component-actions__cta   link link--highlight-hover " aria-label="Write us on WhatsApp" style="" rel="noopener noreferrer" data-link="pinterest">
-                                            <svg aria-hidden="true" focusable="false" class="icon body-type--hecto">
-                                                <use xlink:href="#icon--pinterest" />
-                                            </svg>
-                                        </a>
-
-                                    </li>
-
-
-
-                                    <li class="footer-links__item">
-
-
-
-
-
-
-
-
-
-
-                                        <a href="https://api.whatsapp.com/send/?phone=97145809640&amp;text&amp;app_absent=1&amp;lang=en" target=_blank class="component-actions__cta   link link--highlight-hover " aria-label="&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; class=&quot;icon body-type--hecto&quot;&gt;&lt;use xlink:href=&quot;#icon--whatsapp&quot;/&gt;&lt;/svg&gt;" style="">
-                                            <svg aria-hidden="true" focusable="false" class="icon body-type--hecto">
-                                                <use xlink:href="#icon--whatsapp" />
-                                            </svg>
-                                        </a>
-
-                                    </li>
+                                 
 
 
                                 </ul>
@@ -1373,8 +1277,10 @@
                     <div class="row">
 
 
-                        <div class="footer__secondary-content-column col-12 col-md-6">
-                            <div class="footer__copyright text-align--small-up-right">
+                            <div class="footer__copyright text-align--small-up-right" style="    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;">
                                 <span class="footer__copyright-description body-type--centi text-transform--uppercase">
                                     Copyright © 2022 Clach
                                 </span>
@@ -1382,9 +1288,6 @@
                                 <br class="display--medium-down" />
 
 
-
-
-                            </div>
                         </div>
                     </div>
                 </div>

@@ -64,15 +64,7 @@
             </a>
 
 
-            <button type="button" class="product-tile__wishlist body-type--deka" title="Add to Wish List, Panth&egrave;re de Cartier bracelet" data-wishlist-trigger="heart" data-wishlist-label-add="Add to Wish List, Panth&egrave;re de Cartier bracelet" data-wishlist-label-remove="Remove from Wish List, Panth&egrave;re de Cartier bracelet">
-                <svg aria-hidden="true" focusable="false" class="icon product-tile__wishlist-add">
-                    <use xlink:href="#icon--heart" />
-                </svg>
-                <svg aria-hidden="true" focusable="false" class="icon product-tile__wishlist-remove">
-                    <use xlink:href="#icon--heart-filled" />
-                </svg>
-            </button>
-
+          
 
 
 

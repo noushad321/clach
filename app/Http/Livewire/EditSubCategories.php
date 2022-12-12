@@ -28,6 +28,7 @@ class EditSubCategories extends Component
     {
         $this->subCategory = $subCategory;
         $this->categories = Category::all();
+        $this->category = $this->subCategory->category->id;
     }
 
     public function save()

@@ -50,6 +50,16 @@ Route::get('/contactus', function () {
 Route::get('/la-maison', function () {
     return view('lamaison');
 });
+Route::get('/terms-of-use', function () {
+    return view('terms-of-use');
+});
+Route::get('/privacy-policy', function () {
+    return view('privacy-policy');
+});
+
+Route::get('/about-us', function () {
+    return view('aboutus');
+});
 
 Route::post('add-to-cart', [ProductsController::class, 'addToCart'])->name('add.to.cart');
 Route::delete('remove-from-cart',  [ProductsController::class, 'remove']);

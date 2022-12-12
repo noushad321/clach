@@ -6,6 +6,7 @@
              data-checkout-get-url="https://www.cartier.com/on/demandware.store/Sites-CartierUAE-Site/en_AE/CheckoutServices-Get"
              data-shipping-view="single">
             <div class="row">
+            @if(session('cart'))
                 <div class="col-12 col-md-7">
                     <div class="gutter--normal">
                         <div class="checkout-steps-header extend-gutter--small-up-normal">
@@ -5284,8 +5285,8 @@
 
                                                                 <div class="content-asset">
                                                                     <!-- dwMarker="content" dwContentID="d7858b4f1d061084590247f792" -->
-                                                                    <p>Cartier offers complimentary secure delivery on
-                                                                        all orders</p>
+                                                                    <!-- <p>Cartier offers complimentary secure delivery on
+                                                                        all orders</p> -->
 
                                                                     <p>&nbsp;</p>
 
@@ -5334,7 +5335,7 @@
                                                                                 aria-describedby="dwfrm_shipping_shippingAddress_shippingMethodID-978950933184">
 
 
-                                                                            <label class="form-check-label--radio"
+                                                                            <!-- <label class="form-check-label--radio"
                                                                                    for="shippingMethod-STDD-e0002f69e8fac8fcfd190b30a7-single"
                                                                                    data-checkout-component="shipping-method-label">
                                                                                 <span
@@ -5345,17 +5346,17 @@
                                                                             </label>
                                                                             <div
                                                                                 id="dwfrm_shipping_shippingAddress_shippingMethodID-978950933184"
-                                                                                class="invalid-feedback"></div>
+                                                                                class="invalid-feedback"></div> -->
                                                                         </div>
                                                                     </div>
 
-                                                                    <div class="col-4 col-md-3">
+                                                                    <!-- <div class="col-4 col-md-3">
                                                                         <div
                                                                             class="text-align--right heading-type body-type--deci"
                                                                             data-checkout-component="shipping-method-cost">
-                                                                            AED 0.00
+                                                                            $ 0.00
                                                                         </div>
-                                                                    </div>
+                                                                    </div> -->
                                                                 </div>
 
                                                                 <div class="shipping-method__item row"
@@ -5498,13 +5499,13 @@
                                                             <hr class="checkout-stage__details-division extend-gutter--small-up-normal text-color--grey-3 display--small-only">
                                                         </fieldset>
                                                     </div>
-                                                    <button
+                                                    <!-- <button
                                                         class="button button--primary set--w-100 body-type--centi submit-shipping"
                                                         type="submit" name="submit" value="submit-shipping"
                                                         data-checkout-component="shipping-stage-next"
                                                         form="dwfrm_shipping">
                                                         Proceed
-                                                    </button>
+                                                    </button> -->
                                                 </div>
                                             </form>
                                         </div>
@@ -5514,8 +5515,241 @@
                         </div>
                     </div>
                 </div>
-            </div>
+
+                <div class="col-12 col-md-5 col-xl-4 off-xl-1">
+                <div class="fixit-container flex-grow-1 gutter--small-only-normal">
+                    <div class="fixit-placeholder" style=""></div><div class="order-summary gutter--small-up-normal fixit-element fixit--respond-to-parent" style="">
+                        <div class="order-summary__header flex flex-justify-between flex-align-baseline flex-flow-wrap">
+                            <h2 class="order-summary__title heading-type body-type--deka">Order Summary</h2>
+                            <a class="link--primary" href="{{url('/cart')}}" title="Modify">
+                               Modify
+                            </a>
+
+                            <p class="set--w-100 text-line--medium flex-grow-1 font-family--serif">
+                            @if(session('cart')) ({{count(session('cart'))}}) @endif Items
+                            </p>
+                        </div>
+
+                        <div class="order-summary__products">
+                            
+
+
+
+
+
+<div data-checkout-component="product-list">
+    
+<?php $total = 0 ?>    
+            
+@foreach(session('cart') as $id => $details)
+<?php $total += $details['price'] * $details['quantity'] ?>
+            <div class="product-line-item product-line-item--order " data-product-container="card" data-pid="CRB6067616" data-cart-line-item="7fee393a0d67364a5789c78d3b">
+                
+
+
+
+
+
+
+
+
+
+
+<div class="product-line-item__main">
+    <div class="product-line-item__details row">
+        <div class="col-6">
+            <a href="#" class="product-line-item__image-wrap link" title="#LOVE# bracelet" tabindex="-1">
+                <img class="product-line-item__image component-overlay component-overlay--center object-fit--contain set--w-100" src="data:image/jpeg;base64,{{base64_encode(Storage::get(json_decode($details['photo'])->source_path)) }}" alt="#LOVE# bracelet" title="#LOVE# bracelet" data-line-item-component="image">
+            </a>
         </div>
+
+        <div class="col-6">
+            <div class="product-line-item__header font-weight--semibold flex flex-justify-between">
+                <div class="product-line-item__header-main">
+                    <!--Product Badges -->
+                    
+
+
+
+                    <a href="#" class="product-line-item__name link word-break--break-word hyphens--auto" title="#LOVE# bracelet">
+                    {{$details['name']}}
+                    </a>
+                </div>
+
+                
+
+                
+            </div>
+
+            <div class="product-line-item__attributes font-family--serif body-type--deci word-break--break-word hyphens--auto">
+                
+
+                
+            <p class="product-line-item__attribute" data-line-item-component="size">
+
+
+                <span class="product-line-item__attribute-key">Size:</span>
+
+
+                <span class="product-line-item__attribute-value">16</span></p>
+                <p class="product-line-item__attribute" data-line-item-component="size">
+
+
+                <span class="product-line-item__attribute-key">Quantity:</span>
+
+
+                <span class="product-line-item__attribute-value">{{$details['quantity']}}</span></p>
+                
+
+                <div class="product-line-item__options">
+                    
+                </div>
+
+                
+
+                
+
+                
+                    <div class="product-line-item__attribute font-weight--semibold  body-type--deci">
+                        <div class="product-line-item__total-price item-total-7fee393a0d67364a5789c78d3b price font-family--sans" data-line-item-component="price-total">
+    
+
+<div class="price__sales pricing line-item-total-price-amount">
+$ {{$details['price']}}
+    
+
+</div>
+
+</div>
+                    </div>
+                
+
+                <div class="product-line-item__attribute">
+                    
+<div class="product-line-item__promotions" data-line-item-component="promotions" data-uuid="7fee393a0d67364a5789c78d3b">
+    
+</div>
+
+                </div>
+
+                
+                    
+<ul class="product-line-item__availability product-line-item__attribute availability-7fee393a0d67364a5789c78d3b list--reset hidden" data-line-item-component="availability">
+    
+        <li class="product-line-item__attributes">In Stock</li>
+    
+
+    
+</ul>
+
+                
+
+                
+                    
+
+
+
+
+
+                
+
+                
+            </div>
+
+            
+
+            
+        </div>
+    </div>
+
+    
+</div>
+
+            </div>
+            @endforeach
+        
+            
+
+            
+        
+            
+
+            
+        
+            
+
+            
+            </div>
+            @else
+            <h2>No items</h2>
+            @endif
+        </div>
+        <div class="order-summary__totals order-summary__totals--checkout gutter--normal">
+                            
+
+<dl class="total-list">
+    
+    <div class="total-list__row row flex-align-center subtotal-item font-weight--semibold" data-totals-component="subTotal">
+        <dt class="col">
+            <p class="order-receipt-label heading-type word-break--break-word hyphens--auto" data-totals-component="label">Subtotal</p>
+        </dt>
+        <dd class="col">
+            <p class="text-align--right sub-total" data-totals-component="value">$ {{$total}}</p>
+        </dd>
+    </div>
+
+    
+    <div class="total-list__row row flex-align-center font-weight--semibold order-discount body-type--centi hidden" data-totals-component="orderLevelDiscountTotal">
+        <dt class="col">
+            <p class="order-receipt-label heading-type word-break--break-word hyphens--auto" data-totals-component="label">Order Discount</p>
+        </dt>
+        <dd class="col">
+            <p class="text-align--right order-discount-total">- <span data-totals-component="value">$ 0.00</span></p>
+        </dd>
+    </div>
+
+    
+    
+        <div class="total-list__row row flex-align-center font-weight--semibold shipping-item body-type--centi" data-totals-component="totalShippingCost">
+            <dt class="col">
+                <p class="order-receipt-label heading-type word-break--break-word hyphens--auto" data-totals-component="label">Standard Delivery</p>
+            </dt>
+            <dd class="col">
+                <p class="text-align--right shipping-total-cost" data-totals-component="value">$ 0</p>
+            </dd>
+        </div>
+    
+        
+        <div class="total-list__row row flex-align-center font-weight--semibold shipping-discount body-type--centi hidden" data-totals-component="shippingLevelDiscountTotal">
+            <dt class="col">
+                <p class="order-receipt-label heading-type word-break--break-word hyphens--auto" data-totals-component="label">Shipping Discount</p>
+            </dt>
+            <dd class="col">
+                <p class="text-align--right shipping-discount-total">- <span data-totals-component="value">AED 0.00</span></p>
+            </dd>
+        </div>
+    
+
+    <hr class="total-list__division text-color--grey-3">
+
+    
+    <div class="total-list__row--short-spacing row grand-total" data-totals-component="grandTotal">
+        <dt class="col">
+            <strong class="order-receipt-label heading-type word-break--break-word hyphens--auto" data-totals-component="label">Total</strong>
+        </dt>
+        <dd class="col">
+            <strong class="text-align--right font-weight--semibold grand-total-sum" data-totals-component="value">$ {{$total}}</strong>
+        </dd>
+    </div>
+
+    
+    <div class="total-list__row row sales-tax-item" data-totals-component="totalTax">
+      
+	    
+    </div>
+</dl>
+
+                        </div>
     </main>
 
 @endsection

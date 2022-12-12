@@ -12,6 +12,47 @@
                         class="max-width--large module-container__constraint--center gutter--normal module-container--has-outer-gutter">
                         <div class="wrapper">
                             <div class="carousel">
+                                @forelse($slider as $slide)
+                               
+                                <div><img src="data:image/jpeg;base64,{{ base64_encode(Storage::get($slide->multimedia()->first()->getRawOriginal('source_path'))) }}">
+                                    <div class="
+                                    content-tile__content-wrap
+                                    set--w-100 flex
+
+                                    set--text-after
+
+                                    text-align--center
+
+                                    component-h-align--center
+
+
+                                    " style="">
+
+                                        <div class="content-tile__content">
+
+
+                                            <h2 class="content-tile__title heading-type component-copy__title--regular">
+                                                {{$slide->name}}
+                                            </h2>
+
+
+                                            <div class="component-actions content-tile__actions">
+
+
+                                                <a href="https://www.cartier.com/en-ae/jewellery/collections/panthere-de-cartier/"
+                                                   target="_blank"
+                                                   class="component-actions__cta component-actions__cta--fake content-tile__cta link link--primary "
+                                                   aria-label="Discover" tabindex="0" style="">
+                                                    Discover
+                                                </a>
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                @empty
                                 <div><img src="images/1.jpg">
                                     <div class="
                                     content-tile__content-wrap
@@ -50,82 +91,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div><img src="images/2.jpg">
-                                    <div class="
-            content-tile__content-wrap
-            set--w-100 flex
+                                @endforelse
 
-            set--text-after
-
-            text-align--center
-
-            component-h-align--center
-
-
-            " style="">
-
-                                        <div class="content-tile__content">
-
-
-                                            <h2 class="content-tile__title heading-type component-copy__title--regular">
-                                                More Feline Than Ever&ZeroWidthSpace;
-                                            </h2>
-
-
-                                            <div class="component-actions content-tile__actions">
-
-
-                                                <a href="https://www.cartier.com/en-ae/jewellery/collections/panthere-de-cartier/"
-                                                   target="_blank"
-                                                   class="component-actions__cta component-actions__cta--fake content-tile__cta link link--primary "
-                                                   aria-label="Discover" tabindex="0" style="">
-                                                    Discover
-                                                </a>
-
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div><img src="images/3.jpg">
-                                    <div class="
-                                    content-tile__content-wrap
-                                    set--w-100 flex
-
-                                    set--text-after
-
-                                    text-align--center
-
-                                    component-h-align--center
-
-
-                                    " style="">
-
-                                        <div class="content-tile__content">
-
-
-                                            <h2 class="content-tile__title heading-type component-copy__title--regular">
-                                                More Feline Than Ever&ZeroWidthSpace;
-                                            </h2>
-
-
-                                            <div class="component-actions content-tile__actions">
-
-
-                                                <a href="https://www.cartier.com/en-ae/jewellery/collections/panthere-de-cartier/"
-                                                   target="_blank"
-                                                   class="component-actions__cta component-actions__cta--fake content-tile__cta link link--primary "
-                                                   aria-label="Discover" tabindex="0" style="">
-                                                    Discover
-                                                </a>
-
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
+                               
                             </div>
                         </div>
                         <div class="page-designer__empty-container page-designer__empty-container--secondary"></div>

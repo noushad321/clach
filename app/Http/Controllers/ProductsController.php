@@ -10,6 +10,7 @@ use App\Models\SubCategoryType;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Storage;
 
 class ProductsController extends Controller
 {
@@ -38,70 +39,58 @@ class ProductsController extends Controller
     {
         $id = $request->id;
         $product = Product::find($id);
-        
-        if(!$product) {
+
+        if (!$product) {
             abort(404);
         }
         $cart = session()->get('cart');
-        if(!$cart) {
+        if (!$cart) {
             $cart = [
-                    $id => [
-                        "name" => $product->name,
-                        "quantity" => 1,
-                        "price" => $product->price,
-                        "photo" => ''
-                    ]
+                $id => [
+                    "name" => $product->name,
+                    "quantity" => 1,
+                    "price" => $product->price,
+                    "photo" => $product->multimedia()->first()
+                ]
             ];
             session()->put('cart', $cart);
             //return response()->json(['message' => 'first added', 'data' => $cart]);
         }
         // if cart not empty then check if this product exist then increment quantity
-       else if(isset($cart[$id])) {
+        else if (isset($cart[$id])) {
             $cart[$id]['quantity']++;
             session()->put('cart', $cart);
             //return response()->json(['message' => 'updated', 'data' => $cart]);
-         
+
+        } else {
+            // if item not exist in cart then add to cart with quantity = 1
+            $cart[$id] = [
+                "name" => $product->name,
+                "quantity" => 1,
+                "price" => $product->price,
+                "photo" => $product->multimedia()->first()
+            ];
+            session()->put('cart', $cart);
         }
-        else{
-        // if item not exist in cart then add to cart with quantity = 1
-        $cart[$id] = [
-            "name" => $product->name,
-            "quantity" => 1,
-            "price" => $product->price,
-            "photo" => ''
-        ];
-        session()->put('cart', $cart);
-    }
-      
-       
+
+
         $div = '';
         $div = '<div class="utility-overlay__line-items" data-minicart-component="items" data-line-item-container="minicart">';
-     
- 
- 
- 
-         $total = 0;
 
-         foreach(session('cart') as $id => $details)
-         {
-                 $total += $details['price'] * $details['quantity'];
-                 $div .='<div class="utility-overlay__line-item product-line-item product-line-item--minicart" data-product-container="card" data-pid="CRB6067416" data-cart-line-item="be14c8d5b901190a7997ae7535">
-         
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
+
+
+        $total = 0;
+
+        foreach (session('cart') as $id => $details) {
+            $total += $details['price'] * $details['quantity'];
+            $image = $details['photo'] ? 'data:image/jpeg;base64,'.base64_encode(Storage::get(json_decode($details['photo'])->source_path)) : ''; 
+            $div .= '<div class="utility-overlay__line-item product-line-item product-line-item--minicart" data-product-container="card" data-pid="CRB6067416" data-cart-line-item="be14c8d5b901190a7997ae7535">
  <div class="product-line-item__main">
      <div class="product-line-item__details row">
          <div class="col-6">
-             <a href="/en-ae/jewellery/bracelets/love/love-bracelet-CRB6067416.html" class="product-line-item__image-wrap link" title="#LOVE# bracelet" tabindex="-1">
-                 <img class="product-line-item__image component-overlay component-overlay--center object-fit--contain set--w-100" src="https://www.cartier.com/dw/image/v2/BFHP_PRD/on/demandware.static/-/Sites-cartier-master/default/dw3487b10f/images/large/637909358247314416-2366914.png?sw=250&amp;sh=250&amp;sm=fit&amp;sfrm=png" alt="#LOVE# bracelet" title="#LOVE# bracelet" data-line-item-component="image">
+             <a href="#" class="product-line-item__image-wrap link" title="#LOVE# bracelet" tabindex="-1">
+                 <img class="product-line-item__image component-overlay component-overlay--center object-fit--contain set--w-100" src="'.$image.'" alt="#LOVE# bracelet" title="#LOVE# bracelet" data-line-item-component="image">
              </a>
          </div>
  
@@ -109,19 +98,10 @@ class ProductsController extends Controller
              <div class="product-line-item__header font-weight--semibold flex flex-justify-between">
                  <div class="product-line-item__header-main">
                      <!--Product Badges -->
-                     
- 
- 
- 
                      <a href="" class="product-line-item__name link word-break--break-word hyphens--auto" title="#LOVE# bracelet">'
-                         . $details['name'].
-                     '</a>
-                 </div>
- 
-                 
- 
-                 
-                     
+                . $details['name'] .
+                '</a>
+                 </div>    
  <div class="product-line-item__remove ">
      <button data-id="{{$id}}"  type="button" class="product-line-item__action-cta--remove button--circle-close bg--white" data-line-item-component="remove-action" aria-label="Remove, #LOVE# bracelet" id="toggleID-7824" aria-expanded="false" aria-controls="toggleID-7824--target">
  
@@ -150,20 +130,9 @@ class ProductsController extends Controller
          </div>
      </div>
  </div>
- 
  </div>
- 
-                 
              </div>
- 
-             <div class="product-line-item__attributes font-family--serif body-type--deci word-break--break-word hyphens--auto">
-                 
- 
-                 
-                     <p class="product-line-item__attribute">Rose gold</p>
-                 
- 
-                 
+             <div class="product-line-item__attributes font-family--serif body-type--deci word-break--break-word hyphens--auto">                     <p class="product-line-item__attribute">Rose gold</p>
                      <p class="product-line-item__attribute" data-line-item-component="size">
  
                      
@@ -177,23 +146,18 @@ class ProductsController extends Controller
  <span class="product-line-item__attribute-key">Quantity:</span>
  
  
- <span class="product-line-item__attribute-value">'.$details['quantity'].'</span></p>
+ <span class="product-line-item__attribute-value">' . $details['quantity'] . '</span></p>
                  
  
                  <div class="product-line-item__options">
                      
                  </div>
  
-                 
- 
-                 
- 
-                 
                      <div class="product-line-item__attribute font-weight--semibold  body-type--deci">
                          <div class="product-line-item__total-price item-total-be14c8d5b901190a7997ae7535 price font-family--sans" data-line-item-component="price-total">
      
  
- <div class="price__sales pricing line-item-total-price-amount">$'.$details['price'].'</div>
+ <div class="price__sales pricing line-item-total-price-amount">$' . $details['price'] . '</div>
  
  </div>
                      </div>
@@ -224,9 +188,8 @@ class ProductsController extends Controller
  </div>
  
      </div>';
- 
-         }
- $div.='</div> <div class="utility-overlay__footer">
+        }
+        $div .= '</div> <div class="utility-overlay__footer">
     
 
  <div class="utility-overlay__footer-section utility-overlay__footer-totals">
@@ -236,7 +199,7 @@ class ProductsController extends Controller
          </div>
 
          <div class="col-6">
-             <p class="text-align--right" data-totals-component="value">$'.$total.'</p>
+             <p class="text-align--right" data-totals-component="value">$' . $total . '</p>
          </div>
      </div>
      
@@ -251,17 +214,15 @@ class ProductsController extends Controller
      </div>
  </div>
 </div>';
- 
-return response()->json(['message' => 'updated','count'=>count(session('cart')) ,'data' => $div]);
-       
 
+        return response()->json(['message' => 'updated', 'count' => count(session('cart')), 'data' => $div]);
     }
 
     public function remove(Request $request)
     {
-        if($request->id) {
+        if ($request->id) {
             $cart = session()->get('cart');
-            if(isset($cart[$request->id])) {
+            if (isset($cart[$request->id])) {
                 unset($cart[$request->id]);
                 session()->put('cart', $cart);
             }
@@ -269,9 +230,9 @@ return response()->json(['message' => 'updated','count'=>count(session('cart')) 
         }
     }
 
-    
 
-    
+
+
     public function store(Request $request)
     {
         //
@@ -297,8 +258,7 @@ return response()->json(['message' => 'updated','count'=>count(session('cart')) 
      */
     public function update(Request $request)
     {
-        if($request->id and $request->quantity)
-        {
+        if ($request->id and $request->quantity) {
             $cart = session()->get('cart');
             $cart[$request->id]["quantity"] = $request->quantity;
             session()->put('cart', $cart);

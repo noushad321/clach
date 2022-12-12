@@ -31,6 +31,16 @@
             @endif
             <div class="mb-6">
                 <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Banner Image</label>
+                @if($subCategory->multimedia()->count() > 0)
+                    <div class="display: inline-block">
+                        @foreach($subCategory->multimedia()->get() as $pic)
+                            <img alt="{{ env('APP_NAME', '') }}"
+                                 style="display: block; margin-left: 20px; max-width: 200px; max-height: 200px"
+                                 src="data:image/jpeg;base64,{{ base64_encode(Storage::get($pic->getRawOriginal('source_path'))) }}"/>
+                        @endforeach
+                    </div>
+
+                @endif
                 <input type="file" wire:model.defer="bannerImage">
                 @error('bannerImage') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
             </div>
