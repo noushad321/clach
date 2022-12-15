@@ -8,9 +8,12 @@ $(window).bind("scroll", function () {
 });
 
 $(".toggleRead").click(function(){
-    console.log("first")
     $(this).parent().toggleClass("toggle--active");
 });
+
+
+
+
 
 
 

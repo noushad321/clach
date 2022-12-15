@@ -6,7 +6,7 @@
         <div class="row flex-no-gutters">
           
             <div class="col">
-            <input type='search' placeholder="Search products" autocomplete="off" wire:keyup="searchResult" class="form-control site-search__field set--w-100 font-family--serif" wire:model="search" >
+            <input type='text' placeholder="Search products" autocomplete="off"  class="form-control "  >
 
             </div>
 

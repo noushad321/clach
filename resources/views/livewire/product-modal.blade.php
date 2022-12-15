@@ -1,6 +1,7 @@
-@if($visibleModal)
 <div>
-<div id="modal-quickview" class="window-modal modal--quickview modal--small-full modal-active" data-modal="true" data-modal-index="0" data-modal-active="true" data-focustrap-enabled="true"><div class="window-modal__content" tabindex="-1" role="dialog" aria-labelledby="qvProductName-B6069917" aria-modal="true" style="outline: none;">
+@if($visibleModal)
+
+<div id="modal-quickview" class="window-modal modal--quickview modal--small-full" data-modal="true" data-modal-index="0" data-modal-active="true" data-focustrap-enabled="true"><div class="window-modal__content" tabindex="-1" role="dialog" aria-labelledby="qvProductName-B6069917" aria-modal="true" style="outline: none;">
 <div class="quickview quickview-master" data-product-container="quickview" data-pid="B6069917">
     <div class="row flex-no-gutters">
         <!-- Product Images Carousel -->
@@ -416,6 +417,7 @@
     
 </div>
 
-<button class="window-modal__close" data-modal-close="true" title="Close modal" aria-label="Close modal" type="button"></button></div></div></div>
+<button class="window-modal__close" data-modal-close="true" title="Close modal" aria-label="Close modal" type="button"></button></div></div>
 
 @endif
+</div>

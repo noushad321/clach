@@ -687,7 +687,7 @@
                                                                 @foreach($menu->subCategories as $subcategory)
 
                                                                 <li class="header-flyout__tab-item header-flyout__item level-2">
-                                                                    <button id="flyout-high-jewellery_latest-collections" class="header-flyout__anchor header-flyout__anchor--tab flex-justify-between text-transform--uppercase flex-align-center  level-2" data-nav-component="anchor-2" data-nav-tab="anchor-2" data-menu-parent="[data-nav-component=parent-container]" data-menu-target="[data-nav-component=container-3-0]" aria-label="View High Jewellery: Latest collections" role="tab">
+                                                                    <button id="flyout-high-jewellery_latest-collections" class="header-flyout__anchor header-flyout__anchor--tab flex-justify-between text-transform--uppercase flex-align-center  level-2" data-nav-component="anchor-2" data-nav-tab="anchor-2" data-menu-parent="[data-nav-component=parent-container]" data-menu-target="[data-nav-component=container-3-{{$loop->index}}]" aria-label="View High Jewellery: Latest collections" role="tab">
                                                                         {{$subcategory->name}}
                                                                         <svg aria-hidden="true" focusable="false" class="header-flyout__anchor-arrow icon body-type--deci display--small-only">
                                                                             <use xlink:href="#icon--angle-right" />
@@ -751,8 +751,8 @@
 
 
                                                                         <div class="header-flyout__tab-viewall level-3">
-                                                                    <a href="/en-ae/high-jewellery/latest-collections/" id="flyout-high-jewellery_latest-collections--viewall" class="link--primary text-transform--initial level-3" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" aria-label="View all Latest collections">
-                                                                            View all Latest collections
+                                                                    <a href="{{url('items/'.$menu->slug.'/'.$subcategory->slug)}}" id="flyout-high-jewellery_latest-collections--viewall" class="link--primary text-transform--initial level-3" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" aria-label="View all Latest collections">
+                                                                            View all {{$subcategory->name}}
                                                                         </a>
                                                                 </div>
 
@@ -850,13 +850,14 @@
                                             <use xlink:href="#icon--close"></use>
                                         </svg>
                                     </button>
-                                    <form role="search" action="/en-ae/search" method="get" name="simpleSearch" class="site-search__form flex flex-grow-1 flex-direction-col flex-align-center gutter--normal" data-search-suggestions="" data-search-component="form" id="toggleID-3458--target" aria-labelledby="toggleID-1270" data-focustrap-enabled="true" data-gtm-form-interact-id="0">
+                                    <form role=""  method="get" name="" class="site-search__form flex flex-grow-1 flex-direction-col flex-align-center gutter--normal" data-search-suggestions="" data-search-component="form" id="toggleID-3458--target" aria-labelledby="toggleID-1270" data-focustrap-enabled="true" data-gtm-form-interact-id="0">
                                         <div class="site-search__form-group set--w-100">
                                             <label for="siteSearch" class="form-control-label sr-only">Search</label>
 
                                             <div class="row flex-no-gutters">
                                                 <div class="col">
-                                                    <input class="form-control site-search__field set--w-100 font-family--serif" type="search" id="siteSearch" name="q" value="" data-search-component="query-input" placeholder="Search products" autocomplete="off" aria-describedby="q-1046559120397" data-gtm-form-interact-field-id="0">
+                                                    <input class="" type="text"  value="" id="searchProduct" placeholder="Search products" autocomplete="off" aria-describedby="q-1046559120397"
+                                                     data-gtm-form-interact-field-id="0">
                                                     <div id="q-1046559120397" class="invalid-feedback"></div>
                                                 </div>
 
@@ -1297,6 +1298,19 @@
     <div class="error-messaging"></div>
 
 
+    <div id="modal-quickview" class="window-modal modal--quickview modal--small-full" data-modal="true" data-modal-index="0" data-modal-active="true" data-focustrap-enabled="true"><div class="window-modal__content" tabindex="-1" role="dialog" aria-labelledby="qvProductName-B6069917" aria-modal="true" style="outline: none;">
+<div class="quickview quickview-master" data-product-container="quickview" data-pid="B6069917">
+    <div class="row flex-no-gutters quickViewContainer">
+       
+       
+    </div>
+
+    
+
+    
+</div>
+
+<button class="window-modal__close" data-modal-close="true" title="Close modal" aria-label="Close modal" type="button"></button></div></div>
 
 
 
@@ -1509,6 +1523,7 @@
         });
         $(document).on( 'click', '.addToCart', function (e) {
         e.preventDefault(); 
+        $(".modal--quickview").removeClass('modal-active');
         $('.loader').css("opacity","1");
         $('.loader').css("visibility","visible");
 
@@ -1567,6 +1582,222 @@
                }
             });
         });
+        
+        $("#searchProduct").keyup(function(){
+            const query = $(this).val();
+        })
+        $(document).on("click",".quickView",function(){
+            console.log($(this))
+            const productId = $(this).prev().val();;
+          const image = $(this).parent().parent().parent().prev().find('.product-tile__image').attr('data-src');
+          const price = $(this).next().val();
+         const name = $(this).next().next().val();
+         const description = $(this).next().next().next().val();
+            $('body').css('overflow','hidden')
+          $(".modal--quickview").addClass('modal-active');
+          var sizes =   $(this).next().next().next().next().val().split(",");
+          var options ="";
+          sizes.forEach(element => {
+                options += `<option>${element}</option>`
+          });
+          $(".quickViewContainer").empty();
+          $(".quickViewContainer").append(`<div class="col-12 col-md-7 flex-justify-center">
+            
+                       <div class="product-gallery__item aspect-ratio--square bg--grey-1 col-12">
+                        <img src="${image}" class="product-gallery__img component-overlay component-overlay--center object-fit--contain" data-product-component="image" data-image-index="9" alt="#LOVE# bracelet, 4 diamonds, image 10" itemprop="image">
+                    </div>
+                    </div>
+                   
+            
+                    <!-- Product Name and Number -->
+                    <div class="col-12 col-md-5">
+                        <section class="quickview__main flex flex-direction-col flex-grow-1 gutter--normal">
+                            <div class="pdp-main__section pdp-main__section--name set--w-100">
+                                <h1 id="qvProductName-B6069917" class="quickview__name heading-type fluid-type--deka-hecto text-line--normal" data-product-component="name" data-modal-component="labelledby">
+                                   ${name}
+                                </h1>
+            
+                                <!-- Prices -->
+                                <div class="quickview__price pdp-main__price flex flex-flow-wrap">
+                                    <div class="quickview__price-value font-weight--semibold">
+                                        
+                                        
+            
+                                        
+                                            
+                
+                    <div class="price flex--inline flex-flow-wrap flex-align-baseline" data-product-component="price" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                        
+                        
+            
+            
+            
+            
+            
+            <meta itemprop="priceCurrency" content="$">
+            
+                <span class="price__sales sales">
+                
+                
+                
+                    <span class="value" itemprop="price" content="42400.00">
+                
+                
+            
+                
+               $ ${price}
+            
+            
+            
+                </span>
+            
+            
+                    </span></div>
+                
+            
+            
+                                        
+                                    </div>
+            
+                                    
+                                    
+                                    
+                                </div>
+            
+                                
+                                    <div class="quickview__details-description-wrapper">
+                                        
+                <div class="pdp-main__description cms-generic-copy text-line--medium" data-product-component="short-description" id="toggleID-1561--target" aria-labelledby="toggleID-1561">
+                    
+                        <span class="pdp-main__description-truncated">
+                        ${description}
+                        </span>
+            
+                       
+            
+                       
+                    
+                </div>
+            
+            
+            
+                                    </div>
+                                
+            
+                                <!-- Attributes -->
+                                <div class="quickview__attribute-list product-attribute__list flex flex-flow-wrap">
+                                    
+            
+            
+                                    
+                                        
+            
+            
+            
+            
+            <div class="product-attribute product-attribute--size product-attribute--last" data-attr-group="size" data-attr-group-type="dropdown">
+                <!-- Size Chart -->
+                
+            
+                <!-- Select <Attribute> Label -->
+                <div class="product-attribute__head flex flex-justify-between sr-only">
+                    <label class="product-attribute__label product-attribute__label--size form-control-label" for="productAttribute-B6069917-size">
+                        <span class="product-attribute__label-pre">Select Size</span>
+                    </label>
+                </div>
+            
+                <div class="product-attribute__contents ">
+                  
+                      <!-- Attribute Values Drop Down Menu -->
+                      
+                      <select id="productAttribute-B6069917-size" class="product-attribute__size button form-control form-control--select form-control--boxed text-align-last--center" data-attr="size" data-attr-type="dropdown">
+                          <option value="0">
+                              Select Size
+                          </option>
+                          ${options}
+                             
+                          
+                      </select>
+                      
+            
+                  
+                </div>
+            
+            
+            </div>
+            
+                                    
+            
+                                    <!-- Quantity Drop Down Menu -->
+                                    
+            
+            
+            
+                <input type="hidden" value="1" data-product-component="qty">
+            
+            
+            
+                                    
+                                        <!-- Options -->
+                                        
+                                    
+                                </div>
+            
+                                <div class="quickview__footer" data-product-component="actions">
+                                    <div class="quickview__footer-section quickview__footer-section-actions flex">
+                                        <!-- Cart and [Optionally] Apple Pay -->
+                                        
+                                            <div class="product-add__container cart-and-ipay flex-grow-1 flex flex-align-center">
+          
+            
+                
+                  
+                  
+            
+                        <input type="hidden" value="${productId}">
+                        <button class="product-add__button add-to-cart button button--primary button--fluid set--w-100 addToCart" disabled="" data-pid="B6069917" data-product-component="add-button" data-url="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Cart-AddProduct" data-add-ready="">
+                            Add to Shopping Bag
+                        </button>
+                    
+                    <p class="font-family--serif hidden " data-product-component="phone-sellable-message">
+                        This Product will be Sold only on Phone.
+                    </p>
+                
+            
+                
+            </div>
+            
+                                        
+
+                                        
+                                    </div>
+            
+                                   
+                                </div>
+                            </div>
+                        </section>
+                    </div>`);
+                    $('.myslick').slick({
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    });
+          
+        })
+        $(document).on("click",".window-modal__close",function(){
+            $('body').css('overflow','auto')
+            $(".modal--quickview").removeClass('modal-active')
+            
+        });
+
+        $(document).on('change','.product-attribute__size',function(){
+          
+           const value = $(this).val();
+           if(value!=0)
+           {
+                $(this).parent().parent().parent().next().find('button').prop("disabled", false);
+           }
+        })
+        
     </script>
     @livewireScripts
     @stack('custom-scripts')

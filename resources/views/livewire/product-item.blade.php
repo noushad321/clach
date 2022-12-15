@@ -21,7 +21,7 @@
                     <p class="product-tile__body-section product-tile__name text-line--large heading-type body-type--deci" itemprop="name">
                         {{$product->name}}
                     </p>
-                    <p class="product-tile__body-section product-tile__material font-family--serif">
+                    <p class="product-tile__body-section product-tile__material font-family--serif myAttrs">
                         @foreach($product->attributeValues as $value)
                         @if($value->attribute->name=='metal')
                         {{$value->value}}
@@ -102,7 +102,8 @@
                     </div>
                     @else
                     <div class="product-tile__quickadd">
-                        <button type="button" wire:click="toggleModal" class="product-tile__quickadd-trigger button button--primary button--small set--w-100" data-url="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Product-ShowQuickAdd?pid=CRB6067217" data-product-url="productShowQuickAdd" title="Quick Add for {{$product->name}}">
+                    <input type="hidden" class="productId" value="{{$product->id}}">
+                        <button type="button"  class="product-tile__quickadd-trigger button button--primary button--small set--w-100 quickView"  title="Quick Add for {{$product->name}}">
                             <span class="display--small-up">
                                 Quick View
                             </span>
@@ -110,7 +111,21 @@
                                 Quick View
                             </span>
                         </button>
-
+                        <input type="hidden" class="price" value="{{$product->price}}">
+                        <input type="hidden" class="name" value="{{$product->name}}">
+                        <input type="hidden" class="description" value="{{$product->long_description}}">
+                       
+                       @php 
+                       $values =[]; 
+                        foreach($product->attributeValues as $value){
+                                    if($value->attribute->name=='size'){
+                                        array_push($values,$value->value);
+                                    }
+                                }
+                        $sizes =   implode(",", $values);
+                                
+                        @endphp
+                        <input type="hidden" class="size" value="{{$sizes}}">
                         <div class="product-tile__quickadd-panel body-type--deci" data-quickadd-component="panel" tabindex="-1" role="dialog" aria-modal="true"></div>
                     </div>
                     @endif
@@ -123,4 +138,5 @@
         </div>
 
     </div>
+    
 </div>

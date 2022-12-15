@@ -105,7 +105,7 @@
                                 @foreach(request()->route()->parameters as $breadcrumbs)
                                 @if(count(request()->route()->parameters)-1 > $loop->index )
                                 <li class="breadcrumbs__item flex--inline flex-align-baseline">
-                                    <a class="breadcrumbs__anchor link--secondary" href="" title="Home">{{$breadcrumbs}}</a>
+                                    <a class="breadcrumbs__anchor link--secondary" href="{{url('/items')}}" title="Home">{{$breadcrumbs}}</a>
 
                                     @if(count(request()->route()->parameters)-2 > $loop->index )
                                     <span class="breadcrumbs__separator">/</span>
@@ -408,12 +408,12 @@
                                         <!-- Attribute Values Drop Down Menu -->
 
                                         <select id="productAttribute-B6067517-size" class="product-attribute__size button form-control form-control--select form-control--boxed text-align-last--center" data-attr="size" data-attr-type="dropdown">
-                                            <option value="https://www.cartier.com/on/demandware.store/Sites-CartierUAE-Site/en_AE/Product-Variation?dwvar_B6067517_size=&amp;pid=B6067517&amp;quantity=1">
+                                            <option value="">
                                                 Select Size
                                             </option>
                                             @foreach($product->attributeValues as $value)
                                             @if($value->attribute->name=='size')
-                                            <option value="https://www.cartier.com/on/demandware.store/Sites-CartierUAE-Site/en_AE/Product-Variation?dwvar_B6067517_size=&amp;pid=B6067517&amp;quantity=1" data-attr-value="15">
+                                            <option value=" {{$value->value}}">
                                                 {{$value->value}}
                                             </option>
                                             @endif

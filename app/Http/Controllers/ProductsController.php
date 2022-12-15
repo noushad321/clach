@@ -43,10 +43,11 @@ class ProductsController extends Controller
         if (!$product) {
             abort(404);
         }
+        $sessoinId= rand(0,100000);
         $cart = session()->get('cart');
         if (!$cart) {
             $cart = [
-                $id => [
+                $sessoinId => [
                     "name" => $product->name,
                     "quantity" => 1,
                     "price" => $product->price,
@@ -57,14 +58,9 @@ class ProductsController extends Controller
             //return response()->json(['message' => 'first added', 'data' => $cart]);
         }
         // if cart not empty then check if this product exist then increment quantity
-        else if (isset($cart[$id])) {
-            $cart[$id]['quantity']++;
-            session()->put('cart', $cart);
-            //return response()->json(['message' => 'updated', 'data' => $cart]);
-
-        } else {
+      else {
             // if item not exist in cart then add to cart with quantity = 1
-            $cart[$id] = [
+            $cart[$sessoinId] = [
                 "name" => $product->name,
                 "quantity" => 1,
                 "price" => $product->price,
