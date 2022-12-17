@@ -9,6 +9,7 @@ use App\Models\SubCategory;
 use App\Models\SubCategoryType;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
 
@@ -80,7 +81,7 @@ class ProductsController extends Controller
 
         foreach (session('cart') as $id => $details) {
             $total += $details['price'] * $details['quantity'];
-            $image = $details['photo'] ? 'data:image/jpeg;base64,'.base64_encode(Storage::get(json_decode($details['photo'])->source_path)) : ''; 
+            $image = $details['photo'] ? 'data:image/jpeg;base64,'.base64_encode(Storage::get(json_decode($details['photo'])->source_path)) : '';
             $div .= '<div class="utility-overlay__line-item product-line-item product-line-item--minicart" data-product-container="card" data-pid="CRB6067416" data-cart-line-item="be14c8d5b901190a7997ae7535">
  <div class="product-line-item__main">
      <div class="product-line-item__details row">
@@ -89,7 +90,7 @@ class ProductsController extends Controller
                  <img class="product-line-item__image component-overlay component-overlay--center object-fit--contain set--w-100" src="'.$image.'" alt="#LOVE# bracelet" title="#LOVE# bracelet" data-line-item-component="image">
              </a>
          </div>
- 
+
          <div class="col-6">
              <div class="product-line-item__header font-weight--semibold flex flex-justify-between">
                  <div class="product-line-item__header-main">
@@ -97,28 +98,28 @@ class ProductsController extends Controller
                      <a href="" class="product-line-item__name link word-break--break-word hyphens--auto" title="#LOVE# bracelet">'
                 . $details['name'] .
                 '</a>
-                 </div>    
+                 </div>
  <div class="product-line-item__remove ">
      <button data-id="{{$id}}"  type="button" class="product-line-item__action-cta--remove button--circle-close bg--white" data-line-item-component="remove-action" aria-label="Remove, #LOVE# bracelet" id="toggleID-7824" aria-expanded="false" aria-controls="toggleID-7824--target">
- 
+
          <span class="sr-only">Remove</span>
          <svg aria-hidden="true" focusable="false" class="icon button__icon--circle-close"><use xlink:href="#icon--close"></use></svg>
      </button>
- 
+
      <div class="inline-prompt flex flex-direction-col flex-align-center flex-justify-center text-align--center gutter--small" data-line-item-component="remove-confirm" role="dialog" aria-labelledby="toggleID-7824" id="toggleID-7824--target">
      <div class="inline-prompt__header">
          <h4 id="removeLineItem-be14c8d5b901190a7997ae7535" class="inline-prompt__title font-weight--semibold text-line--large">Remove Product?</h4>
      </div>
- 
+
      <p class="inline-prompt__body font-family--serif">
          Are you sure you want to remove the following product from the cart?
      </p>
- 
+
      <div class="inline-prompt__footer row flex-justify-center set--w-100">
          <div class="col-4">
              <button type="button" class="button button--small button--primary-outline body-type--deci" data-toggle-close="[data-line-item-component=remove-action]">Cancel</button>
          </div>
- 
+
          <div class="col-4">
              <button type="button" class="button button--small button--primary body-type--deci" data-toggle-close="[data-line-item-component=remove-action]" data-line-item-component="remove-confirm-action">
                  Yes
@@ -130,63 +131,63 @@ class ProductsController extends Controller
              </div>
              <div class="product-line-item__attributes font-family--serif body-type--deci word-break--break-word hyphens--auto">                     <p class="product-line-item__attribute">Rose gold</p>
                      <p class="product-line-item__attribute" data-line-item-component="size">
- 
-                     
+
+
                          <span class="product-line-item__attribute-key">Size:</span>
-                     
- 
+
+
                      <span class="product-line-item__attribute-value">16</span></p>
                      <p class="product-line-item__attribute" data-line-item-component="size">
- 
-                     
+
+
  <span class="product-line-item__attribute-key">Quantity:</span>
- 
- 
+
+
  <span class="product-line-item__attribute-value">' . $details['quantity'] . '</span></p>
-                 
- 
+
+
                  <div class="product-line-item__options">
-                     
+
                  </div>
- 
+
                      <div class="product-line-item__attribute font-weight--semibold  body-type--deci">
                          <div class="product-line-item__total-price item-total-be14c8d5b901190a7997ae7535 price font-family--sans" data-line-item-component="price-total">
-     
- 
+
+
  <div class="price__sales pricing line-item-total-price-amount">$' . $details['price'] . '</div>
- 
+
  </div>
                      </div>
-                 
- 
+
+
                  <div class="product-line-item__attribute">
-                     
+
  <div class="product-line-item__promotions" data-line-item-component="promotions" data-uuid="be14c8d5b901190a7997ae7535">
-     
+
  </div>
- 
+
                  </div>
- 
-                 
- 
-                 
-                     
-                 
+
+
+
+
+
+
              </div>
- 
-             
- 
-             
+
+
+
+
          </div>
      </div>
- 
-     
+
+
  </div>
- 
+
      </div>';
         }
         $div .= '</div> <div class="utility-overlay__footer">
-    
+
 
  <div class="utility-overlay__footer-section utility-overlay__footer-totals">
      <div class="row font-weight--semibold text-transform--uppercase" data-totals-component="subTotal">
@@ -198,9 +199,9 @@ class ProductsController extends Controller
              <p class="text-align--right" data-totals-component="value">$' . $total . '</p>
          </div>
      </div>
-     
+
          <p class="utility-overlay__footer-message font-family--serif">Shipping and taxes calculated at checkout.</p>
-     
+
      <div class="utility-overlay__footer-actions">
          <a href="/cart" class="button button--primary minicart__checkout-action checkout-btn set--w-100 " role="button" data-cart-component="checkout-action">
  Proceed to Checkout
@@ -212,6 +213,29 @@ class ProductsController extends Controller
 </div>';
 
         return response()->json(['message' => 'updated', 'count' => count(session('cart')), 'data' => $div]);
+    }
+
+    public function searchProducts(Request $request): AnonymousResourceCollection
+    {
+        $search = $request->get('search');
+
+        $products = Product::all();
+        if($search){
+            $products = Product::where('name', 'LIKE', '%' .$search. '%')
+                ->orWhere('short_description', 'like', '%'.$search.'%')
+            ->orWhereHas('category', function($q) use ($search) {
+                return $q->where('name', 'LIKE', '%' . $search . '%');
+            })
+                ->orWhereHas('subCategory', function($q) use ($search) {
+                    return $q->where('name', 'LIKE', '%'. $search . '%');
+                })
+                ->orWhereHas('subCategoryType', function($q) use ($search) {
+                    return $q->where('name', 'LIKE', '%'. $search . '%');
+                })
+                ->get();
+        }
+        return ProductsResource::collection($products);
+
     }
 
     public function remove(Request $request)
