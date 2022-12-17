@@ -892,7 +892,7 @@
         <div>
         <livewire:cart-drawer />
 
-</div>
+    </div>
 
 
 

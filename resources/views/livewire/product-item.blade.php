@@ -34,12 +34,12 @@
 
                         @endforeach
                     </p>
-                    <div class="product-tile__body-section text-line--large font-weight--semibold body-type--deci">
+                    <div class="product-tile__body-section text-line--large font-weight--semibold body-type--deci" style="margin-bottom:45px;">
                         <div class="price flex--inline flex-flow-wrap flex-align-baseline" data-product-component="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                             <meta itemprop="priceCurrency" content="AED" />
                             <span class="price__sales sales">
                                 <span class="value" itemprop="price" content="30700.00">
-                                    ${{$product->price}}
+                                    ${{number_format($product->price)}}
                                 </span>
                         </div>
 

@@ -78,7 +78,7 @@
                                             <div class="component-actions content-tile__actions">
 
 
-                                                <a href="https://www.cartier.com/en-ae/jewellery/collections/panthere-de-cartier/"
+                                                <a href="#"
                                                    target="_blank"
                                                    class="component-actions__cta component-actions__cta--fake content-tile__cta link link--primary "
                                                    aria-label="Discover" tabindex="0" style="">
@@ -103,23 +103,24 @@
 
                             <div class="module-grid__item col-12 col-md-12 col-lg-12">
 
+                            <div class="module-container set--motion-complete" style="" data-tracking-context="content-carousel">
 
                                 <section class=" gutter--normal">
-                                    <div class="module-container__header">
+                                    <!--<div class="module-container__header">-->
                                         <div class="multiple-items">
 
                                             @foreach($products as $product)
                                                 <livewire:product-item :product="$product" :keys="$loop->index">
                                             @endforeach
                                         </div>
-                                    </div>
+                                    <!--</div>-->
 
 
                                     <div
                                         class="page-designer__empty-container page-designer__empty-container--secondary">
                                     </div>
                                 </section>
-
+ </div>
                             </div>
                             <div class="module-grid__item col-12 col-md-12 col-lg-12">
 
