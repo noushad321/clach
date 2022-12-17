@@ -63,6 +63,9 @@ Route::get('/about-us', function () {
 
 Route::post('add-to-cart', [ProductsController::class, 'addToCart'])->name('add.to.cart');
 Route::delete('remove-from-cart',  [ProductsController::class, 'remove']);
+
+Route::get('/search', [ProductsController::class, 'searchProducts']);
+
 Route::patch('update-cart', [ProductsController::class, 'update']);
 Route::post('/shipment', [PaymentsController::class, 'storeShipmentAddress'])->name('shipment');
 Route::get('/email/verify/{shipment_id}', [PaymentsController::class, 'verifyEmail']);
@@ -84,6 +87,8 @@ Route::middleware([
 
     Route::get('/category/add', AddCategories::class);
     Route::get('/categories', ShowCategories::class);
+
+
 
     Route::get('/sub-category/add', AddSubCategories::class);
     Route::get('/sub-categories', ShowSubCategories::class);
