@@ -96,7 +96,7 @@
                         <div class="descriptive-card__content component-custom-width" style="--component-var-width:26.25rem; ">
 
                             <h1 class="descriptive-card__title heading-type component-copy__title--regular set--motion-complete">
-                                Rings
+                                {{$category->name}}
                             </h1>
 
 
@@ -135,9 +135,9 @@
                     <div class="search-results__toolbar row flex-align-center">
                         <div class="col-12 col-md-3 breadcrumbs--spaced">
 
-                            <ol class="breadcrumbs body-type--centi list--reset">
+                            <!-- <ol class="breadcrumbs body-type--centi list--reset">
                                 <li class="breadcrumbs__item flex--inline flex-align-baseline">
-                                    <a class="breadcrumbs__anchor link--secondary" href="https://www.cartier.com/en-ae/home" title="Home">Home</a>
+                                    <a class="breadcrumbs__anchor link--secondary" href="#" title="Home">Home</a>
 
 
                                     <span class="breadcrumbs__separator">/</span>
@@ -164,7 +164,7 @@
 
                                 </li>
 
-                            </ol>
+                            </ol> -->
 
                         </div>
 
@@ -241,270 +241,175 @@
 
 
 
-                                    <div class="refinements body-type--deci">
-                                        <div class="refinement__title font-weight--semibold display--small-up">
-                                            Filter By
-                                        </div>
-
-
-
-
-
-                                        <div id="refinement-null" class="refinement__content null">
-
-                                            <ol class="refinement__null list--reset">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                                <li class="refinement__boolean-item  ">
-                                                    <a href="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Search-ShowAjax?cgid=Jewelry_AllCollection__JusteunClou&amp;prefn1=isSellable&amp;prefv1=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-true">
-
-                                                        <span class="body-type--centi link--underline-hover" aria-hidden="true">
-
-                                                            Available Online
-
-                                                        </span>
-                                                        <span class="sr-only selected-assistive-text">
-                                                            Refine by Available Online: true
-                                                        </span>
-                                                    </a>
-                                                </li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                                <li class="refinement__boolean-item  ">
-                                                    <a href="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Search-ShowAjax?cgid=Jewelry_AllCollection__JusteunClou&amp;prefn1=novelties&amp;prefv1=BEST%20SELLER" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-MUST HAVE">
-
-                                                        <span class="body-type--centi link--underline-hover" aria-hidden="true">
-
-                                                            MUST HAVE
-
-                                                        </span>
-                                                        <span class="sr-only selected-assistive-text">
-                                                            Refine by New Arrivals: MUST HAVE
-                                                        </span>
-                                                    </a>
-                                                </li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                            </ol>
-                                        </div>
-                                    </div>
-
-
-
-                                    <div class="refinements body-type--deci">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                        <div class="refinement refinement-metal " data-refinement-type="metal" tabindex="-1">
-                                            <button type="button" class="refinement__header set--w-100 flex flex-justify-between " data-search-component="refinement-trigger" aria-label="Metal" id="toggleID-5998" aria-expanded="false" aria-controls="refinement-metal">
-                                                <strong class="refinement__type text-transform--uppercase font-weight--semibold text-align--left">
-                                                    Metal
-
-                                                </strong>
-                                                <svg aria-hidden="true" focusable="false" class="icon refinement__header-icon">
-                                                    <use xlink:href="#icon--angle-up"></use>
-                                                </svg>
-                                            </button>
-                                            <div id="refinement-metal" class="refinement__content " aria-labelledby="toggleID-5998">
-
-
-
-
-
-
-                                                <ol class="refinement__metal list--reset">
-
-
-
-
-
-
-
-
-
-
-
-
-                                                    <li class="refinement__boolean-item  ">
-                                                        <a href="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Search-ShowAjax?cgid=Jewelry_AllCollection__JusteunClou&amp;prefn1=material1&amp;prefv1=Yellow%20Gold" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-Yellow Gold">
-
-                                                            <span class="body-type--centi link--underline-hover" aria-hidden="true">
-
-                                                                Yellow Gold
-
-                                                            </span>
-                                                            <span class="sr-only selected-assistive-text">
-                                                                Refine by Metal: Yellow Gold
-                                                            </span>
-                                                        </a>
-                                                    </li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                                    <li class="refinement__boolean-item  ">
-                                                        <a href="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Search-ShowAjax?cgid=Jewelry_AllCollection__JusteunClou&amp;prefn1=material1&amp;prefv1=Rose%20Gold" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-Rose Gold">
-
-                                                            <span class="body-type--centi link--underline-hover" aria-hidden="true">
-
-                                                                Rose Gold
-
-                                                            </span>
-                                                            <span class="sr-only selected-assistive-text">
-                                                                Refine by Metal: Rose Gold
-                                                            </span>
-                                                        </a>
-                                                    </li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                                    <li class="refinement__boolean-item  ">
-                                                        <a href="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Search-ShowAjax?cgid=Jewelry_AllCollection__JusteunClou&amp;prefn1=material1&amp;prefv1=White%20Gold" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-White Gold">
-
-                                                            <span class="body-type--centi link--underline-hover" aria-hidden="true">
-
-                                                                White Gold
-
-                                                            </span>
-                                                            <span class="sr-only selected-assistive-text">
-                                                                Refine by Metal: White Gold
-                                                            </span>
-                                                        </a>
-                                                    </li>
-
-
-
-
-
-                                                </ol>
-
-
-
-
-
-                                            </div>
-                                        </div>
-
-
-
-
-
-                                    </div>
+                                <div class="refinement-bar__sort-list form-check-group" name="sort-order" data-search-component="search-sort">
+        <div class="display--small-up body-type--deci font-weight--semibold">Sort By</div>
+        
+            <div class="refinement-bar__sort-item-container">
+                <a class="refinement-bar__sort-item" href="https://www.cartier.com/on/demandware.store/Sites-CartierUAE-Site/en_AE/Search-ShowAjax?cgid=Jewelry_AllCollection_LOVE&amp;srule=price-low-to-high&amp;start=0&amp;sz=24" data-sort-option-id="price-low-to-high" data-search-component="search-sort-anchor" aria-label="Price Low To High">
+                    <input type="radio" id="price-low-to-high" class="form-check-input" name="sort-radio">
+                    <label for="price-low-to-high" class="form-check-label--radio cursor--pointer">
+                        <span class="body-type--centi link--underline-hover">Price Low To High</span>
+                    </label>
+                </a>
+            </div>
+        
+            <div class="refinement-bar__sort-item-container">
+                <a class="refinement-bar__sort-item" href="https://www.cartier.com/on/demandware.store/Sites-CartierUAE-Site/en_AE/Search-ShowAjax?cgid=Jewelry_AllCollection_LOVE&amp;srule=price-high-to-low&amp;start=0&amp;sz=24" data-sort-option-id="price-high-to-low" data-search-component="search-sort-anchor" aria-label="Price High to Low">
+                    <input type="radio" id="price-high-to-low" class="form-check-input" name="sort-radio">
+                    <label for="price-high-to-low" class="form-check-label--radio cursor--pointer">
+                        <span class="body-type--centi link--underline-hover">Price High to Low</span>
+                    </label>
+                </a>
+            </div>
+        
+            <div class="refinement-bar__sort-item-container">
+                <a class="refinement-bar__sort-item" href="https://www.cartier.com/on/demandware.store/Sites-CartierUAE-Site/en_AE/Search-ShowAjax?cgid=Jewelry_AllCollection_LOVE&amp;srule=recommended&amp;start=0&amp;sz=24" data-sort-option-id="recommended" data-search-component="search-sort-anchor" aria-label="Recommended">
+                    <input type="radio" id="recommended" class="form-check-input" name="sort-radio">
+                    <label for="recommended" class="form-check-label--radio cursor--pointer">
+                        <span class="body-type--centi link--underline-hover">Recommended</span>
+                    </label>
+                </a>
+            </div>
+        
+    </div>
+
+
+
+    <div class="refinement refinement-metal " data-refinement-type="metal" tabindex="-1">
+                <button type="button" class="refinement__header set--w-100 flex flex-justify-between " data-search-component="refinement-trigger" aria-label="Metal" id="toggleID-9771" aria-expanded="false" aria-controls="refinement-metal">
+                    <strong class="refinement__type text-transform--uppercase font-weight--semibold text-align--left">
+                        Metal
+                        
+                    </strong>
+                </button>
+                <div id="refinement-metal" class="refinement__content " aria-labelledby="toggleID-9771">
+                    
+                    
+
+                    
+                    
+                        
+<ol class="refinement__metal list--reset">
+    
+        
+        
+
+        
+
+        
+            
+
+            
+
+<li class="refinement__boolean-item  ">
+    <a href="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Search-ShowAjax?cgid=Jewelry_AllCollection_LOVE&amp;prefn1=material1&amp;prefv1=Yellow%20Gold" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-Yellow Gold">
+        
+        <span class="body-type--centi link--underline-hover" aria-hidden="true">
+            
+                Yellow Gold
+            
+        </span>
+        <span class="sr-only selected-assistive-text">
+            Refine by Metal: Yellow Gold
+        </span>
+    </a>
+</li>
+
+        
+    
+        
+        
+
+        
+
+        
+            
+
+            
+
+<li class="refinement__boolean-item  ">
+    <a href="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Search-ShowAjax?cgid=Jewelry_AllCollection_LOVE&amp;prefn1=material1&amp;prefv1=Platinum" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-Platinum">
+        
+        <span class="body-type--centi link--underline-hover" aria-hidden="true">
+            
+                Platinum
+            
+        </span>
+        <span class="sr-only selected-assistive-text">
+            Refine by Metal: Platinum
+        </span>
+    </a>
+</li>
+
+        
+    
+        
+        
+
+        
+
+        
+            
+
+            
+
+<li class="refinement__boolean-item  ">
+    <a href="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Search-ShowAjax?cgid=Jewelry_AllCollection_LOVE&amp;prefn1=material1&amp;prefv1=Rose%20Gold" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-Rose Gold">
+        
+        <span class="body-type--centi link--underline-hover" aria-hidden="true">
+            
+                Rose Gold
+            
+        </span>
+        <span class="sr-only selected-assistive-text">
+            Refine by Metal: Rose Gold
+        </span>
+    </a>
+</li>
+
+        
+    
+        
+        
+
+        
+            
+            
+        
+
+        
+            
+
+            
+
+<li class="refinement__boolean-item  hidden" data-refinement-hide="">
+    <a href="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Search-ShowAjax?cgid=Jewelry_AllCollection_LOVE&amp;prefn1=material1&amp;prefv1=White%20Gold" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-White Gold">
+        
+        <span class="body-type--centi link--underline-hover" aria-hidden="true">
+            
+                White Gold
+            
+        </span>
+        <span class="sr-only selected-assistive-text">
+            Refine by Metal: White Gold
+        </span>
+    </a>
+</li>
+
+        
+    
+
+    
+       
+    
+</ol>
+
+                    
+
+                    
+                    
+                </div>
+            </div>
 
                                 </div>
 
@@ -514,9 +419,14 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-12 col-md-9">
+    <div class="row product-grid grid-view">
+        @foreach($products as $product)
+        <livewire:product-item :product="$product" :keys="$loop->index">
 
-
-                        <livewire:products />
+            @endforeach
+    </div>
+</div>
 
                     </div>
 

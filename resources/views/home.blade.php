@@ -1,9 +1,13 @@
 @extends('layouts.user.guest')
 @section('content')
-
+<style>
+     .product-tile__overlay {
+        top:1rem;
+     }
+</style>
 
     <main id="main" class="main" role="main">
-        <h1 class="sr-only">Cartier&reg; Official Website - Jewellery and Watchmaker since 1847</h1>
+        <h1 class="sr-only">Clach&reg; Official Website</h1>
         <div class="experience-region experience-main">
             <div class="experience-component experience-accelerator_layouts-flexibleGrid">
                 <div class="module-container" data-tracking-context="content-grid">
@@ -234,7 +238,7 @@
                                                            aria-label="Discover">
 
                                                         <span class="sr-only">
-                                                            Santos de Cartier​
+                                                            Santos de Clach
 
                                                             
                                                         </span>
@@ -334,7 +338,9 @@
                             </div>
                         </div>
 
-                        <div class="page-designer__empty-container page-designer__empty-container--secondary"></div>
+                        <div class="page-designer__empty-container page-designer__empty-container--secondary">
+                            
+                        </div>
                     </section>
                 </div>
             </div>

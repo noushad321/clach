@@ -26,7 +26,7 @@
 <div class="product-line-item__details row">
 <div class="col-6">
     <a href="/en-ae/jewellery/bracelets/love/love-bracelet-CRB6067416.html" class="product-line-item__image-wrap link" title="#LOVE# bracelet" tabindex="-1">
-        <img class="product-line-item__image component-overlay component-overlay--center object-fit--contain set--w-100" src="https://www.cartier.com/dw/image/v2/BFHP_PRD/on/demandware.static/-/Sites-cartier-master/default/dw3487b10f/images/large/637909358247314416-2366914.png?sw=250&amp;sh=250&amp;sm=fit&amp;sfrm=png" alt="#LOVE# bracelet" title="#LOVE# bracelet" data-line-item-component="image">
+        <img class="product-line-item__image component-overlay component-overlay--center object-fit--contain set--w-100" src="" alt="#LOVE# bracelet" title="#LOVE# bracelet" data-line-item-component="image">
     </a>
 </div>
 

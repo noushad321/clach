@@ -154,7 +154,7 @@ class ProductsController extends Controller
                          <div class="product-line-item__total-price item-total-be14c8d5b901190a7997ae7535 price font-family--sans" data-line-item-component="price-total">
 
 
- <div class="price__sales pricing line-item-total-price-amount">$' . $details['price'] . '</div>
+ <div class="price__sales pricing line-item-total-price-amount">$' . number_format($details['price']) . '</div>
 
  </div>
                      </div>
@@ -196,7 +196,7 @@ class ProductsController extends Controller
          </div>
 
          <div class="col-6">
-             <p class="text-align--right" data-totals-component="value">$' . $total . '</p>
+             <p class="text-align--right" data-totals-component="value">$' . number_format($total) . '</p>
          </div>
      </div>
 
@@ -215,13 +215,13 @@ class ProductsController extends Controller
         return response()->json(['message' => 'updated', 'count' => count(session('cart')), 'data' => $div]);
     }
 
-    public function searchProducts(Request $request): AnonymousResourceCollection
+    public function searchProducts(Request $request)
     {
         $search = $request->get('search');
 
-        $products = Product::all();
+        $products = Product::with('attributeValues.attribute', 'tags', 'subCategoryType.subCategory.category', 'multimedia')->take(3)->get();
         if($search){
-            $products = Product::where('name', 'LIKE', '%' .$search. '%')
+            $products = Product::with('subCategoryType.subCategory.category','tags')->where('name', 'LIKE', '%' .$search. '%')
                 ->orWhere('short_description', 'like', '%'.$search.'%')
             ->orWhereHas('category', function($q) use ($search) {
                 return $q->where('name', 'LIKE', '%' . $search . '%');
@@ -232,9 +232,105 @@ class ProductsController extends Controller
                 ->orWhereHas('subCategoryType', function($q) use ($search) {
                     return $q->where('name', 'LIKE', '%'. $search . '%');
                 })
+                ->take(3)
                 ->get();
+        
+
+        $div = '';
+        $div = '<div class="site-search__suggestions-list"><div class="row"><div class="col-12 col-md site-search__suggestions-section"><ul class="site-search__suggestions-matches list--reset row">';
+       
+        foreach ($products as $key => $value) {
+          
+            $image1 = 'data:image/jpeg;base64,'.base64_encode(Storage::get($value->multimedia[0]->getRawOriginal('source_path')));
+            $image2 = 'data:image/jpeg;base64,'.base64_encode(Storage::get($value->multimedia[1]->getRawOriginal('source_path')));
+            $attributes="";
+            foreach($value->attributeValues as $values){
+            if($values->attribute->name=='metal'){
+            $attributes.= $values->value.',';
         }
-        return ProductsResource::collection($products);
+            }
+
+            if($value->tags){
+            foreach($value->tags as $tag){
+
+                $attributes.= $tag->name;
+
+            }
+        
+    }
+            $div.='<li class="site-search__suggestions-item col-12 col-md-3" id='.$value["name"].'><div class="product flex flex-grow-1 flex-direction-col">
+            <div class="product-tile product-tile--default flex flex-direction-col flex-grow-1 text-align--center set--images-lazy-loaded" itemscope="" itemtype="" data-product-container="tile" data-product-tile="" data-pid="B6067517">
+            <!-- dwMarker="product" dwContentID="5d390e3010d785d9f47e31534d" -->
+            <a class="product-tile__anchor" href="#" data-product-url="productShow" itemprop="url">
+                <!--Product Badges -->
+                
+                    <p class="product-badge--novelty">
+                        MUST HAVE
+                    </p>
+                
+        <div class="product-tile__media product-tile__media--default aspect-ratio--square ">
+            <div class="product-tile__media-container component-overlay component-overlay--center">
+                
+                    <img class="product-tile__image product-tile__image--primary component-overlay component-overlay--center object-fit--contain none-up set--has-secondary-image full-stretch-image ls-is-cached lazyloaded" data-product-component="image" data-src="'.$image1.'" data-image-index="0" itemprop="image" alt="#LOVE# bracelet" width="350" height="350" title="#LOVE# bracelet" src="'.$image1.'">
+        
+                        <img class="product-tile__image product-tile__image--secondary component-overlay component-overlay--center object-fit--contain none-up display--small-up  full-stretch-image ls-is-cached lazyloaded" data-product-component="image" data-src="'.$image2.'" data-image-index="1" itemprop="image" alt="#LOVE# bracelet" width="350" height="350" title="#LOVE# bracelet" src="'.$image2.'">
+                
+            </div>
+        </div>
+        
+        
+                <div class="product-tile__body">
+                    <p class="product-tile__body-section product-tile__name text-line--large heading-type body-type--deci" itemprop="name">
+                    '.$value->name.'
+                    </p>
+        
+        
+                    
+                        <div class="product-tile__body-section product-tile__swatches font-family--serif" data-product-component="swatches">
+            
+                
+        </div>
+        
+                        <p class="product-tile__body-section product-tile__material font-family--serif">
+            '.$attributes.'
+        </p>
+                    
+                        <div class="product-tile__body-section text-line--large font-weight--semibold body-type--deci">
+                            
+                <div class="price flex--inline flex-flow-wrap flex-align-baseline" data-product-component="price" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                    
+        <meta itemprop="priceCurrency" content="$">
+        
+            <span class="price__sales sales">
+            
+                <span class="value" itemprop="price" content="'.$value.'" id="'.$value.'">
+            
+            '.number_format($value["price"]).'
+    
+            </span>
+        
+        
+                </span></div>
+            
+                        </div>
+                </div>
+            </a>
+        
+            
+              
+            
+                <div class="product-tile__body-section">
+            <div class="ratings flex">
+            </div>
+        </div>
+        </div>
+        
+        </div></li>';
+        }
+        $div.='</ul></div></div></div>';
+
+    }
+        echo $div; 
 
     }
 

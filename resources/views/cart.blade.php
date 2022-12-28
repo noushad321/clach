@@ -19,7 +19,7 @@
             <h1 class="cart__title fluid-type--deka-hecto heading-type">Shopping Bag</h1>
 
             
-                <span class="cart__header-count font-family--serif" data-minicart-component="qty" data-qty-label-single="({0} Item)" data-qty-label="({0} Items)">({{count(session('cart'))}} Item)</span>
+                <span class="cart__header-count font-family--serif" data-minicart-component="qty" data-qty-label-single="({0} Item)" data-qty-label="({0} Items)" style="padding-left:10px;">({{count(session('cart'))}} Item)</span>
             
         </div>
 
@@ -88,20 +88,19 @@
                     </a>
                 </div>
 
-
                     <div class="product-line-item__header-price display--medium-up white-space--nowrap">
+                    
+
                         <div class="product-line-item__total-price item-total-be14c8d5b901190a7997ae7535 price font-family--sans" data-line-item-component="price-total">
 
-
 <div class="price__sales pricing line-item-total-price-amount">
-    $ {{$details['price']}}
+    $ {{number_format($details['price'])}}
 
 
 </div>
 
 </div>
                     </div>
-
 
 
 
@@ -176,9 +175,8 @@
                     <div class="product-line-item__attribute font-weight--semibold display--medium-down body-type--deci">
                         <div class="product-line-item__total-price item-total-be14c8d5b901190a7997ae7535 price font-family--sans" data-line-item-component="price-total">
 
-
 <div class="price__sales pricing line-item-total-price-amount">
-    $ {{$details['price']}}
+    $ {{number_format($details['price'])}}
 
 
 </div>
@@ -205,26 +203,26 @@
 
 
 
-<div class="product-line-item__actions">
+            <div class="product-line-item__actions">
 
 
 
 
 
 
-    <div class="product-line-item__action product-line-item__add">
-        <button type="button" class="link--primary" data-product-component="add-button" data-line-item-component="add-action" aria-label="Add another &quot;#LOVE# bracelet&quot; to bag" data-add-ready="">
-            Add another item
-        </button>
-    </div>
+<div class="product-line-item__action product-line-item__add">
+    <button type="button" class="link--primary" data-product-component="add-button" data-line-item-component="add-action" aria-label="Add another &quot;#LOVE# bracelet&quot; to bag" data-add-ready="">
+        Add another item
+    </button>
+</div>
 
 
 
 
 
-    <!-- <div class="product-line-item__action product-line-item__edit body-type--deci">
-        <a href="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Cart-GetProduct?uuid=be14c8d5b901190a7997ae7535" data-line-item-component="edit-action" class="link--primary button--flex" aria-label="Edit, #LOVE# bracelet">Edit</a>
-    </div> -->
+<!-- <div class="product-line-item__action product-line-item__edit body-type--deci">
+    <a href="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Cart-GetProduct?uuid=be14c8d5b901190a7997ae7535" data-line-item-component="edit-action" class="link--primary button--flex" aria-label="Edit, #LOVE# bracelet">Edit</a>
+</div> -->
 
 
 
@@ -232,14 +230,20 @@
 
 
 <div class="product-line-item__action product-line-item__wishlist">
-    <button type="button" class="product-line-item__wishlist-remove link--primary" aria-label="Remove from wishlist, #LOVE# bracelet" data-wishlist-trigger-ready="cta">Remove from Wish List</button>
+<button type="button" class="product-line-item__wishlist-remove link--primary" aria-label="Remove from wishlist, #LOVE# bracelet" data-wishlist-trigger-ready="cta">Remove from Wish List</button>
 
-    <!-- <button type="button" class="product-line-item__wishlist-add link--primary" data-wishlist-label-add="Move to Wishlist" data-pid="CRB6067416" data-uuid="be14c8d5b901190a7997ae7535" data-line-item-component="remove-confirm-action" data-action="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Cart-RemoveProductLineItem" aria-label="Move to wishlist, #LOVE# bracelet" data-wishlist-trigger-ready="cta">Move to Wishlist</button> -->
+<!-- <button type="button" class="product-line-item__wishlist-add link--primary" data-wishlist-label-add="Move to Wishlist" data-pid="CRB6067416" data-uuid="be14c8d5b901190a7997ae7535" data-line-item-component="remove-confirm-action" data-action="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Cart-RemoveProductLineItem" aria-label="Move to wishlist, #LOVE# bracelet" data-wishlist-trigger-ready="cta">Move to Wishlist</button> -->
 </div>
 
 
 
-</div>
+<div class="product-line-item__action product-line-item__add" style="
+padding-left: 110px;
+">
+    <button type="button" class="link--primary" data-product-component="add-button" data-line-item-component="add-action" aria-label="Add another &quot;#LOVE# bracelet&quot; to bag" data-add-ready="">
+       Add Gift Message
+    </button>
+</div></div>
 
 
 
@@ -266,9 +270,9 @@
 
 
 
-        <!-- <a href="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Cart-AddPersonalisation?ProductPersonalisation=ProductGiftMessage&amp;uuid=be14c8d5b901190a7997ae7535&amp;pid=CRB6067416" class="link--secondary body-type--centi" aria-label="Add gift message for #LOVE# bracelet" data-disable-redirect="">
+        <a  class="link--secondary body-type--centi add_gift_message" aria-label="Add gift message for #LOVE# bracelet" data-disable-redirect="">
             Add gift message
-        </a> -->
+        </a>
 
 </div>
         </div>
@@ -355,7 +359,7 @@
             <p class="word-break--break-word hyphens--auto" data-totals-component="label">Shipping Discount</p>
         </dt>
         <dd class="col">
-            <p class="text-align--right">- <span data-totals-component="value">AED 0.00</span></p>
+            <p class="text-align--right">- <span data-totals-component="value">$ 0.00</span></p>
         </dd>
     </div>
 
@@ -365,7 +369,7 @@
             <p class="order-receipt-label heading-type word-break--break-word hyphens--auto" data-totals-component="label">Order Discount</p>
         </dt>
         <dd class="col">
-            <p class="text-align--right order-discount-total">- <span data-totals-component="value">AED 0.00</span></p>
+            <p class="text-align--right order-discount-total">- <span data-totals-component="value">$ 0.00</span></p>
         </dd>
     </div>
 
@@ -375,7 +379,7 @@
             <p class="order-receipt-label heading-type word-break--break-word hyphens--auto" data-totals-component="label">Subtotal</p>
         </dt>
         <dd class="col">
-        @if(session('cart'))   <p class="text-align--right sub-total word-break--break-word" data-totals-component="value">$ {{$total}}</p>@endif
+        @if(session('cart'))   <p class="text-align--right sub-total word-break--break-word" data-totals-component="value">$ {{number_format($total)}}</p>@endif
         </dd>
     </div>
 
@@ -409,7 +413,7 @@
                 </div>
 
                 <div class="cart__back-to-shopping text-align--small-center">
-                    <a class="link--secondary link--flex flex-align-center font-weight--semibold" href="https://www.cartier.com/on/demandware.store/Sites-CartierUAE-Site/en_AE/Cart-ContinueShopping" title="Back to Shopping" aria-label="Back to Shopping">
+                    <a class="link--secondary link--flex flex-align-center font-weight--semibold" href="" title="Back to Shopping" aria-label="Back to Shopping">
                         <svg aria-hidden="true" focusable="false" class="icon icon--set-left-short"><use xlink:href="#icon--angle-left"></use></svg>
                         Back to Shopping
                     </a>
@@ -448,7 +452,22 @@
             
         </div>
     </div>
+    <div id="modal-quickview" class="window-modal modal--quickview gift_message modal--small-full" data-modal="true" data-modal-index="0" data-modal-active="true" data-focustrap-enabled="true"><div class="window-modal__content" tabindex="-1" role="dialog" aria-labelledby="qvProductName-B6069917" aria-modal="true" style="outline: none;">
+<div class="quickview quickview-master" data-product-container="quickview" data-pid="B6069917">
+    <div class="row flex-no-gutters quickViewContainer">
+       
+       sdsdsdsdsds
+    </div>
+
+    sdsd
+
+    
+</div>
+
+<button class="window-modal__close" data-modal-close="true" title="Close modal" aria-label="Close modal" type="button"></button></div></div>
         @endif
 </main>
-
+<script type="text/javascript">
+   
+</script>
 @endsection

@@ -56,6 +56,15 @@ Route::get('/terms-of-use', function () {
 Route::get('/privacy-policy', function () {
     return view('privacy-policy');
 });
+Route::get('/conditions-of-sale', function () {
+    return view('condition-of-sale');
+});
+Route::get('/shipping-policy', function () {
+    return view('shipping-policy');
+});
+Route::get('/refund-policy', function () {
+    return view('refund-policy');
+});
 
 Route::get('/about-us', function () {
     return view('aboutus');

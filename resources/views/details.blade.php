@@ -100,21 +100,29 @@
                     <div class="pdp-main__media">
                         <!-- Breadcrumbs -->
                         <div class="pdp-main__breadcrumbs">
-
                             <ol class="breadcrumbs body-type--centi list--reset">
-                                @foreach(request()->route()->parameters as $breadcrumbs)
-                                @if(count(request()->route()->parameters)-1 > $loop->index )
+                               
                                 <li class="breadcrumbs__item flex--inline flex-align-baseline">
-                                    <a class="breadcrumbs__anchor link--secondary" href="{{url('/items')}}" title="Home">{{$breadcrumbs}}</a>
-
-                                    @if(count(request()->route()->parameters)-2 > $loop->index )
+                                    <a class="breadcrumbs__anchor link--secondary" href="{{url('/items/'.$product->subCategoryType->subCategory->category->slug)}}" title="Home">{{$product->subCategoryType->subCategory->category->name}}</a>
                                     <span class="breadcrumbs__separator">/</span>
-                                    @endif
-
+                                    
+                                    
+                                 
                                 </li>
-                                @endif
-                                @endforeach
-
+                                 <li class="breadcrumbs__item flex--inline flex-align-baseline">
+                                    <a class="breadcrumbs__anchor link--secondary" href="{{url('/items/'.$product->subCategoryType->subCategory->category->slug.'/'.$product->subCategoryType->subCategory->slug)}}" title="Home">{{$product->subCategoryType->subCategory->name}}</a>
+                                    <span class="breadcrumbs__separator">/</span>
+                                    
+                                    
+                                 
+                                </li>
+                               <li class="breadcrumbs__item flex--inline flex-align-baseline">
+                                    <a class="breadcrumbs__anchor link--secondary" href="{{url('/items/'.$product->subCategoryType->subCategory->category->slug.'/'.$product->subCategoryType->subCategory->slug.'/'.$product->subCategoryType->slug)}}" title="Home">{{$product->subCategoryType->name}}</a>
+                                    
+                                    
+                                 
+                                </li>
+                                
 
                             </ol>
                         </div>
@@ -492,12 +500,12 @@
 
 
 
-                                <button type="button" class="product__request-price button button--primary set--w-100 hidden" data-pid="CRB6067515" data-url="/on/demandware.store/Sites-CartierUAE-Site/en_AE/RequestPrice-Start?dwvar_B6067517_size=15&amp;pid=B6067517&amp;quantity=1" data-product-url="productRequestPrice" data-product-component="request-price" data-disable-redirect="">
+                                <button type="button" class="product__request-price button button--primary set--w-100 hidden" data-pid="CRB6067515" data-url="" data-product-url="productRequestPrice" data-product-component="request-price" data-disable-redirect="">
                                     Request Price
                                 </button>
 
 
-                                <button type="button" class="stock-notify-subscription product-get__notify button button--primary button--fluid set--w-100 hidden" data-pid="CRB6067515" data-url="/on/demandware.store/Sites-CartierUAE-Site/en_AE/StockNotification-Show?pid=CRB6067515" data-notification-url="getStockNotification" data-product-component="stock-availability-status" data-disable-redirect="">
+                                <button type="button" class="stock-notify-subscription product-get__notify button button--primary button--fluid set--w-100 hidden" data-pid="CRB6067515" data-url="" data-notification-url="getStockNotification" data-product-component="stock-availability-status" data-disable-redirect="">
                                     GET NOTIFIED
                                 </button>
                                 <p class="font-family--serif hidden" data-product-component="stock-availability-status">

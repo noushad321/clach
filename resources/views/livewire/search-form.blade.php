@@ -26,6 +26,6 @@
         <div id="lang-1341774084129" class="invalid-feedback"></div>
     </div>
 
-    <div class="site-search__suggestions-container max-width--xmedium flex flex-direction-col set--w-100" data-search-component="suggestions-container" data-suggestions-url="/on/demandware.store/Sites-CartierUAE-Site/en_AE/SearchServices-GetSuggestions" data-scrollable=""></div>
+    <div class="site-search__suggestions-container max-width--xmedium flex flex-direction-col set--w-100" data-search-component="suggestions-container" data-suggestions-url="#" data-scrollable=""></div>
 </form>
 @endif

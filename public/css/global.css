@@ -3,9 +3,18 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
 }
+.header:after, .page:after, .set--overlay:not(.header-container):after{
+    background-color: rgba(0,0,0,.25);
+    -webkit-transition: opacity .3s ease-in-out,visibility .3s ease-in-out;
+    transition: opacity .3s ease-in-out,visibility .3s ease-in-out;
+    content: "";
+}
 .checkout-stage__details-division{
     margin-top: 3rem;
     margin-bottom: 3rem;
+}
+.module-carousel__item .product-tile{
+    min-height: 30rem;
 }
 .checkout-stage__shipment-toggle.tab-nav{
 
@@ -115,7 +124,7 @@ display: -webkit-box;
     margin-bottom: 0.25rem;
 }
 .tooltip--shipping-address .tooltip__trigger:before {
-    content: "?";
+    /* content: "?";
     border: 2px solid #222;
     border-radius: 100%;
     min-width: 18px;
@@ -123,7 +132,7 @@ display: -webkit-box;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 700; */
 }
 [dir=ltr] .checkout-steps-header .checkout-steps_list .opt-wrapper .checkout-register {
     margin-right: 1rem;
@@ -6102,7 +6111,7 @@ button {
     display: inline-block;
     width: .7em;
     height: 1em;
-    content: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24'%3E%3Cpath fill='%231D1C1C' d='M9 0c-.6 0-.9.6-.9 1.2s.6 1.2 1.2 1.2h11.1L.2 22.3c-.3.3-.3 1.2 0 1.5.3.3 1.2.3 1.5 0L21.6 3.9V15c0 .6.6 1.2 1.2 1.2.6-.3 1.2-.6 1.2-1.2V0H9z' /%3E%3C/svg%3E")
+    /* content: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24'%3E%3Cpath fill='%231D1C1C' d='M9 0c-.6 0-.9.6-.9 1.2s.6 1.2 1.2 1.2h11.1L.2 22.3c-.3.3-.3 1.2 0 1.5.3.3 1.2.3 1.5 0L21.6 3.9V15c0 .6.6 1.2 1.2 1.2.6-.3 1.2-.6 1.2-1.2V0H9z' /%3E%3C/svg%3E") */
 }
 
 [dir=ltr] .link--primary:not(.link--hide-external)[target=_blank]:after,[dir=ltr] .link--secondary--highlight:not(.link--hide-external)[target=_blank]:after,[dir=ltr] .link--secondary--static:not(.link--hide-external)[target=_blank]:after,[dir=ltr] .link--secondary-icon:not(.link--hide-external)[target=_blank]:after,[dir=ltr] .link--secondary:not(.link--hide-external)[target=_blank]:after {
@@ -6168,8 +6177,8 @@ button {
 .link--secondary--highlight {
     padding-bottom: .7em;
     background-size: 0 .1875rem;
-    background-image: -webkit-gradient(linear,left top, left bottom,from(#d50032),to(#d50032));
-    background-image: linear-gradient(#d50032,#d50032)
+    background-image: -webkit-gradient(linear,left top, left bottom,from(#000000),to(#000000));
+    background-image: linear-gradient(#000000,#000000)
 }
 
 .link--secondary--highlight.link--secondary--static,.link--secondary--highlight:hover {
@@ -7666,8 +7675,8 @@ option {
     }
 
     .header__logo {
-        max-width: 10rem;
-        height: 2.85rem
+        max-width: 15rem;
+        height: 3.5rem
     }
 
     .header--logo-has-copy .header__logo {
@@ -7957,7 +7966,7 @@ option {
     }
 
     .header--logo-no-copy .header-flyout__anchor.level-1 {
-        padding: 1.25rem .9375rem 1.925rem
+        padding: 1rem .9375rem 1.925rem
     }
 
     .header--logo-no-copy .header-flyout__anchor.level-1:after {
@@ -8142,7 +8151,7 @@ option {
     }
 
     .header-flyout__tab-carousel {
-        width: 60rem;
+        width: 50rem;
         margin: 0 auto
     }
 
@@ -8723,6 +8732,10 @@ html[lang=th-TH] .descriptive-card__content .descriptive-card__actions,html[lang
 }
 
 @media (min-width: 48rem) {
+    .site-search__form {
+        min-height: 13.125rem;
+        max-height: calc(100vh - 9.375rem);
+    }
     .header__search {
         margin-top:-.75rem
     }
@@ -12059,9 +12072,9 @@ isapplepay {
 .component-overlay--center {
     top: 0;
     right: 0;
-    bottom: 0;
+    /* bottom: 0; */
     left: 0;
-    margin: auto
+    /* margin: auto */
 }
 
 .component-overlay--low-index {

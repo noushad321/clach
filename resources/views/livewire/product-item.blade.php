@@ -8,10 +8,10 @@
                 <div class="product-tile__media product-tile__media--default aspect-ratio--square ">
                     <div class="product-tile__media-container component-overlay component-overlay--center">
 
-                        <img class="product-tile__image product-tile__image--primary component-overlay component-overlay--center object-fit--contain lazyload none-up  full-stretch-image " data-product-component="image" data-src="data:image/jpeg;base64,{{ base64_encode(Storage::get($product->multimedia[0]->getRawOriginal('source_path'))) }}" data-image-index="0" itemprop="image" alt="Panth&egrave;re de Cartier bracelet" width="350" height="350" title="Panth&egrave;re de Cartier bracelet" />
+                        <img class="product-tile__image product-tile__image--primary component-overlay component-overlay--center object-fit--contain lazyload none-up  full-stretch-image " data-product-component="image" data-src="data:image/jpeg;base64,{{ base64_encode(Storage::get($product->multimedia[0]->getRawOriginal('source_path'))) }}" data-image-index="0" itemprop="image" alt="{{$product->name}}" width="350" height="350" title="{{$product->name}}" />
 
                         @if($product->multimedia->count() > 1)
-                        <img class="product-tile__image product-tile__image--secondary component-overlay component-overlay--center object-fit--contain lazyload none-up display--small-up  full-stretch-image " data-product-component="image" data-src="data:image/jpeg;base64,{{ base64_encode(Storage::get($product->multimedia[1]->getRawOriginal('source_path'))) }}" data-image-index="0" itemprop="image" alt="Panth&egrave;re de Cartier bracelet" width="350" height="350" title="Panth&egrave;re de Cartier bracelet" />
+                        <img class="product-tile__image product-tile__image--secondary component-overlay component-overlay--center object-fit--contain lazyload none-up display--small-up  full-stretch-image " data-product-component="image" data-src="data:image/jpeg;base64,{{ base64_encode(Storage::get($product->multimedia[1]->getRawOriginal('source_path'))) }}" data-image-index="0" itemprop="image" alt="{{$product->name}}" width="350" height="350" title="{{$product->name}}" />
                         @endif
                     </div>
                 </div>
@@ -34,7 +34,7 @@
 
                         @endforeach
                     </p>
-                    <div class="product-tile__body-section text-line--large font-weight--semibold body-type--deci" style="margin-bottom:45px;">
+                    <div class="product-tile__body-section text-line--large font-weight--semibold body-type--deci" >
                         <div class="price flex--inline flex-flow-wrap flex-align-baseline" data-product-component="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                             <meta itemprop="priceCurrency" content="AED" />
                             <span class="price__sales sales">
@@ -89,7 +89,7 @@
 
                     <div class="product-tile__quickadd" data-quickadd>
                         <input type="hidden" value='{{$product->id}}'class="productID">
-                        <button type="button"  class="product-tile__quickadd-trigger button button--primary button--small set--w-100 addToCart" data-url="" data-product-url="productShowQuickAdd" title="Quick Add for Panth&egrave;re de Cartier bracelet" data-quickadd-trigger>
+                        <button type="button"  class="product-tile__quickadd-trigger button button--primary button--small set--w-100 addToCart" data-url="" data-product-url="productShowQuickAdd" title="" data-quickadd-trigger>
                             <span class="display--small-up">
                                 Add to Shopping Bag
                             </span>

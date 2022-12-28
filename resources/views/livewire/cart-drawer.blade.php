@@ -139,7 +139,7 @@
 
 
 <div class="price__sales pricing line-item-total-price-amount">
-    $ {{$details['price']}}
+    $ {{number_format($details['price'])}}
 
 
 </div>
@@ -206,7 +206,7 @@
             </div>
 
             <div class="col-6">
-                <p class="text-align--right" data-totals-component="value">$ {{$total}}</p>
+                <p class="text-align--right" data-totals-component="value">$ {{number_format($total)}}</p>
             </div>
         </div>
 

@@ -3,7 +3,7 @@
     <main id="main" class="main gutter--small-up-normal" role="main">
         <div id="checkout-main" class="checkout max-width--xmedium" data-customer-type="guest" data-stage=""
              data-current-stage="shipping"
-             data-checkout-get-url="https://www.cartier.com/on/demandware.store/Sites-CartierUAE-Site/en_AE/CheckoutServices-Get"
+             data-checkout-get-url=""
              data-shipping-view="single">
             <div class="row">
             @if(session('cart'))
@@ -29,7 +29,7 @@
                                                     the purchase.</p>
                                                 <p class="font-family--serif">For further information about how we use
                                                     your personal information, please see our
-                                                    <a href="https://www.cartier.com/en-ae/resources/privacy-policy-template/privacy-policy.html"
+                                                    <a href="#"
                                                        title="Privacy Policy" target="_blank">Privacy Policy</a></p>
                                                     <div class="form-group--short-spacing
                                     required dwfrm_shipping_shippingAddress_contactInfoFields_email"
@@ -89,25 +89,9 @@
 
 
                                                 <div class="checkout-stage__header shipping-method">
-                                                    <legend class="body-type heading-type">Shipping Method</legend>
+                                                    <legend class="body-type heading-type">Shipping Address</legend>
                                                 </div>
-                                                <div class="checkout-stage__shipment-toggle tab-nav">
-                                                    <a href="#homedelivery"
-                                                       class="checkout-stage__shipment-toggle-item tab-nav__item flex flex-align-center flex-justify-center font-family--sans-secondary body-type--centi text-line--xxlarge text-transform--uppercase toggle--active"
-                                                       data-toggle-component="home" role="tab" id="toggleID-1656"
-                                                       aria-expanded="true" aria-controls="toggleID-1656--target">
-                                                        <span class="tab-nav__item-label">Ship to an Address</span>
-                                                    </a>
-
-
-                                                    <a href="#storepickup"
-                                                       class="checkout-stage__shipment-toggle-item tab-nav__item flex flex-align-center flex-justify-center font-family--sans-secondary body-type--centi text-line--xxlarge text-transform--uppercase"
-                                                       data-toggle-component="store" role="tab" id="toggleID-4169"
-                                                       aria-expanded="false" aria-controls="toggleID-4169--target">
-                                                        <span class="tab-nav__item-label">Ship to a Boutique</span>
-                                                    </a>
-
-                                                </div>
+                                                
                                                 <div class="tab-content">
                                                     <div
                                                         class="checkout-stage__address-container tab-content__panel toggle--active"
@@ -130,7 +114,7 @@
                                                                         name="shipmentSelector"
                                                                         class="addressSelector form-control form-control--select form-control--boxed form-control--alt-font"
                                                                         data-checkout-component="single-shipping-address-selector"
-                                                                        data-create-shipment-url="https://www.cartier.com/on/demandware.store/Sites-CartierUAE-Site/en_AE/CheckoutAddressServices-CreateNewAddress"
+                                                                        data-create-shipment-url=""
                                                                         aria-describedby="shipmentSelector-1413098612274">
 
 
@@ -182,7 +166,7 @@
                                                                        data-verification-component="using-verified"
                                                                        aria-describedby="dwfrm_shipping_shippingAddress_addressFields_usingVerifiedAddress-333526276577">
 
-                                                                <p class="form-required__copy font-family--serif text-align--right text-color--grey-5">
+                                                                <p class="form-required__copy font-family--serif  text-color--grey-5">
                                                                     Required field*
                                                                 </p>
 
@@ -201,7 +185,7 @@
                                                                         <div class="form-check form-check-group__item">
                                                                             <input
                                                                                 id="customerSalutationOption-dwfrm_shipping_shippingAddress_addressFields_salutations_salutation-mr"
-                                                                                type="radio" class="form-check-input"
+                                                                                type="checkbox" class="form-check-input"
                                                                                 name="dwfrm_shipping_shippingAddress_addressFields_salutations_salutation"
                                                                                 required="" aria-required="true"
                                                                                 value="mr"
@@ -209,7 +193,7 @@
 
                                                                             <label
                                                                                 for="customerSalutationOption-dwfrm_shipping_shippingAddress_addressFields_salutations_salutation-mr"
-                                                                                class="form-check-label--radio">
+                                                                                class="form-check-label">
                                                                                 MR
                                                                             </label>
                                                                         </div>
@@ -218,7 +202,7 @@
                                                                         <div class="form-check form-check-group__item">
                                                                             <input
                                                                                 id="customerSalutationOption-dwfrm_shipping_shippingAddress_addressFields_salutations_salutation-mrs"
-                                                                                type="radio" class="form-check-input"
+                                                                                type="checkbox" class="form-check-input"
                                                                                 name="dwfrm_shipping_shippingAddress_addressFields_salutations_salutation"
                                                                                 required="" aria-required="true"
                                                                                 value="mrs"
@@ -226,7 +210,7 @@
 
                                                                             <label
                                                                                 for="customerSalutationOption-dwfrm_shipping_shippingAddress_addressFields_salutations_salutation-mrs"
-                                                                                class="form-check-label--radio">
+                                                                                class="form-check-label">
                                                                                 MRS
                                                                             </label>
                                                                         </div>
@@ -289,6 +273,29 @@
                                                                                 class="invalid-feedback"></div>
                                                                         </div>
                                                                     </div>
+                                                                    <div class="col-12">
+                                                                        <div class="form-group
+            required
+            dwfrm_shipping_shippingAddress_addressFields_lastName" data-floating-label="">
+                                                                            <label class="form-control-label"
+                                                                                   for="shippingLastName">
+                                                                                Age
+                                                                            </label>
+                                                                            <input type="text"
+                                                                                   class="form-control shippingLastName"
+                                                                                   id="shippingLastName"
+                                                                                   data-validate-latin="" value=""
+                                                                                   name="user_last_name"
+                                                                                   required="" aria-required="true"
+                                                                                   maxlength="32"
+                                                                                   autocomplete="family-name"
+                                                                                   aria-describedby="dwfrm_shipping_shippingAddress_addressFields_lastName-111923446893">
+                                                                            <div class="invalid-feedback"></div>
+                                                                            <div
+                                                                                id="dwfrm_shipping_shippingAddress_addressFields_lastName-111923446893"
+                                                                                class="invalid-feedback"></div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
 
                                                                 <!-- Custom Names  -->
@@ -321,12 +328,12 @@
 
                                                                             <span
                                                                                 class="tooltip tooltip--field-label tooltip--shipping-address">
-    <button type="button" class="tooltip__trigger link" id="toggleID-6685" aria-expanded="false"
+    <!-- <button type="button" class="tooltip__trigger link" id="toggleID-6685" aria-expanded="false"
             aria-controls="toggleID-6685--target">
         <span class="sr-only">Help</span>
         <svg aria-hidden="true" focusable="false" class="tooltip__trigger-icon icon"><use
                 xlink:href="#icon--info"></use></svg>
-    </button>
+    </button> -->
     <div class="tooltip__content body-type--deci bg--grey-7 set--top set--right" id="toggleID-6685--target"
          aria-labelledby="toggleID-6685">
 
@@ -353,7 +360,7 @@
             dwfrm_shipping_shippingAddress_addressFields_address2" data-floating-label="">
                                                                             <label class="form-control-label"
                                                                                    for="shippingAddressTwo">
-                                                                                Apartment#/Hotel Room#/Villa# (Max 39
+                                                                                   Villa#/Hotel Room#/Apartment# (Max 40
                                                                                 Characters)
                                                                             </label>
                                                                             <input type="text"
@@ -1324,6 +1331,36 @@
 
 
                                                                 <div class="row">
+                                                                <div class="col-12">
+                                                                        <div
+                                                                            class="form-group required dwfrm_shipping_shippingAddress_addressFields_country_countryCode set--floating-label"
+                                                                            data-floating-label="">
+                                                                            <label class="form-control-label"
+                                                                                   for="shippingCountry">
+                                                                                Nationality
+                                                                            </label>
+                                                                            <select
+                                                                                class="form-control shippingCountry custom-select"
+                                                                                id="shippingCountry"
+                                                                                data-checkout-component="shipping-method-update"
+                                                                                name="country_code"
+                                                                                required="" aria-required="true"
+                                                                                autocomplete="shipping country"
+                                                                                aria-describedby="dwfrm_shipping_shippingAddress_addressFields_country_countryCode-291660805933">
+
+                                                                                <option value="AE">United Arab
+                                                                                    Emirates
+                                                                                </option>
+
+                                                                            </select>
+                                                                            <div class="invalid-feedback"></div>
+
+
+                                                                            <div
+                                                                                id="dwfrm_shipping_shippingAddress_addressFields_country_countryCode-291660805933"
+                                                                                class="invalid-feedback"></div>
+                                                                        </div>
+                                                                    </div>
                                                                     <div class="col-12">
                                                                         <div
                                                                             class="form-group required dwfrm_shipping_shippingAddress_addressFields_country_countryCode set--floating-label"
@@ -5267,6 +5304,7 @@
                                                                             class="set--w-100 invalid-feedback"></div>
                                                                     </div>
                                                                 </div>
+                                                                <input type="checkbox"><label sty> &nbsp;I consent to receiving communication from clach regarding events and new collections.</label>
 
                                                                 <div
                                                                     id="dwfrm_shipping_shippingAddress_addressFields_usingVerifiedAddress-333526276577"
@@ -5306,7 +5344,6 @@
                                                                     <p>&nbsp;</p>
                                                                 </div> <!-- End content-asset -->
 
-
                                                             </div>
 
 
@@ -5315,8 +5352,8 @@
                                                                    aria-describedby="shipmentUUID-146925642301">
 
                                                             <div class="form-check-list"
-                                                                 data-select-shipping-method-url="https://www.cartier.com/on/demandware.store/Sites-CartierUAE-Site/en_AE/CheckoutShippingServices-SelectShippingMethod"
-                                                                 data-action-url="https://www.cartier.com/on/demandware.store/Sites-CartierUAE-Site/en_AE/CheckoutShippingServices-UpdateShippingMethodsList"
+                                                                 data-select-shipping-method-url=""
+                                                                 data-action-url=""
                                                                  data-checkout-component="shipping-method-list">
 
                                                                 <div class="shipping-method__item row"
@@ -5454,7 +5491,7 @@
                                                             class="checkout-stage__details-section store-locator--store-pickup"
                                                             data-checkout-component="shipping-pickup-section">
                                                             <div class="pickup-in-store"
-                                                                 data-url="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Stores-InventorySearch?showMap=false&amp;products=CRB6048617%3a1&amp;isForm=false&amp;radius=300"
+                                                                 data-url=""
                                                                  data-checkout-component="pickup-in-store"></div>
 
                                                             <div class="hidden"
@@ -5499,13 +5536,7 @@
                                                             <hr class="checkout-stage__details-division extend-gutter--small-up-normal text-color--grey-3 display--small-only">
                                                         </fieldset>
                                                     </div>
-                                                    <!-- <button
-                                                        class="button button--primary set--w-100 body-type--centi submit-shipping"
-                                                        type="submit" name="submit" value="submit-shipping"
-                                                        data-checkout-component="shipping-stage-next"
-                                                        form="dwfrm_shipping">
-                                                        Proceed
-                                                    </button> -->
+                                                   
                                                 </div>
                                             </form>
                                         </div>
@@ -5515,10 +5546,11 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-12 col-md-5 col-xl-4 off-xl-1">
+                <h2 style="visibility: hidden;">Order summary</h2>
+
                 <div class="fixit-container flex-grow-1 gutter--small-only-normal">
-                    <div class="fixit-placeholder" style=""></div><div class="order-summary gutter--small-up-normal fixit-element fixit--respond-to-parent" style="">
+                    <div class="fixit-placeholder" style=""></div><div class="order-summary gutter--small-up-normal fixit-element fixit--respond-to-parent" style="margin-top:15px">
                         <div class="order-summary__header flex flex-justify-between flex-align-baseline flex-flow-wrap">
                             <h2 class="order-summary__title heading-type body-type--deka">Order Summary</h2>
                             <a class="link--primary" href="{{url('/cart')}}" title="Modify">
@@ -5615,7 +5647,7 @@
     
 
 <div class="price__sales pricing line-item-total-price-amount">
-$ {{$details['price']}}
+$ {{number_format($details['price'])}}
     
 
 </div>
@@ -5694,7 +5726,7 @@ $ {{$details['price']}}
             <p class="order-receipt-label heading-type word-break--break-word hyphens--auto" data-totals-component="label">Subtotal</p>
         </dt>
         <dd class="col">
-            <p class="text-align--right sub-total" data-totals-component="value">$ {{$total}}</p>
+            <p class="text-align--right sub-total" data-totals-component="value">$ {{number_format($total)}}</p>
         </dd>
     </div>
 
@@ -5738,7 +5770,7 @@ $ {{$details['price']}}
             <strong class="order-receipt-label heading-type word-break--break-word hyphens--auto" data-totals-component="label">Total</strong>
         </dt>
         <dd class="col">
-            <strong class="text-align--right font-weight--semibold grand-total-sum" data-totals-component="value">$ {{$total}}</strong>
+            <strong class="text-align--right font-weight--semibold grand-total-sum" data-totals-component="value">$ {{number_format($total)}}</strong>
         </dd>
     </div>
 
@@ -5748,6 +5780,24 @@ $ {{$details['price']}}
 	    
     </div>
 </dl>
+
+                        </div>
+                        <div class="order-summary__actions " data-checkout-component="actions">
+                            <button class="button button--primary set--w-100 body-type--centi submit-shipping" type="submit" name="submit" value="submit-shipping" data-checkout-component="shipping-stage-next" form="dwfrm_shipping">
+                                Proceed
+                            </button>
+
+                            <!-- <button class="button button--primary set--w-100 body-type--centi submit-payment" type="submit" name="submit" value="submit-payment" data-checkout-component="payment-stage-next" form="dwfrm_billing">
+                                Proceed
+                            </button>
+
+                            
+                            <button class="button button--primary set--w-100 body-type--centi place-order " data-action="/on/demandware.store/Sites-CartierUAE-Site/en_AE/CheckoutServices-PlaceOrder" data-checkout-component="placeOrder-stage-next" type="submit" name="submit" value="place-order">
+    Place Order
+</button> -->
+                            
+    <isapplepay class="button button--apple-pay set--w-100"></isapplepay>
+
 
                         </div>
     </main>

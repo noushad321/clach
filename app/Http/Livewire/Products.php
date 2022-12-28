@@ -18,9 +18,24 @@ class Products extends Component
     public function mount()
     {
         $this->currentRouteName = Route::getCurrentRoute()->parameters();
+        if(isset($this->currentRouteName['subCategoryType'])){
         $category = $this->currentRouteName['category'];
-        $sub_category = $this->currentRouteName['subCategory'];
-        $sub_category_type = $this->currentRouteName['subCategoryType'];
+    }else{
+        $category="";  
+    }
+        if(isset($this->currentRouteName['subCategory']))
+        {
+            $sub_category = $this->currentRouteName['subCategory'];
+        }else{
+            $sub_category = "";
+        }
+        if(isset($this->currentRouteName['subCategoryType']))
+        {
+            $sub_category_type = $this->currentRouteName['subCategoryType'];
+        }else{
+            $sub_category_type = "";
+        }
+   
         if ($category != "") {
 
             $category = (new Category)->where('slug', $category)->first();

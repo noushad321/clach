@@ -14,8 +14,8 @@
     <title>Clach</title>
 
 
-    <meta name="description" content="Cartier&reg; Fine watches (Ballon Bleu de Cartier, Tank...), jewellery, wedding and engagement rings,  leather goods and other luxury goods from the famous French" />
-    <meta name="keywords" content="Cartier" />
+    <meta name="description" content="Clach&reg; Fine watches (Ballon Bleu de Clach, Tank...), jewellery, wedding and engagement rings,  leather goods and other luxury goods from the famous Dubai" />
+    <meta name="keywords" content="Clach" />
 
 
 
@@ -29,11 +29,11 @@
 
 
 
-    <link rel="icon" type="image/png" href="/on/demandware.static/Sites-CartierUAE-Site/-/default/dw569c92a4/images/favicons/favicon-196x196.png" sizes="196x196" />
-    <link rel="icon" type="image/png" href="/on/demandware.static/Sites-CartierUAE-Site/-/default/dw57810931/images/favicons/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="/on/demandware.static/Sites-CartierUAE-Site/-/default/dw6340d59d/images/favicons/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="/on/demandware.static/Sites-CartierUAE-Site/-/default/dwf8902acd/images/favicons/favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="/on/demandware.static/Sites-CartierUAE-Site/-/default/dwb248086e/images/favicons/favicon-128.png" sizes="128x128" />
+    <link rel="icon" type="image/png" href="" sizes="196x196" />
+    <link rel="icon" type="image/png" href="" sizes="96x96" />
+    <link rel="icon" type="image/png" href="" sizes="32x32" />
+    <link rel="icon" type="image/png" href="" sizes="16x16" />
+    <link rel="icon" type="image/png" href="" sizes="128x128" />
 
     <link rel="stylesheet" href="{{asset('css/global.css')}}" />
     <link rel="stylesheet" href="{{asset('css/searchMain.css')}}" />
@@ -51,7 +51,7 @@
 
 
             <symbol id="logo" viewBox="0 0 170 49.3">
-                <title>Cartier</title>
+                <title>Clach</title>
                 <path d="M36 1c-1.5 0-3.1.2-4.8.6 0 0-9 2.2-19 11.5 0 0-4.7 4.8-8.1 11 0 0-3.5 6.5-4 11.8 0 0-.5 6.1 2.9 9.2 0 0 3.9 3.6 12.6 2.9 0 0 5.4-.7 11.3-4.3 0 0 2.8-1.8 4.7-3.6 0 0-.9 3.1.4 5.3 0 0 1.2 2.1 3.9 2.6 0 0 2 .4 4.8-.7 0 0 1.8-.8 3-1.4 0 0 2.4-1.3 4.8-3.2 0 0-.5 1.8.6 3.4 0 0 1.3 1.8 3.6 2 0 0 6.2.5 14.8-10.1l-6.1 9.7 5.5-.1 4.8-8.3s5-8.6 6.1-9.6c0 0 2.6-3.4 6.5-4.2l2.6.2s1.1.5 1.1 1.7l-1.9-.3s-1.1.1-1.7 1.3c0 0-.5 1.1-.3 2.2 0 0 .3.9 1.2 1.3l.6.2 1.9-.3s3.4-1.3 8-7l-1.1 1.9-3.9 6.6-4.5 8s-1.3 2.6-.7 4.2c0 0 .6 1.5 2.6 1.9l4.3-.3s2.4-.7 4.4-2.4l2.8-2.3s3.4-2.9 6.5-6.3l-.2.3s-2.7 4.9-3.2 6.6c0 0-1.1 3.5 1.4 4.9l2.8.3s2.3-.3 4.6-2l3.8-3.2s3.2-3 4.9-5.2c0 0-.9 2-1.1 3.4 0 0-.7 4.6 3.6 6.5l4 .3s1.6-.1 4-1c0 0 5.7-1.8 13.6-9.2 0 0 4-3.7 6.8-7l-10 16.8h4.9l3.7-6.2 4.7-7.7s2.7-4.3 7.6-7c0 0 2-1.2 3.5-1.4 0 0 1.6-.3 1.9.5 0 0-2.2-.5-2.8 1.8 0 0-.5 2.3 1.3 3 0 0 1.4.5 2.5-.3 0 0 1-.7 1.3-2.1 0 0 .3-1.4-.4-2.4 0 0-.8-1.2-2.6-1.3 0 0-2-.1-6.1 2.6 0 0-3 2-4.3 3.2l3.4-5.7h-5s-4.7 8-13.1 14.9c0 0-8.2 6.6-12.8 6.8 0 0-4.5.3-4.9-3.1 0 0-.3-2 .9-4.9 0 0 2.8.3 6.5-.9 0 0 3.5-1.1 6.4-3.1 0 0 3.1-2.1 4.2-4.3 0 0 1.3-2.5-.2-4.6 0 0-2.8-2.7-8.8-.2 0 0-6.2 2.6-10.8 8.7l-1.2 1.8-.1.2-3.3 3.8-3.4 3.4s-4.1 4-6.1 2.8c0 0-.8-.5-.8-1.8 0 0 0-1.3.9-2.8l9.5-16.6h-4.3s-2.4 3.9-5.1 7.6c0 0-5.4 7.2-11.3 11.3 0 0-4 3.1-6.3 2 0 0-1-.5-.9-1.7 0 0 .1-1.4 1.4-3.3l9.3-15.9 5.2-.1.7-.7h-5.3l5.6-9.9-4.7.1s-3.3 5.6-5.8 9c0 0-4.6 6.1-8.4 7.7 0 0 .7-.9.7-2.2l-.1-1.1s-.3-1.4-1.6-2l-1.2-.3-2.2.2s-2.6.6-5.1 2.7l2-3.4h-4.7s-4.3 7.6-9.9 14.2c0 0-7.3 8.4-11.3 7.4 0 0-1.2-.6-1.3-2 0 0 0-1.4 1.3-3.5l9.5-16.1-4.7.1-1.5 2.6-1 1.9s.2-.6 0-1.8c0 0-.4-3-3.2-3.6l-2.2-.2s-5.7-.1-12.1 5.6c0 0-4.4 3.9-7.8 9.9 0 0-6.7 6.3-13.8 7.6 0 0-6.3 1.3-9-1.5 0 0-3-3-3-8.3 0 0 .1-6.3 4.5-14.7 0 0 4.7-7 7.6-10.1 0 0 7.4-8.1 15-10.1 0 0 6.3-1.6 9.7 1.2 0 0 3 2.4 3.2 7.4l1.7-2.9s2.2-3.4 4.1-5.4c0 0-1.8.8-3.9 1.1 0 0-2.7.3-4-.5.2-.1-2.7-1.9-7.5-2zm16.1 23.3c1.9 0 2.9.9 2.9.9 2.3 2.1.5 6.1.5 6.1-3.6 7.4-8.8 11.8-8.8 11.8l-3.2 2.2c-4.9 2.4-7 .7-7 .7-1.7-1.4-1-4.7-1-4.7.5-2.2 2.3-5.5 2.3-5.5l3.6-5.2c3.2-3.6 6.9-5.4 6.9-5.4 1.5-.7 2.8-.9 3.8-.9zm84.7.6h.2s1.1.1 1.5.7c0 0 .5.7.3 2 0 0-.3 3.5-4.2 6.8 0 0-4.4 3.8-9.5 3.6l1-2s2.2-4.3 5.5-7.7c0-.1 3.1-3.4 5.2-3.4z" />
                 <path d="M116.8 17.5s0 .9.7 1.5c0 0 .6.6 1.5.6 0 0 .9 0 1.4-.6 0 0 .6-.7.6-1.5l-.6-1.5s-.7-.6-1.4-.6c0 0-.9 0-1.5.6-.1 0-.7.6-.7 1.5" />
             </symbol>
@@ -450,7 +450,9 @@
                               <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="3U5UD-A3KVH-XWX9Q-ND4WL-URRMD",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"3U5UD-A3KVH-XWX9Q-ND4WL-URRMD",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e=""=="true"?1:0,t="cookiepresent",n="knxjwnvydlfsuy3lkdhq-f-326130b85-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"33","ak.cp":"1101092","ak.ai":parseInt("202616",10),"ak.ol":"0","ak.cr":98,"ak.ipv":4,"ak.proto":"h2","ak.rid":"a3aa81c","ak.r":11483,"ak.a2":e,"ak.m":"a","ak.n":"essl","ak.bpcip":"83.110.155.0","ak.cport":49328,"ak.gh":"23.32.29.100","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.csrc":"-","ak.acc":"","ak.t":"1667977423","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==/Sj7nA01u7drqWfekH0GWgpnMkppky6HPNJpOtBFXPajWcDJEvGzNah7cKM112XS0+TeA0oNbfNVOngpkk8L6rm4SBqXCvKgJ90O/YFzSkfHFuIwg9Nh74WrPP9bbs0G2ttUd9ro2pp9o1rcMsRYadvplqn2zNlpH3sL2IzVwoN617oVETDXIEMMV0mu69B2gVKyyIeL5hEyZPb0zq/HR7Z72mVd0OdYHVa2qsiLtL9C2qbM7MYuPNNJu/01Iq6Fl/D0ATOzB/hsx5XcP/zscpCiw4VZEDhYssY7BMlokAvd3y1dYvbdR28gGZNl9o2s1aYH3jygbN2dLduqfsTi2naaKNcrSt94gpSyTErog5m93oUxnfmI2/RI8FrfG8f74OpNA1zBxdH8WRviafGLpHiHNb6BmzvD9IA0hqbnJx0=","ak.pv":"271","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head> -->
 
 <body>
-<div class="loader"><img src="{{asset('images/loading.gif')}}"> </div>
+<div class="loader">
+    <!-- <img src="{{asset('images/loading.gif')}}">  -->
+</div>
 
     <!-- Google Tag Manager (noscript) -->
 
@@ -458,7 +460,7 @@
 
     <!-- End Google Tag Manager (noscript) -->
 
-    <div class="page page--homepage" data-action="Home-Show" data-querystring="" data-page-motion>
+    <div class="page page--homepage set--page-motion-ready" data-action="Home-Show" data-querystring="" data-page-motion>
 
 
 
@@ -586,7 +588,7 @@
                         </div>
 
                         <div class="col-6 col-md-4 flex-align-center">
-                            <a href="{{url('/')}}" class="header__logo set--w-100 flex flex-direction-col flex-align-center" title="Cartier Home">
+                            <a href="{{url('/')}}" class="header__logo set--w-100 flex flex-direction-col flex-align-center" title="Clach  Home">
                                 <img src="{{asset('images/clach_logo-1.png')}}">
                             </a>
                         </div>
@@ -813,17 +815,17 @@
 
                                          
 
-                                            <a class="header__utility-anchor header-flyout__secondary-link link flex" href="#" title="My Cartier" aria-label="My Cartier" data-auth-trigger>
+                                            <a class="header__utility-anchor header-flyout__secondary-link link flex" href="#" title="My Clach" aria-label="My Clach" data-auth-trigger>
                                                 <svg aria-hidden="true" focusable="false" class="icon body-type--deka">
                                                     <use xlink:href="#nav--profile" />
                                                 </svg>
                                                 <span class="header__utility-label icon--set-right-large text-transform--uppercase body-type--centi">My
-                                                    Cartier</span>
+                                                    Clach</span>
                                             </a>
 
 
 
-                                            <a class="header__utility-anchor header-flyout__secondary-link link flex" href="https://www.cartier.com/en-ae/stores" title="Find a Boutique" aria-label="Find a Boutique">
+                                            <a class="header__utility-anchor header-flyout__secondary-link link flex" href="#" title="Find a Boutique" aria-label="Find a Boutique">
                                                 <svg aria-hidden="true" focusable="false" class="icon body-type--deka">
                                                     <use xlink:href="#icon--store-locator" />
                                                 </svg>
@@ -877,7 +879,9 @@
                                             <div id="lang-1341774084129" class="invalid-feedback"></div>
                                         </div>
 
-                                        <div class="site-search__suggestions-container max-width--xmedium flex flex-direction-col set--w-100" data-search-component="suggestions-container" data-suggestions-url="/on/demandware.store/Sites-CartierUAE-Site/en_AE/SearchServices-GetSuggestions" data-scrollable=""></div>
+                                        <div class="site-search__suggestions-container max-width--xmedium flex flex-direction-col set--w-100" >
+
+                                        </div>
                                     </form>
                                 </div>
 
@@ -1007,8 +1011,8 @@
 
 
 
-                                        <a href="tel: +97143467864" class="component-actions__cta  body-type--centi link link--secondary " aria-label="Start call to: +97143467864" style="">
-                                            Call Now: +971 43467864
+                                        <a href="https://api.whatsapp.com/send/?phone=97145809640&amp;text&amp;app_absent=1&amp;lang=en" class="component-actions__cta  body-type--centi link link--secondary "  style="">
+                                            Chat with us on Whats app
                                         </a>
 
                                     </li>
@@ -1026,8 +1030,8 @@
 
 
 
-                                        <a href="/en-ae/faq-product.html" class="component-actions__cta  body-type--centi link link--secondary " aria-label="Read Frequently Asked Questions" style="">
-                                            Refund Policy
+                                        <a href="{{url('refund-policy')}}" class="component-actions__cta  body-type--centi link link--secondary " aria-label="Read Frequently Asked Questions" style="">
+                                            Exchange Policy
                                         </a>
 
                                     </li>
@@ -1128,7 +1132,7 @@
 
 
 
-                                        <a href="/en-ae/conditions-of-sale.html" class="component-actions__cta  body-type--centi link link--secondary " aria-label="Conditions of Sale" style="">
+                                        <a href="{{url('/conditions-of-sale')}}" class="component-actions__cta  body-type--centi link link--secondary " aria-label="Conditions of Sale" style="">
                                             Conditions of Sale
                                         </a>
 
@@ -1147,7 +1151,7 @@
 
 
 
-                                        <a href="/en-ae/legal-%26-privacy/credits.html" class="component-actions__cta  body-type--centi link link--secondary " aria-label="Credits" style="">
+                                        <a href="{{url('/shipping-policy')}}" class="component-actions__cta  body-type--centi link link--secondary " aria-label="Credits" style="">
                                             SHIPPING POLICY
                                         </a>
 
@@ -1360,9 +1364,9 @@
             "cartCountLabel": "Shopping bag, {0} item in your shopping bag.",
             "cartCountLabelPlural": "Shopping bag, {0} items in your shopping bag.",
             "checkoutPageTitle": {
-                "shipping": "Cartier | Checkout - Shipping",
-                "payment": "Cartier | Checkout - Payment",
-                "placeOrder": "Cartier | Checkout - Review"
+                "shipping": "Clach | Checkout - Shipping",
+                "payment": "Clach | Checkout - Payment",
+                "placeOrder": "Clach | Checkout - Review"
             },
             "salutations": {
                 "mr": "Mr",
@@ -1489,7 +1493,7 @@
             });
 
             $(".site-search__trigger-search").click(function() {
-                // $(".site-search__form").addClass('toggle--active');
+                 $(".set--page-motion-ready").addClass('set--overlay');
                 $("body").css("overflow", "hidden");
                 $(".site-search").addClass("toggle--active");
                 $(".header__utility-anchor").addClass("toggle--active");
@@ -1498,6 +1502,7 @@
             })
             $(".site-search__trigger-close").click(function() {
                 // $(".site-search__form").addClass('toggle--active');
+                $(".set--page-motion-ready").removeClass('set--overlay');
                 $("body").css("overflow", "auto");
                 $(".site-search").removeClass("toggle--active");
                 $(".header__utility-anchor").removeClass("toggle--active");
@@ -1541,7 +1546,6 @@
             'X-CSRF-Token': '{{ csrf_token() }}',
         },
         success: function(data){
-            console.log(data.count)
             $('.loader').css("opacity","0");
             $('.loader').css("visibility","hidden");
             $(".utility-overlay__line-items").remove();
@@ -1585,6 +1589,37 @@
         
         $("#searchProduct").keyup(function(){
             const query = $(this).val();
+            $(".site-search__suggestions-container").empty();
+           if(query.length >= 3){
+            $('.loader').css("opacity","1");
+        $('.loader').css("visibility","visible");
+            $.ajax({
+        url: '{{url("search")}}',
+      
+        type: "GET",
+        data: {_token: '{{ csrf_token() }}', search: query},
+        headers: {
+            'X-CSRF-Token': '{{ csrf_token() }}',
+        },
+        success: function(data){
+            $('.loader').css("opacity","0");
+            $('.loader').css("visibility","hidden");
+            if(data){
+                $(".site-search__suggestions-container").append(data);
+            }
+            // $('.loader').css("opacity","0");
+            // $('.loader').css("visibility","hidden");
+            // $(".utility-overlay__line-items").remove();
+            // $(".utility-overlay__footer").remove();
+            //  $(".cartCount").text(data.count);
+            // //$(".cartIcon").append(`<span class="cartCount header__utility-badge header__utility-badge--has-items flex flex-align-center flex-justify-center" data-minicart-component="qty">${data.count}</span>`);
+            // $(".myCartList").append(data.data);
+            // $('.header__minicart-overlay').addClass("toggle--active");
+
+        }, 
+    });
+}
+    
         })
         $(document).on("click",".quickView",function(){
             console.log($(this))
@@ -1797,7 +1832,10 @@
                 $(this).parent().parent().parent().next().find('button').prop("disabled", false);
            }
         })
-        
+        $(document).on("click",".add_gift_message",function(){
+       console.log($('.gift_message'))
+       //$(".gift_message").addClass('modal-active');
+   })
     </script>
     @livewireScripts
     @stack('custom-scripts')
