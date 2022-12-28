@@ -301,6 +301,14 @@
             font-display: swap;
         }
 
+        @font-face {
+            font-family: 'Tuesday Night';
+            src: url("{{asset('fonts/tuesdaynight-regular-webfont.woff2')}}") format('woff2'),
+            url("{{asset('fonts/tuesdaynight-regular-webfont.woff')}}") format('woff');
+            font-weight: 400;
+            font-display: swap;
+        }
+
         /*------------------------------------*\
     Brilliant Cut
     \*------------------------------------*/
@@ -450,9 +458,9 @@
                               <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="3U5UD-A3KVH-XWX9Q-ND4WL-URRMD",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"3U5UD-A3KVH-XWX9Q-ND4WL-URRMD",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e=""=="true"?1:0,t="cookiepresent",n="knxjwnvydlfsuy3lkdhq-f-326130b85-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"33","ak.cp":"1101092","ak.ai":parseInt("202616",10),"ak.ol":"0","ak.cr":98,"ak.ipv":4,"ak.proto":"h2","ak.rid":"a3aa81c","ak.r":11483,"ak.a2":e,"ak.m":"a","ak.n":"essl","ak.bpcip":"83.110.155.0","ak.cport":49328,"ak.gh":"23.32.29.100","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.csrc":"-","ak.acc":"","ak.t":"1667977423","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==/Sj7nA01u7drqWfekH0GWgpnMkppky6HPNJpOtBFXPajWcDJEvGzNah7cKM112XS0+TeA0oNbfNVOngpkk8L6rm4SBqXCvKgJ90O/YFzSkfHFuIwg9Nh74WrPP9bbs0G2ttUd9ro2pp9o1rcMsRYadvplqn2zNlpH3sL2IzVwoN617oVETDXIEMMV0mu69B2gVKyyIeL5hEyZPb0zq/HR7Z72mVd0OdYHVa2qsiLtL9C2qbM7MYuPNNJu/01Iq6Fl/D0ATOzB/hsx5XcP/zscpCiw4VZEDhYssY7BMlokAvd3y1dYvbdR28gGZNl9o2s1aYH3jygbN2dLduqfsTi2naaKNcrSt94gpSyTErog5m93oUxnfmI2/RI8FrfG8f74OpNA1zBxdH8WRviafGLpHiHNb6BmzvD9IA0hqbnJx0=","ak.pv":"271","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head> -->
 
 <body>
-<div class="loader">
-    <!-- <img src="{{asset('images/loading.gif')}}">  -->
-</div>
+    <div class="loader">
+        <!-- <img src="{{asset('images/loading.gif')}}">  -->
+    </div>
 
     <!-- Google Tag Manager (noscript) -->
 
@@ -600,9 +608,9 @@
 
 
 
-                               
 
-                                <a class="header__utility-item header__utility-anchor link flex" href="{{url('/login')}}" title="My Cartier" aria-label="My Cartier">
+
+                                <a class="header__utility-item header__utility-anchor link flex" href="{{url('/login')}}" title="My Clach" aria-label="My Clach">
                                     <svg aria-hidden="true" focusable="false" class="icon fluid-type--deka-base">
                                         <use xlink:href="#nav--profile" />
                                     </svg>
@@ -618,24 +626,24 @@
 
 
                             <div class="header__minicart header__utility-item--reverse-spacing header__utility-item--badged flex " data-minicart-component="container">
-    <a class="header__utility-anchor flex flex-align-center link body-type--milli cartIcon" title="View Cart" wire:click="toggleCartDrawer" role="button">
-        <svg aria-hidden="true" focusable="false" class="header__minicart-icon icon fluid-type--deka-base">
-            <use xlink:href="#nav--cart" />
-        </svg>
-        
-        <span class="cartCount header__utility-badge header__utility-badge--has-items flex flex-align-center flex-justify-center" data-minicart-component="qty">
-        @if(session('cart'))
-        
-{{count(session('cart'))}}
-@else
-0
-@endif
-        </span>
-        
-    </a>
+                                <a class="header__utility-anchor flex flex-align-center link body-type--milli cartIcon" title="View Cart" wire:click="toggleCartDrawer" role="button">
+                                    <svg aria-hidden="true" focusable="false" class="header__minicart-icon icon fluid-type--deka-base">
+                                        <use xlink:href="#nav--cart" />
+                                    </svg>
 
-    <div class="header__minicart-overlay utility-overlay" data-minicart-component="overlay" tabindex="-1" role="dialog" aria-modal="true"></div>
-</div>
+                                    <span class="cartCount header__utility-badge header__utility-badge--has-items flex flex-align-center flex-justify-center" data-minicart-component="qty">
+                                        @if(session('cart'))
+
+                                        {{count(session('cart'))}}
+                                        @else
+                                        0
+                                        @endif
+                                    </span>
+
+                                </a>
+
+                                <div class="header__minicart-overlay utility-overlay" data-minicart-component="overlay" tabindex="-1" role="dialog" aria-modal="true"></div>
+                            </div>
 
 
 
@@ -753,10 +761,10 @@
 
 
                                                                         <div class="header-flyout__tab-viewall level-3">
-                                                                    <a href="{{url('items/'.$menu->slug.'/'.$subcategory->slug)}}" id="flyout-high-jewellery_latest-collections--viewall" class="link--primary text-transform--initial level-3" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" aria-label="View all Latest collections">
-                                                                            View all {{$subcategory->name}}
-                                                                        </a>
-                                                                </div>
+                                                                            <a href="{{url('items/'.$menu->slug.'/'.$subcategory->slug)}}" id="flyout-high-jewellery_latest-collections--viewall" class="link--primary text-transform--initial level-3" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" aria-label="View all Latest collections">
+                                                                                View all {{$subcategory->name}}
+                                                                            </a>
+                                                                        </div>
 
 
                                                                     </div>
@@ -813,7 +821,7 @@
 
 
 
-                                         
+
 
                                             <a class="header__utility-anchor header-flyout__secondary-link link flex" href="#" title="My Clach" aria-label="My Clach" data-auth-trigger>
                                                 <svg aria-hidden="true" focusable="false" class="icon body-type--deka">
@@ -852,14 +860,13 @@
                                             <use xlink:href="#icon--close"></use>
                                         </svg>
                                     </button>
-                                    <form role=""  method="get" name="" class="site-search__form flex flex-grow-1 flex-direction-col flex-align-center gutter--normal" data-search-suggestions="" data-search-component="form" id="toggleID-3458--target" aria-labelledby="toggleID-1270" data-focustrap-enabled="true" data-gtm-form-interact-id="0">
+                                    <form role="" method="get" name="" class="site-search__form flex flex-grow-1 flex-direction-col flex-align-center gutter--normal" data-search-suggestions="" data-search-component="form" id="toggleID-3458--target" aria-labelledby="toggleID-1270" data-focustrap-enabled="true" data-gtm-form-interact-id="0">
                                         <div class="site-search__form-group set--w-100">
                                             <label for="siteSearch" class="form-control-label sr-only">Search</label>
 
                                             <div class="row flex-no-gutters">
                                                 <div class="col">
-                                                    <input class="" type="text"  value="" id="searchProduct" placeholder="Search products" autocomplete="off" aria-describedby="q-1046559120397"
-                                                     data-gtm-form-interact-field-id="0">
+                                                    <input class="" type="text" value="" id="searchProduct" placeholder="Search products" autocomplete="off" aria-describedby="q-1046559120397" data-gtm-form-interact-field-id="0">
                                                     <div id="q-1046559120397" class="invalid-feedback"></div>
                                                 </div>
 
@@ -879,7 +886,7 @@
                                             <div id="lang-1341774084129" class="invalid-feedback"></div>
                                         </div>
 
-                                        <div class="site-search__suggestions-container max-width--xmedium flex flex-direction-col set--w-100" >
+                                        <div class="site-search__suggestions-container max-width--xmedium flex flex-direction-col set--w-100">
 
                                         </div>
                                     </form>
@@ -894,9 +901,9 @@
 
 
         <div>
-        <livewire:cart-drawer />
+            <livewire:cart-drawer />
 
-    </div>
+        </div>
 
 
 
@@ -935,7 +942,7 @@
 
             <div class="max-width--large gutter--normal">
                 <div class="subscription-banner">
-                    
+
                 </div>
             </div>
 
@@ -1011,7 +1018,7 @@
 
 
 
-                                        <a href="https://api.whatsapp.com/send/?phone=97145809640&amp;text&amp;app_absent=1&amp;lang=en" class="component-actions__cta  body-type--centi link link--secondary "  style="">
+                                        <a href="https://api.whatsapp.com/send/?phone=97145809640&amp;text&amp;app_absent=1&amp;lang=en" class="component-actions__cta  body-type--centi link link--secondary " style="">
                                             Chat with us on Whats app
                                         </a>
 
@@ -1251,7 +1258,7 @@
 
 
 
-                                 
+
 
 
                                 </ul>
@@ -1282,15 +1289,15 @@
                     <div class="row">
 
 
-                            <div class="footer__copyright text-align--small-up-right" style="    display: flex;
+                        <div class="footer__copyright text-align--small-up-right" style="    display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;">
-                                <span class="footer__copyright-description body-type--centi text-transform--uppercase">
-                                    Copyright © 2022 Clach
-                                </span>
+                            <span class="footer__copyright-description body-type--centi text-transform--uppercase">
+                                Copyright © 2022 Clach
+                            </span>
 
-                                <br class="display--medium-down" />
+                            <br class="display--medium-down" />
 
 
                         </div>
@@ -1302,19 +1309,22 @@
     <div class="error-messaging"></div>
 
 
-    <div id="modal-quickview" class="window-modal modal--quickview modal--small-full" data-modal="true" data-modal-index="0" data-modal-active="true" data-focustrap-enabled="true"><div class="window-modal__content" tabindex="-1" role="dialog" aria-labelledby="qvProductName-B6069917" aria-modal="true" style="outline: none;">
-<div class="quickview quickview-master" data-product-container="quickview" data-pid="B6069917">
-    <div class="row flex-no-gutters quickViewContainer">
-       
-       
+    <div id="modal-quickview" class="window-modal modal--quickview modal--small-full" data-modal="true" data-modal-index="0" data-modal-active="true" data-focustrap-enabled="true">
+        <div class="window-modal__content" tabindex="-1" role="dialog" aria-labelledby="qvProductName-B6069917" aria-modal="true" style="outline: none;">
+            <div class="quickview quickview-master" data-product-container="quickview" data-pid="B6069917">
+                <div class="row flex-no-gutters quickViewContainer">
+
+
+                </div>
+
+
+
+
+            </div>
+
+            <button class="window-modal__close" data-modal-close="true" title="Close modal" aria-label="Close modal" type="button"></button>
+        </div>
     </div>
-
-    
-
-    
-</div>
-
-<button class="window-modal__close" data-modal-close="true" title="Close modal" aria-label="Close modal" type="button"></button></div></div>
 
 
 
@@ -1493,7 +1503,7 @@
             });
 
             $(".site-search__trigger-search").click(function() {
-                 $(".set--page-motion-ready").addClass('set--overlay');
+                $(".set--page-motion-ready").addClass('set--overlay');
                 $("body").css("overflow", "hidden");
                 $(".site-search").addClass("toggle--active");
                 $(".header__utility-anchor").addClass("toggle--active");
@@ -1516,127 +1526,140 @@
             })
 
 
-            
-            $(".header__minicart").click(function(){
-               $('.header__minicart-overlay').addClass("toggle--active")
+
+            $(".header__minicart").click(function() {
+                $('.header__minicart-overlay').addClass("toggle--active")
             })
 
-            $(".utility-overlay__header-close").click(function(){
+            $(".utility-overlay__header-close").click(function() {
                 $('.header__minicart-overlay').removeClass("toggle--active")
             })
-            
+
         });
-        $(document).on( 'click', '.addToCart', function (e) {
-        e.preventDefault(); 
-        $(".modal--quickview").removeClass('modal-active');
-        $('.loader').css("opacity","1");
-        $('.loader').css("visibility","visible");
+        $(document).on('click', '.addToCart', function(e) {
+            e.preventDefault();
+            $(".modal--quickview").removeClass('modal-active');
+            $('.loader').css("opacity", "1");
+            $('.loader').css("visibility", "visible");
 
-        const ele = $(this);
-        const productID = ele.prev().val();
-        $(".emptyCart").remove();
-        $(".myCartList").empty();
-        //$(".cartIcon").empty();
-        $.ajax({
-        url: '{{url("add-to-cart")}}',
-      
-        type: "POST",
-        data: {_token: '{{ csrf_token() }}', id: productID},
-        headers: {
-            'X-CSRF-Token': '{{ csrf_token() }}',
-        },
-        success: function(data){
-            $('.loader').css("opacity","0");
-            $('.loader').css("visibility","hidden");
-            $(".utility-overlay__line-items").remove();
-            $(".utility-overlay__footer").remove();
-             $(".cartCount").text(data.count);
-            //$(".cartIcon").append(`<span class="cartCount header__utility-badge header__utility-badge--has-items flex flex-align-center flex-justify-center" data-minicart-component="qty">${data.count}</span>`);
-            $(".myCartList").append(data.data);
-            $('.header__minicart-overlay').addClass("toggle--active");
+            const ele = $(this);
+            const productID = ele.prev().val();
+            $(".emptyCart").remove();
+            $(".myCartList").empty();
+            //$(".cartIcon").empty();
+            $.ajax({
+                url: '{{url("add-to-cart")}}',
 
-        }, 
-    })
-    })
-    $(document).on( 'click','.product-line-item__action-cta--remove',function (e) {
+                type: "POST",
+                data: {
+                    _token: '{{ csrf_token() }}',
+                    id: productID
+                },
+                headers: {
+                    'X-CSRF-Token': '{{ csrf_token() }}',
+                },
+                success: function(data) {
+                    $('.loader').css("opacity", "0");
+                    $('.loader').css("visibility", "hidden");
+                    $(".utility-overlay__line-items").remove();
+                    $(".utility-overlay__footer").remove();
+                    $(".cartCount").text(data.count);
+                    //$(".cartIcon").append(`<span class="cartCount header__utility-badge header__utility-badge--has-items flex flex-align-center flex-justify-center" data-minicart-component="qty">${data.count}</span>`);
+                    $(".myCartList").append(data.data);
+                    $('.header__minicart-overlay').addClass("toggle--active");
+
+                },
+            })
+        })
+        $(document).on('click', '.product-line-item__action-cta--remove', function(e) {
             e.preventDefault();
             var ele = $(this);
-            if(confirm("Are you sure")) {
+            if (confirm("Are you sure")) {
                 $.ajax({
-                 
+
                     url: '{{ url("remove-from-cart") }}',
                     method: "DELETE",
-                    data: {_token: '{{ csrf_token() }}', id: ele.attr("data-id")},
-                    success: function (response) {
+                    data: {
+                        _token: '{{ csrf_token() }}',
+                        id: ele.attr("data-id")
+                    },
+                    success: function(response) {
                         window.location.reload();
                     }
                 });
             }
         });
 
-            $(document).on( 'click','.update-cart',function (e) {
-           e.preventDefault();
-           var ele = $(this);
+        $(document).on('click', '.update-cart', function(e) {
+            e.preventDefault();
+            var ele = $(this);
             $.ajax({
-               url: '{{ url("update-cart") }}',
-               method: "patch",
-               data: {_token: '{{ csrf_token() }}', id: ele.attr("data-id"), quantity: ele.parents("tr").find(".quantity").val()},
-               success: function (response) {
-                   window.location.reload();
-               }
+                url: '{{ url("update-cart") }}',
+                method: "patch",
+                data: {
+                    _token: '{{ csrf_token() }}',
+                    id: ele.attr("data-id"),
+                    quantity: ele.parents("tr").find(".quantity").val()
+                },
+                success: function(response) {
+                    window.location.reload();
+                }
             });
         });
-        
-        $("#searchProduct").keyup(function(){
+
+        $("#searchProduct").keyup(function() {
             const query = $(this).val();
             $(".site-search__suggestions-container").empty();
-           if(query.length >= 3){
-            $('.loader').css("opacity","1");
-        $('.loader').css("visibility","visible");
-            $.ajax({
-        url: '{{url("search")}}',
-      
-        type: "GET",
-        data: {_token: '{{ csrf_token() }}', search: query},
-        headers: {
-            'X-CSRF-Token': '{{ csrf_token() }}',
-        },
-        success: function(data){
-            $('.loader').css("opacity","0");
-            $('.loader').css("visibility","hidden");
-            if(data){
-                $(".site-search__suggestions-container").append(data);
-            }
-            // $('.loader').css("opacity","0");
-            // $('.loader').css("visibility","hidden");
-            // $(".utility-overlay__line-items").remove();
-            // $(".utility-overlay__footer").remove();
-            //  $(".cartCount").text(data.count);
-            // //$(".cartIcon").append(`<span class="cartCount header__utility-badge header__utility-badge--has-items flex flex-align-center flex-justify-center" data-minicart-component="qty">${data.count}</span>`);
-            // $(".myCartList").append(data.data);
-            // $('.header__minicart-overlay').addClass("toggle--active");
+            if (query.length >= 3) {
+                $('.loader').css("opacity", "1");
+                $('.loader').css("visibility", "visible");
+                $.ajax({
+                    url: '{{url("search")}}',
 
-        }, 
-    });
-}
-    
+                    type: "GET",
+                    data: {
+                        _token: '{{ csrf_token() }}',
+                        search: query
+                    },
+                    headers: {
+                        'X-CSRF-Token': '{{ csrf_token() }}',
+                    },
+                    success: function(data) {
+                        $('.loader').css("opacity", "0");
+                        $('.loader').css("visibility", "hidden");
+                        if (data) {
+                            $(".site-search__suggestions-container").append(data);
+                        }
+                        // $('.loader').css("opacity","0");
+                        // $('.loader').css("visibility","hidden");
+                        // $(".utility-overlay__line-items").remove();
+                        // $(".utility-overlay__footer").remove();
+                        //  $(".cartCount").text(data.count);
+                        // //$(".cartIcon").append(`<span class="cartCount header__utility-badge header__utility-badge--has-items flex flex-align-center flex-justify-center" data-minicart-component="qty">${data.count}</span>`);
+                        // $(".myCartList").append(data.data);
+                        // $('.header__minicart-overlay').addClass("toggle--active");
+
+                    },
+                });
+            }
+
         })
-        $(document).on("click",".quickView",function(){
+        $(document).on("click", ".quickView", function() {
             console.log($(this))
             const productId = $(this).prev().val();;
-          const image = $(this).parent().parent().parent().prev().find('.product-tile__image').attr('data-src');
-          const price = $(this).next().val();
-         const name = $(this).next().next().val();
-         const description = $(this).next().next().next().val();
-            $('body').css('overflow','hidden')
-          $(".modal--quickview").addClass('modal-active');
-          var sizes =   $(this).next().next().next().next().val().split(",");
-          var options ="";
-          sizes.forEach(element => {
+            const image = $(this).parent().parent().parent().prev().find('.product-tile__image').attr('data-src');
+            const price = $(this).next().val();
+            const name = $(this).next().next().val();
+            const description = $(this).next().next().next().val();
+            $('body').css('overflow', 'hidden')
+            $(".modal--quickview").addClass('modal-active');
+            var sizes = $(this).next().next().next().next().val().split(",");
+            var options = "";
+            sizes.forEach(element => {
                 options += `<option>${element}</option>`
-          });
-          $(".quickViewContainer").empty();
-          $(".quickViewContainer").append(`<div class="col-12 col-md-7 flex-justify-center">
+            });
+            $(".quickViewContainer").empty();
+            $(".quickViewContainer").append(`<div class="col-12 col-md-7 flex-justify-center">
             
                        <div class="product-gallery__item aspect-ratio--square bg--grey-1 col-12">
                         <img src="${image}" class="product-gallery__img component-overlay component-overlay--center object-fit--contain" data-product-component="image" data-image-index="9" alt="#LOVE# bracelet, 4 diamonds, image 10" itemprop="image">
@@ -1812,30 +1835,146 @@
                             </div>
                         </section>
                     </div>`);
-                    $('.myslick').slick({
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                    });
-          
+            $('.myslick').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            });
+
         })
-        $(document).on("click",".window-modal__close",function(){
-            $('body').css('overflow','auto')
+        $(document).on("click", ".window-modal__close", function() {
+            $('body').css('overflow', 'auto')
             $(".modal--quickview").removeClass('modal-active')
-            
+
         });
 
-        $(document).on('change','.product-attribute__size',function(){
-          
-           const value = $(this).val();
-           if(value!=0)
-           {
+        $(document).on('change', '.product-attribute__size', function() {
+
+            const value = $(this).val();
+            if (value != 0) {
                 $(this).parent().parent().parent().next().find('button').prop("disabled", false);
-           }
+            }
         })
-        $(document).on("click",".add_gift_message",function(){
-       console.log($('.gift_message'))
-       //$(".gift_message").addClass('modal-active');
-   })
+        $(document).on("click", ".add_gift_message", function() {
+            var base_url = window.location.origin + "/" + 'images/clach_logo-1.png';
+
+
+            //console.log($('.gift_message'))
+            $("#modal-quickview").addClass('modal-active');
+            $(".quickViewContainer").empty();
+            $(".quickViewContainer").append(`
+            <div class="window-modal__content" tabindex="-1" role="dialog" aria-modal="true" style="outline: none;">
+            <div class="modal__header">
+    <h2 class="modal__title fluid-type--deka-hecto heading-type">Gift Message</h2>
+</div>
+
+<form action="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Cart-SavePersonalisation?ProductPersonalisation=ProductGiftMessage" class="modal__content gutter--small-only-normal toggle--active" method="POST" name="gift-message-form" data-cart-component="product-gift-message" novalidate="" data-gtm-form-interact-id="0" style="padding-right: 5.625rem;
+    padding-left: 5.625rem;
+    padding-bottom: 4.375rem;>
+    <input type="hidden" name="csrf_token" value="0ASa7SqmuRREaBGQyRTDzU-GG57sqRVL-2ZhYctJjogJczO7mCtdjiBPFVm7ByyJ_s4rEZ-wxHbGZNyU5qDYoc5zzprNPBsDl3iUPEYT_1JIOzXKI_GfQi7QXtLhx-rqjJjl3Wv9_taFrzq2QWTU__IH3K_FJSzrupvtWrlzg7P_9_B4fhQ=" aria-describedby="csrf_token-1602124019370">
+    <input type="hidden" name="uuid" value="35dd41236159db52ac2170ce2d" aria-describedby="uuid-17921375039">
+    <input type="hidden" name="pid" value="CRB6067419" aria-describedby="pid-1110612112171">
+
+    <div class="form-group">
+        
+        
+
+        <div class="form-check-group flex flex-flow-wrap">
+            
+                
+                
+
+                <div class="form-check form-check-group__item">
+                    <input type="radio" id="dwfrm_productpersonalisation_gift_hasGiftMessage-1-35dd41236159db52ac2170ce2d" class="form-check-input personalisation__gift-option toggle--active" name="dwfrm_productpersonalisation_gift_hasGiftMessage" required="" aria-required="true" value="1" checked="" aria-expanded="true" aria-controls="dwfrm_productpersonalisation_gift_hasGiftMessage-1-35dd41236159db52ac2170ce2d--target" aria-describedby="dwfrm_productpersonalisation_gift_hasGiftMessage-664625358621" data-gtm-form-interact-field-id="1">
+
+                    <label for="dwfrm_productpersonalisation_gift_hasGiftMessage-1-35dd41236159db52ac2170ce2d" class="form-check-label--radio font-family--serif">
+                        Compose your message now
+                    </label>
+                <div id="dwfrm_productpersonalisation_gift_hasGiftMessage-664625358621" class="invalid-feedback"></div></div>
+            
+                
+                
+
+                <div class="form-check form-check-group__item">
+                    <input type="radio" id="dwfrm_productpersonalisation_gift_hasGiftMessage-2-35dd41236159db52ac2170ce2d" class="form-check-input personalisation__gift-option" name="dwfrm_productpersonalisation_gift_hasGiftMessage" required="" aria-required="true" value="2" aria-expanded="false" aria-controls="dwfrm_productpersonalisation_gift_hasGiftMessage-2-35dd41236159db52ac2170ce2d--target" aria-describedby="dwfrm_productpersonalisation_gift_hasGiftMessage-68189607688" data-gtm-form-interact-field-id="0">
+
+                    <label for="dwfrm_productpersonalisation_gift_hasGiftMessage-2-35dd41236159db52ac2170ce2d" class="form-check-label--radio font-family--serif">
+                        Receive a blank card
+                    </label>
+                <div id="dwfrm_productpersonalisation_gift_hasGiftMessage-68189607688" class="invalid-feedback"></div></div>
+            
+        </div>
+    </div>
+
+    <div class="personalisation__gift-option-content toggle--active" data-line-item-component="gift-msg-field-1" data-gift-msg-font="" id="dwfrm_productpersonalisation_gift_hasGiftMessage-1-35dd41236159db52ac2170ce2d--target" aria-labelledby="dwfrm_productpersonalisation_gift_hasGiftMessage-1-35dd41236159db52ac2170ce2d">
+        <h3 class="form-intro__title heading-type body-type">
+            Your message will be printed on an exclusive gift card
+        </h3>
+ 
+        <div class="form-group">
+            <label class="form-control-label form-control-label--spacing-hecto text-color--grey-7">
+                Select a style (Required)
+            </label>
+
+            
+
+            <div class="flex">
+                
+                    
+
+                    <div class="form-check form-check--button-item">
+                        <input id="dwfrm_productpersonalisation_gift_giftMessageFont-Regular-35dd41236159db52ac2170ce2d" class="form-check-input" data-line-item-component="gift-msg-font" type="radio" name="dwfrm_productpersonalisation_gift_giftMessageFont" value="Regular" checked="" aria-describedby="dwfrm_productpersonalisation_gift_giftMessageFont-22962807403">
+                        <label for="dwfrm_productpersonalisation_gift_giftMessageFont-Regular-35dd41236159db52ac2170ce2d" class="form-check-button pdp-font-personalisation-block">
+                            Regular
+                        </label>
+                    <div id="dwfrm_productpersonalisation_gift_giftMessageFont-22962807403" class="invalid-feedback"></div></div>
+                
+                    
+
+                    <div class="form-check form-check--button-item">
+                        <input id="dwfrm_productpersonalisation_gift_giftMessageFont-Cursive-35dd41236159db52ac2170ce2d" class="form-check-input" data-line-item-component="gift-msg-font" type="radio" name="dwfrm_productpersonalisation_gift_giftMessageFont" value="Cursive" aria-describedby="dwfrm_productpersonalisation_gift_giftMessageFont-149533323078">
+                        <label for="dwfrm_productpersonalisation_gift_giftMessageFont-Cursive-35dd41236159db52ac2170ce2d" class="form-check-button form-check-button--cursive pdp-font-personalisation-italic">
+                            Cursive
+                        </label>
+                    <div id="dwfrm_productpersonalisation_gift_giftMessageFont-149533323078" class="invalid-feedback"></div></div>
+                
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="form-control-label form-control-label--spacing-hecto text-color--grey-7" for="giftMessage-35dd41236159db52ac2170ce2d">
+                Add your gift message, 125 chars max (Required)
+            </label>
+
+            <div class="personalisation__card text-align--center">
+    <img src="${base_url}" style="display:initial;"/>
+
+
+    <textarea id="giftMessage-35dd41236159db52ac2170ce2d" class="form-control--textarea personalisation__card-textarea is-invalid pdp-font-personalisation-block" data-line-item-component="gift-msg-textarea" required="" data-validate-latin-arabic="" name="dwfrm_productpersonalisation_gift_giftMessage" value="" maxlength="125" rows="6" cols="10" placeholder="Compose your message here" aria-describedby="dwfrm_productpersonalisation_gift_giftMessage-1038041219296"></textarea>
+<div id="dwfrm_productpersonalisation_gift_giftMessage-1038041219296" class="invalid-feedback set--visible">Error - The Add your gift message, 125 chars max (Required) field is required</div></div>
+        </div>
+    </div>
+
+    <div class="personalisation__gift-option-content" data-line-item-component="gift-msg-field-2" id="dwfrm_productpersonalisation_gift_hasGiftMessage-2-35dd41236159db52ac2170ce2d--target" aria-labelledby="dwfrm_productpersonalisation_gift_hasGiftMessage-2-35dd41236159db52ac2170ce2d"></div>
+
+    <div class="form-actions">
+        <button type="submit" name="confirm" class="button button--primary">
+            Confirm
+        </button>
+    </div>
+
+    <p class="success-feedback" data-ajax-success=""></p>
+    <p class="invalid-feedback" data-ajax-errors=""></p>
+<div id="csrf_token-1602124019370" class="invalid-feedback"></div><div id="uuid-17921375039" class="invalid-feedback"></div><div id="pid-1110612112171" class="invalid-feedback"></div></form><button class="window-modal__close" data-modal-close="true" title="Close modal" aria-label="Close modal" type="button"></button>`);
+        })
+
+        $(document).on('change', 'input[type=radio][name=dwfrm_productpersonalisation_gift_hasGiftMessage]', function() {
+            if ($(this).val() == 2) {
+                $('.personalisation__gift-option-content').css('display', 'none');
+            } else {
+                $('.personalisation__gift-option-content').css('display', 'block');
+            }
+
+        })
     </script>
     @livewireScripts
     @stack('custom-scripts')
