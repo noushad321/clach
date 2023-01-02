@@ -304,7 +304,7 @@
 
 
                                                 <li class="refinement__boolean-item  ">
-                                                    <a href="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Search-ShowAjax?cgid=Jewelry_AllCollection_LOVE&amp;prefn1=material1&amp;prefv1=Yellow%20Gold" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-Yellow Gold">
+                                                    <a href="#" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-Yellow Gold">
 
                                                         <span class="body-type--centi link--underline-hover" aria-hidden="true">
 
@@ -330,7 +330,7 @@
 
 
                                                 <li class="refinement__boolean-item  ">
-                                                    <a href="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Search-ShowAjax?cgid=Jewelry_AllCollection_LOVE&amp;prefn1=material1&amp;prefv1=Platinum" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-Platinum">
+                                                    <a href="#" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-Platinum">
 
                                                         <span class="body-type--centi link--underline-hover" aria-hidden="true">
 
@@ -356,7 +356,7 @@
 
 
                                                 <li class="refinement__boolean-item  ">
-                                                    <a href="/on/demandware.store/Sites-CartierUAE-Site/en_AE/Search-ShowAjax?cgid=Jewelry_AllCollection_LOVE&amp;prefn1=material1&amp;prefv1=Rose%20Gold" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-Rose Gold">
+                                                    <a href="#" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-Rose Gold">
 
                                                         <span class="body-type--centi link--underline-hover" aria-hidden="true">
 

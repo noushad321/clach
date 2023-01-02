@@ -25,23 +25,26 @@ class ItemsController extends Controller
     {
         // $category = (new Category)->where('slug', $category)->first();
         // $products = $category->products;
-         $products =  Product::all();
+        $products =  Product::all();
         if (isset($category)) {
 
             $category = (new Category)->where('slug', $category)->first();
-            $products = Product::with('multimedia', 'attributeValues.attribute', 'tags','subCategoryType.subCategory.category')->where('fk_category_id', $category->id)->get();
-        }  if (isset($subCategory)) {
+            $products = Product::with('multimedia', 'attributeValues.attribute', 'tags', 'subCategoryType.subCategory.category')->where('fk_category_id', $category->id)->get();
+        }
+        if (isset($subCategory)) {
             $category = (new SubCategory)->where('slug', $subCategory)->first();
-             $products = Product::with('multimedia', 'attributeValues.attribute', 'tags','subCategoryType.subCategory.category')->where('fk_sub_category_id', $category->id)->get();
-        }  if (isset($subCategoryType)) {
+            $products = Product::with('multimedia', 'attributeValues.attribute', 'tags', 'subCategoryType.subCategory.category')->where('fk_sub_category_id', $category->id)->get();
+        }
+        if (isset($subCategoryType)) {
             $category = (new SubCategoryType)->where('slug', $subCategoryType)->first();
-             $products = Product::with('multimedia', 'attributeValues.attribute', 'tags','subCategoryType.subCategory.category')->where('fk_sub_category_type_id', $category->id)->get();
+            $sub_category = (new SubCategory)->where('slug', $subCategory)->first();
+            $products = Product::with('multimedia', 'attributeValues.attribute', 'tags', 'subCategoryType.subCategory.category')->where('fk_sub_category_id', $sub_category->id)->where('fk_sub_category_type_id', $category->id)->get();
         }
         // $product =  Product::where('multimedia')->where('slug', $productSlug)->first();
         // $similarProducts =  Product::whereHas('subCategoryType', function ($q) use ($subCategoryType) {
         //     $q->where('slug', $subCategoryType);
         // })->where('slug', $productSlug)->get();
-        return view('items', compact('products','category'));
+        return view('items', compact('products', 'category'));
     }
 
     /**
